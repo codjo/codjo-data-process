@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Scenarii SYSTEM "http://scenarii.dtd">
+<Scenarii name="AUTOMATIC">
+    <Scenario id="CONTEXT">
+        <input>
+            <table name="PM_DP_CONTEXT">
+                <row>
+                    <field name="CONTEXT_NAME" value="REPO1"/>
+                    <field name="CONTEXT_KEY" value="KEY1"/>
+                    <field name="CONTEXT_VALUE" value="VALUE1"/>
+                </row>
+                <row>
+                    <field name="CONTEXT_NAME" value="REPO1"/>
+                    <field name="CONTEXT_KEY" value="KEY2"/>
+                    <field name="CONTEXT_VALUE" value="VALUE2"/>
+                </row>
+                <row>
+                    <field name="CONTEXT_NAME" value="REPO2"/>
+                    <field name="CONTEXT_KEY" value="KEY20"/>
+                    <field name="CONTEXT_VALUE" value="VALUE20"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+            <table name="PM_DP_CONTEXT" orderClause="CONTEXT_NAME, CONTEXT_KEY, CONTEXT_VALUE">
+                <row>
+                    <field name="CONTEXT_NAME" value="REPO2"/>
+                    <field name="CONTEXT_KEY" value="KEY20"/>
+                    <field name="CONTEXT_VALUE" value="VALUE20"/>
+                </row>
+                <row>
+                    <field name="CONTEXT_NAME" value="REPO1"/>
+                    <field name="CONTEXT_KEY" value="KEY1"/>
+                    <field name="CONTEXT_VALUE" value="VALUE10"/>
+                </row>
+                <row>
+                    <field name="CONTEXT_NAME" value="REPO1"/>
+                    <field name="CONTEXT_KEY" value="K1"/>
+                    <field name="CONTEXT_VALUE" value="V1"/>
+                </row>
+                <row>
+                    <field name="CONTEXT_NAME" value="REPO1"/>
+                    <field name="CONTEXT_KEY" value="K2"/>
+                    <field name="CONTEXT_VALUE" value="V2"/>
+                </row>
+                <row>
+                    <field name="CONTEXT_NAME" value="REPO1"/>
+                    <field name="CONTEXT_KEY" value="K3"/>
+                    <field name="CONTEXT_VALUE" value="V3"/>
+                </row>
+            </table>
+        </etalon>
+    </Scenario>
+</Scenarii>

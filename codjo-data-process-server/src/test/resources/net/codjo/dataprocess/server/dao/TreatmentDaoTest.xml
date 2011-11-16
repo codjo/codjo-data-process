@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Scenarii SYSTEM "http://scenarii.dtd">
+<Scenarii name="AUTOMATIC">
+    <Scenario id="SAVE">
+        <input>
+            <table name="PM_EXECUTION_LIST">
+                <row comment="sera effacé car repository=1">
+                    <field name="EXECUTION_LIST_NAME" value="listeNeuf"/>
+                    <field name="EXECUTION_LIST_ID" value="66"/>
+                    <field name="PRIORITY" value="2"/>
+                    <field name="FAMILY_ID" value="0"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                </row>
+                <row comment="ne sera pas effacé car repository=2">
+                    <field name="EXECUTION_LIST_NAME" value="listeNeuf"/>
+                    <field name="EXECUTION_LIST_ID" value="77"/>
+                    <field name="PRIORITY" value="2"/>
+                    <field name="FAMILY_ID" value="0"/>
+                    <field name="REPOSITORY_ID" value="2"/>
+                </row>
+            </table>
+            <table name="PM_EXECUTION_LIST_STATUS">
+                <row comment="sera effacé car liste de traitements liée au repository=1">
+                    <field name="EXECUTION_LIST_ID" value="66"/>
+                    <field name="STATUS" value="1"/>
+                    <field name="EXECUTION_DATE" value="2004-07-08 00:00:00"/>
+                </row>
+                <row comment="ne sera pas été effacé car liste de traitements liée au repository=2">
+                    <field name="EXECUTION_LIST_ID" value="77"/>
+                    <field name="STATUS" value="1"/>
+                    <field name="EXECUTION_DATE" value="2004-07-08 00:00:00"/>
+                </row>
+            </table>
+            <table name="PM_TREATMENT_STATUS">
+                <row comment="sera effacé car liste de traitements liée au repository=1">
+                    <field name="EXECUTION_LIST_ID" value="66"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT_56"/>
+                    <field name="STATUS" value="1"/>
+                    <field name="EXECUTION_DATE" value="2004-07-08 00:00:00"/>
+                </row>
+                <row comment="ne sera pas été effacé car liste de traitements liée au repository=2">
+                    <field name="EXECUTION_LIST_ID" value="77"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT_78"/>
+                    <field name="STATUS" value="1"/>
+                    <field name="EXECUTION_DATE" value="2004-07-08 00:00:00"/>
+                </row>
+            </table>
+            <table name="PM_TREATMENT">
+                <row comment="sera effacé car liste de traitements liée au repository=1">
+                    <field name="EXECUTION_LIST_ID" value="66"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_9"/>
+                    <field name="PRIORITY" value="9"/>
+                </row>
+                <row comment="sera effacé car liste de traitements liée au repository=1">
+                    <field name="EXECUTION_LIST_ID" value="66"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_8"/>
+                    <field name="PRIORITY" value="8"/>
+                </row>
+                <row comment="ne sera pas été effacé car liste de traitements liée au repository=2">
+                    <field name="EXECUTION_LIST_ID" value="77"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT_90"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+            <table name="PM_EXECUTION_LIST" orderClause="EXECUTION_LIST_NAME">
+                <row comment="nouvelle liste de traitements">
+                    <field name="EXECUTION_LIST_NAME" value="liste1"/>
+                    <field name="PRIORITY" value="1"/>
+                    <field name="FAMILY_ID" value="0"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                </row>
+                <row comment="nouvelle liste de traitements">
+                    <field name="EXECUTION_LIST_NAME" value="liste2"/>
+                    <field name="PRIORITY" value="2"/>
+                    <field name="FAMILY_ID" value="0"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                </row>
+                <row comment="n'a pas été effacé car repository=2">
+                    <field name="EXECUTION_LIST_NAME" value="listeNeuf"/>
+                    <field name="EXECUTION_LIST_ID" value="77"/>
+                    <field name="PRIORITY" value="2"/>
+                    <field name="FAMILY_ID" value="0"/>
+                    <field name="REPOSITORY_ID" value="2"/>
+                </row>
+            </table>
+            <table name="PM_EXECUTION_LIST_STATUS" orderClause="STATUS">
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                    <field name="STATUS" value="45"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="20"/>
+                    <field name="STATUS" value="95"/>
+                </row>
+                <row comment="n'a pas été effacé car liste de traitements liée au repository=2">
+                    <field name="EXECUTION_LIST_ID" value="77"/>
+                    <field name="STATUS" value="1"/>
+                    <field name="EXECUTION_DATE" value="2004-07-08 00:00:00"/>
+                </row>
+            </table>
+            <table name="PM_TREATMENT" orderClause="EXECUTION_LIST_ID, TREATMENT_ID">
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_1"/>
+                    <field name="PRIORITY" value="0"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_2"/>
+                    <field name="PRIORITY" value="1"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_3"/>
+                    <field name="PRIORITY" value="2"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="20"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_1"/>
+                    <field name="PRIORITY" value="0"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="20"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_2"/>
+                    <field name="PRIORITY" value="1"/>
+                </row>
+                <row comment="n'a pas été effacé car liste de traitements liée au repository=2">
+                    <field name="EXECUTION_LIST_ID" value="77"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT_90"/>
+                </row>
+            </table>
+            <table name="PM_TREATMENT_STATUS" orderClause="EXECUTION_LIST_ID, TREATMENT_ID">
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_1"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_2"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_3"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="20"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_1"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="20"/>
+                    <field name="TREATMENT_ID" value="TRAITEMENT_2"/>
+                </row>
+                <row comment="n'a pas été effacé car liste de traitements liée au repository=2">
+                    <field name="EXECUTION_LIST_ID" value="77"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT_78"/>
+                </row>
+            </table>
+        </etalon>
+    </Scenario>
+    <Scenario id="LOAD">
+        <input>
+            <table name="PM_EXECUTION_LIST">
+                <row id="MichelID">
+                    <field name="EXECUTION_LIST_NAME" value="liste1"/>
+                    <field name="EXECUTION_LIST_ID" value="100"/>
+                    <field name="PRIORITY" value="1"/>
+                    <field name="FAMILY_ID" value="1"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                </row>
+                <row inheritId="MichelID">
+                    <field name="EXECUTION_LIST_ID" value="300"/>
+                    <field name="EXECUTION_LIST_NAME" value="liste3"/>
+                    <field name="REPOSITORY_ID" value="3"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_NAME" value="liste2"/>
+                    <field name="EXECUTION_LIST_ID" value="200"/>
+                    <field name="PRIORITY" value="2"/>
+                    <field name="FAMILY_ID" value="1"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                </row>
+            </table>
+            <table name="PM_FAMILY" identityInsert="true">
+                <row>
+                    <field name="FAMILY_ID" value="1"/>
+                    <field name="FAMILY_NAME" value="Test"/>
+                </row>
+            </table>
+            <table name="PM_EXECUTION_LIST_STATUS">
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="100"/>
+                    <field name="STATUS" value="0"/>
+                    <field name="EXECUTION_DATE" value="2004-07-08 00:00:00"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="200"/>
+                    <field name="STATUS" value="1"/>
+                    <field name="EXECUTION_DATE" value="2004-07-08 12:00:00"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="300"/>
+                    <field name="STATUS" value="1"/>
+                    <field name="EXECUTION_DATE" value="2004-07-08 12:00:00"/>
+                </row>
+            </table>
+            <table name="PM_TREATMENT" orderClause="EXECUTION_LIST_ID">
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="100"/>
+                    <field name="TREATMENT_ID" value="treatment1"/>
+                    <field name="PRIORITY" value="2"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="100"/>
+                    <field name="TREATMENT_ID" value="treatment2"/>
+                    <field name="PRIORITY" value="1"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="100"/>
+                    <field name="TREATMENT_ID" value="treatment3"/>
+                    <field name="PRIORITY" value="0"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="200"/>
+                    <field name="TREATMENT_ID" value="treatment1"/>
+                    <field name="PRIORITY" value="1"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="200"/>
+                    <field name="TREATMENT_ID" value="treatment2"/>
+                    <field name="PRIORITY" value="0"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="300"/>
+                    <field name="TREATMENT_ID" value="treatment3"/>
+                    <field name="PRIORITY" value="0"/>
+                </row>
+            </table>
+        </input>
+        <etalon/>
+    </Scenario>
+    <Scenario id="delete_treatmentModel">
+        <comment>Test la suppression d'un treatmentModel de PM_REPOSITORY_CONTENT</comment>
+        <input>
+            <table name="PM_EXECUTION_LIST">
+                <row>
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="EXECUTION_LIST_NAME" value="ma_list_1"/>
+                    <field name="EXECUTION_LIST_ID" value="1"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="EXECUTION_LIST_NAME" value="ma_list_2"/>
+                    <field name="EXECUTION_LIST_ID" value="2"/>
+                </row>
+                <row comment="Utilise le traitement traitement_aa">
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="EXECUTION_LIST_NAME" value="ma_list_3"/>
+                    <field name="EXECUTION_LIST_ID" value="3"/>
+                </row>
+                <row comment="Utilise le traitement traitement_aa">
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="EXECUTION_LIST_NAME" value="ma_list_4"/>
+                    <field name="EXECUTION_LIST_ID" value="4"/>
+                </row>
+            </table>
+            <table name="PM_TREATMENT">
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="1"/>
+                    <field name="TREATMENT_ID" value="abcdef"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="2"/>
+                    <field name="TREATMENT_ID" value="boCategorieConso"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="3"/>
+                    <field name="TREATMENT_ID" value="traitement_aa"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="4"/>
+                    <field name="TREATMENT_ID" value="traitement_aa"/>
+                </row>
+            </table>
+            <table name="PM_REPOSITORY_CONTENT">
+                <row>
+                    <field name="REPOSITORY_CONTENT_ID" value="1"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="TREATMENT_ID" value="traitement_aa"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_CONTENT_ID" value="2"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="TREATMENT_ID" value="traitement_bb"/>
+                </row>
+                <row comment="Ce traitement sera supprimé">
+                    <field name="REPOSITORY_CONTENT_ID" value="2"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="TREATMENT_ID" value="traitement_cc"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+            <table name="PM_REPOSITORY_CONTENT">
+                <row comment="traitement_aa n'a pas été supprimé car il est utilisé dans une liste de traitement">
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="TREATMENT_ID" value="traitement_aa"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_CONTENT_ID" value="2"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="TREATMENT_ID" value="traitement_bb"/>
+                </row>
+            </table>
+        </etalon>
+    </Scenario>
+</Scenarii>

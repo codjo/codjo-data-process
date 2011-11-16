@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+    <treatment id="treatment3" type="stored_procedure" scope="TREATMENT">
+        <comment>commentaire magnifique</comment>
+        <title>titre magnifique</title>
+        <target>sp_maproc</target>
+        <arguments/>
+        <!--        <arguments>-->
+        <!--            <arg name="@arg1" value="Arno" position="1" type="23"/>-->
+        <!--            <arg name="@arg2" value="Mehdi" position="2" type="24"/>-->
+        <!--        </arguments>-->
+    </treatment>
+    <treatment id="treatment2" type="java" scope="TREATMENT">
+        <comment>commentaire pas magnifique</comment>
+        <title>titre pas magnifique</title>
+        <target>net.codjo.dataprocess.MonTraitement</target>
+    </treatment>
+    <treatment id="treatment1" type="java" scope="TREATMENT">
+        <comment>commentaire</comment>
+        <title></title>
+        <target>net.codjo.dataprocess.MonTraitement</target>
+    </treatment>
+</root>

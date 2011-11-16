@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Scenarii SYSTEM "http://scenarii.dtd">
+<Scenarii name="AUTOMATIC">
+    <Scenario id="STATUS">
+        <input>
+            <table name="PM_TREATMENT_STATUS" orderClause="EXECUTION_LIST_ID">
+                <row comment="ne sera pas màj">
+                    <field name="EXECUTION_LIST_ID" value="1"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT"/>
+                    <field name="STATUS" value="2"/>
+                    <field name="ERROR_MESSAGE" value="Rien n'est OK"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="15"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT"/>
+                    <field name="STATUS" value="2"/>
+                    <field name="ERROR_MESSAGE" value="Rien n'est OK"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="44"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT"/>
+                    <field name="STATUS" value="0"/>
+                    <field name="ERROR_MESSAGE" value="J'aime les pommes"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+            <table name="PM_TREATMENT_STATUS" orderClause="EXECUTION_LIST_ID">
+                <row comment="n'a pas été màj">
+                    <field name="EXECUTION_LIST_ID" value="1"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT"/>
+                    <field name="STATUS" value="2"/>
+                    <field name="ERROR_MESSAGE" value="Rien n'est OK"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="15"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT"/>
+                    <field name="STATUS" value="0"/>
+                    <field name="ERROR_MESSAGE" value="Tout est OK"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="44"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT"/>
+                    <field name="STATUS" value="1"/>
+                    <field name="ERROR_MESSAGE" value="Miam les pommes"/>
+                </row>
+                <row comment="ce status a été créé car il n'existait pas déjà">
+                    <field name="EXECUTION_LIST_ID" value="98"/>
+                    <field name="TREATMENT_ID" value="MON_TRAITEMENT"/>
+                    <field name="STATUS" value="1"/>
+                    <field name="ERROR_MESSAGE" value="Miam les poires"/>
+                </row>
+            </table>
+        </etalon>
+    </Scenario>
+</Scenarii>

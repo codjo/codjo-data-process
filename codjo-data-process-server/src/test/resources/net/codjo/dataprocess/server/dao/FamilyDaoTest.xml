@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Scenarii SYSTEM "http://scenarii.dtd">
+<Scenarii name="AUTOMATIC">
+    <Scenario id="FAMILY_NEW">
+        <input>
+            <table name="PM_FAMILY">
+                <row>
+                    <field name="FAMILY_ID" value="2"/>
+                    <field name="FAMILY_NAME" value="FAM1"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="VISIBLE" value="1"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+            <table name="PM_FAMILY" orderClause="FAMILY_ID">
+                <row>
+                    <field name="FAMILY_ID" value="2"/>
+                    <field name="FAMILY_NAME" value="FAM1"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                </row>
+                <row>
+                    <field name="FAMILY_ID" value="3"/>
+                    <field name="FAMILY_NAME" value="FAM2"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                </row>
+                <row>
+                    <field name="FAMILY_ID" value="4"/>
+                    <field name="FAMILY_NAME" value="FAM3"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                </row>
+                <row>
+                    <field name="FAMILY_ID" value="5"/>
+                    <field name="FAMILY_NAME" value="FAM3"/>
+                    <field name="REPOSITORY_ID" value="2"/>
+                </row>
+            </table>
+        </etalon>
+    </Scenario>
+    <Scenario id="FAMILY_GET">
+        <input>
+            <table name="PM_REPOSITORY">
+                <row>
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="REPOSITORY_NAME" value="REPO1"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="2"/>
+                    <field name="REPOSITORY_NAME" value="REPO2"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="3"/>
+                    <field name="REPOSITORY_NAME" value="REPO3"/>
+                </row>
+            </table>
+            <table name="PM_FAMILY">
+                <row>
+                    <field name="FAMILY_ID" value="1"/>
+                    <field name="FAMILY_NAME" value="FAM1"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="VISIBLE" value="1"/>
+                </row>
+                <row>
+                    <field name="FAMILY_ID" value="2"/>
+                    <field name="FAMILY_NAME" value="FAM2"/>
+                    <field name="REPOSITORY_ID" value="1"/>
+                    <field name="VISIBLE" value="1"/>
+                </row>
+                <row>
+                    <field name="FAMILY_ID" value="3"/>
+                    <field name="FAMILY_NAME" value="FAM3"/>
+                    <field name="REPOSITORY_ID" value="2"/>
+                    <field name="VISIBLE" value="1"/>
+                </row>
+            </table>
+        </input>
+    </Scenario>
+</Scenarii>

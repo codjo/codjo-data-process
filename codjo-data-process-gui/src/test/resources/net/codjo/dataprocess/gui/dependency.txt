@@ -1,0 +1,295 @@
+net.codjo.agent
+net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.report
+	-> net.codjo.dataprocess.common.userparam
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.mad.client.plugin
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+net.codjo.dataprocess.common
+net.codjo.dataprocess.common.codec
+net.codjo.dataprocess.common.context
+net.codjo.dataprocess.common.eventsbinder
+net.codjo.dataprocess.common.eventsbinder.annotations.events
+net.codjo.dataprocess.common.exception
+net.codjo.dataprocess.common.message
+net.codjo.dataprocess.common.model
+net.codjo.dataprocess.common.report
+net.codjo.dataprocess.common.userparam
+net.codjo.dataprocess.common.util
+net.codjo.dataprocess.gui.activation
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.userparam
+	-> net.codjo.dataprocess.gui.activation.impl
+	-> net.codjo.dataprocess.gui.activation.repository
+	-> net.codjo.dataprocess.gui.activation.spi
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+net.codjo.dataprocess.gui.activation.impl
+	-> net.codjo.dataprocess.gui.activation.spi
+net.codjo.dataprocess.gui.activation.repository
+	-> net.codjo.dataprocess.gui.activation.spi
+net.codjo.dataprocess.gui.activation.spi
+net.codjo.dataprocess.gui.dependency
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.gui.selector
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+net.codjo.dataprocess.gui.family
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.gui.selector
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+net.codjo.dataprocess.gui.launcher
+	-> net.codjo.agent
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.message
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.userparam
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.gui.launcher.configuration
+	-> net.codjo.dataprocess.gui.launcher.result
+	-> net.codjo.dataprocess.gui.repository
+	-> net.codjo.dataprocess.gui.selector
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.gui.toolkit.swing
+	-> net.codjo.gui.toolkit.util
+	-> net.codjo.gui.toolkit.waiting
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.mad.gui.request
+	-> net.codjo.plugin.batch
+	-> net.codjo.security.common.api
+	-> net.codjo.workflow.common.schedule
+net.codjo.dataprocess.gui.launcher.configuration
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+net.codjo.dataprocess.gui.launcher.result
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.gui.launcher.result.table
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.mad.gui.request
+	-> net.codjo.workflow.common.message
+	-> net.codjo.workflow.common.subscribe
+net.codjo.dataprocess.gui.launcher.result.table
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.gui.toolkit.util
+	-> net.codjo.workflow.common.message
+net.codjo.dataprocess.gui.param
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.gui.selector
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.gui.toolkit.text
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.util.file
+net.codjo.dataprocess.gui.repository
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.gui.launcher.configuration
+	-> net.codjo.dataprocess.gui.selector
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.gui.toolkit.text
+	-> net.codjo.gui.toolkit.util
+	-> net.codjo.gui.toolkit.waiting
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+net.codjo.dataprocess.gui.selector
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.userparam
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.mad.gui.request
+	-> net.codjo.mad.gui.request.event
+net.codjo.dataprocess.gui.tables
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.userparam
+	-> net.codjo.dataprocess.gui.selector
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.gui.toolkit.swing
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.mad.gui.request
+	-> net.codjo.mad.gui.request.event
+	-> com.thoughtworks.xstream.core
+net.codjo.dataprocess.gui.treatmenthelper
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.util.file
+	-> com.thoughtworks.xstream
+	-> com.thoughtworks.xstream.io.xml
+	-> org.w3c.dom
+net.codjo.dataprocess.gui.usermanager
+	-> net.codjo.dataprocess.common.userparam
+net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.userparam
+	-> net.codjo.gui.toolkit
+	-> net.codjo.gui.toolkit.fileChooser
+	-> net.codjo.gui.toolkit.util
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.mad.gui.request
+	-> net.codjo.mad.gui.request.util
+net.codjo.dataprocess.gui.util.LoginTracker
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.mad.gui.framework
+net.codjo.dataprocess.gui.util.action
+	-> net.codjo.mad.gui.base
+net.codjo.dataprocess.gui.util.editor
+	-> net.codjo.dataprocess.gui.util
+net.codjo.dataprocess.gui.util.fexplorer
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.eventsbinder
+	-> net.codjo.dataprocess.common.eventsbinder.annotations.events
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.gui.toolkit.fileChooser
+	-> net.codjo.gui.toolkit.util
+	-> net.codjo.gui.toolkit.waiting
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> sun.misc
+net.codjo.dataprocess.gui.util.sqleditor
+	-> net.codjo.dataprocess.common.eventsbinder
+	-> net.codjo.dataprocess.common.eventsbinder.annotations.events
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.editor
+	-> net.codjo.dataprocess.gui.util.sqleditor.components
+	-> net.codjo.dataprocess.gui.util.sqleditor.util
+	-> net.codjo.gui.toolkit.util
+	-> net.codjo.gui.toolkit.waiting
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+net.codjo.dataprocess.gui.util.sqleditor.components
+	-> net.codjo.dataprocess.common.eventsbinder
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.editor
+	-> net.codjo.dataprocess.gui.util.sqleditor.util
+	-> net.codjo.gui.toolkit.waiting
+	-> org.apache.commons.lang
+net.codjo.dataprocess.gui.util.sqleditor.loglist
+	-> net.codjo.dataprocess.gui.tables
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.mad.gui.request
+net.codjo.dataprocess.gui.util.sqleditor.util
+	-> net.codjo.dataprocess.client
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+net.codjo.dataprocess.gui.util.std
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.gui.toolkit.progressbar
+	-> net.codjo.gui.toolkit.table
+	-> net.codjo.gui.toolkit.util
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.common
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.mad.gui.request
+	-> net.codjo.mad.gui.request.factory
+	-> net.codjo.security.common.api
+net.codjo.dataprocess.gui.util.table
+	-> net.codjo.mad.gui.request
+net.codjo.dataprocess.gui.util.tableexplorer
+	-> net.codjo.dataprocess.client
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.userparam
+	-> net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.gui.util.std
+	-> net.codjo.gui.toolkit.text
+	-> net.codjo.gui.toolkit.waiting
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.mad.gui.request
+net.codjo.gui.toolkit
+net.codjo.gui.toolkit.fileChooser
+net.codjo.gui.toolkit.progressbar
+net.codjo.gui.toolkit.swing
+net.codjo.gui.toolkit.table
+net.codjo.gui.toolkit.text
+net.codjo.gui.toolkit.util
+net.codjo.gui.toolkit.waiting
+net.codjo.mad.client.plugin
+net.codjo.mad.client.request
+net.codjo.mad.common
+net.codjo.mad.gui.base
+net.codjo.mad.gui.framework
+net.codjo.mad.gui.request
+net.codjo.mad.gui.request.event
+net.codjo.mad.gui.request.factory
+net.codjo.mad.gui.request.util
+net.codjo.plugin.batch
+net.codjo.security.common.api
+net.codjo.util.file
+net.codjo.workflow.common.message
+net.codjo.workflow.common.schedule
+net.codjo.workflow.common.subscribe
+com.thoughtworks.xstream
+com.thoughtworks.xstream.core
+com.thoughtworks.xstream.io.xml
+org.apache.commons.lang
+org.w3c.dom
+sun.misc

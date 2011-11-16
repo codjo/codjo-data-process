@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+    <treatment id="trt1" type="java" scope="TREATMENT">
+        <title>Maj des ptf miroités</title>
+        <comment>Traitement des Maj des ptf miroités</comment>
+        <target>com.patati.patata.Patatouf</target>
+        <gui-target>com.patati.patata.mage.imba</gui-target>
+        <arguments/>
+    </treatment>
+    <treatment id="trt2" type="stored_procedure" scope="TREATMENT">
+        <title>Conso des mouvements</title>
+        <comment>Traitement des Conso des mouvements</comment>
+        <target>sp_SIF_Aggregate_Transactions</target>
+        <gui-target>com.patati.patata.druide.feral</gui-target>
+        <arguments/>
+    </treatment>
+</root>

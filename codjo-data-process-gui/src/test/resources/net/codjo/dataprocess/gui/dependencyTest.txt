@@ -1,0 +1,26 @@
+net.codjo.dataprocess.common.context
+net.codjo.dataprocess.common.model
+net.codjo.dataprocess.common.userparam
+net.codjo.dataprocess.gui
+net.codjo.dataprocess.gui.plugin
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.userparam
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.gui.treatmenthelper
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.gui.util
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.gui.util.std
+	-> net.codjo.gui.toolkit.table
+	-> net.codjo.mad.client.request
+	-> net.codjo.mad.gui.framework
+	-> net.codjo.mad.gui.request
+net.codjo.gui.toolkit.table
+net.codjo.mad.client.request
+net.codjo.mad.gui.framework
+net.codjo.mad.gui.request
+net.codjo.test.common.matcher

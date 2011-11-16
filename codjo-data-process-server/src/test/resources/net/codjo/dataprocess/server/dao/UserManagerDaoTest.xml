@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Scenarii SYSTEM "http://scenarii.dtd">
+<Scenarii name="AUTOMATIC">
+    <Scenario id="CREATE">
+        <input>
+        </input>
+        <etalon>
+            <table name="PM_DP_USER">
+                <row>
+                    <field name="USER_NAME" value="michel"/>
+                    <field name="USER_PARAM" value="michel param"/>
+                </row>
+            </table>
+        </etalon>
+    </Scenario>
+    <Scenario id="LOAD">
+        <input>
+            <table name="PM_DP_USER">
+                <row>
+                    <field name="USER_NAME" value="michel"/>
+                    <field name="USER_PARAM" value="michel param"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+        </etalon>
+    </Scenario>
+    <Scenario id="MODIF">
+        <input>
+            <table name="PM_DP_USER">
+                <row>
+                    <field name="USER_NAME" value="michel"/>
+                    <field name="USER_PARAM" value="michel param"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+            <table name="PM_DP_USER">
+                <row>
+                    <field name="USER_NAME" value="michel"/>
+                    <field name="USER_PARAM" value="michel param modif"/>
+                </row>
+            </table>
+        </etalon>
+    </Scenario>
+
+</Scenarii>

@@ -1,0 +1,34 @@
+net.codjo.dataprocess.common
+net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.test.common
+	-> net.codjo.test.common.matcher
+	-> net.codjo.util.file
+net.codjo.dataprocess.common.context
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.common.eventsbinder
+	-> net.codjo.dataprocess.common.eventsbinder.annotations.events
+	-> net.codjo.dataprocess.common.eventsbinder.annotations.managers
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.common.eventsbinder.annotations.events
+net.codjo.dataprocess.common.eventsbinder.annotations.managers
+net.codjo.dataprocess.common.eventsbinder.dynalistener
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.common.eventsbinder.reflect
+net.codjo.dataprocess.common.exception
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.common.message
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.common.report
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.common.userparam
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.common.util
+	-> net.codjo.test.common.matcher
+net.codjo.test.common
+net.codjo.test.common.matcher
+net.codjo.util.file

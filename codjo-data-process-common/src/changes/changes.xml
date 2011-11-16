@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+    <properties>
+        <title>Changes</title>
+    </properties>
+    <body>
+        <release version="1.25" date="2007-02-19">
+            <action dev="duclosm" type="fix">
+                Amélioration du TreatmentHelper pour vérifier l'intégrité des données insérée dans les
+                repositories.
+            </action>
+            <action dev="duclosm" type="fix">
+                Suppression de Identity sur PM_FAMILY et modification des handlers de création des familles.
+            </action>
+        </release>
+        <release version="1.24" date="2007-01-10">
+            <action dev="blazart" type="add">
+                Publication des JMS depuis un thread separé car il semble qu'un bug de weblo force
+                le topic a être dans la transaction.
+            </action>
+            <action dev="blazart" type="add">
+                Extension de AbstractTreatment: un traitement peut maintenant envoyé des information sur
+                sa progression par exemple.
+            </action>
+            <action dev="duclosm" type="add">
+                A sa création un traitement reçoit maintenant l'ExecutionListModel.
+            </action>
+            <action dev="duclosm" type="add">
+                Séparation et instanciation dynamique de la classe d'Audit (AuditHelper) pour éviter une
+                dépendance statique à cause de l'utilisation de data-process par des applications Jade
+                n'utilisant pas JMS.
+            </action>
+        </release>
+        <release version="1.23" date="2006-11-29">
+            <action dev="duclosm" type="add">
+                Ajout de l'identifiant des traitements à la table PM_REPOSITORY_CONTENT.
+            </action>
+            <action dev="duclosm" type="fix">
+                Gros refactoring pour centraliser le passage des Connection au niveau des méthodes
+                principales + diverses améliorations.
+            </action>
+        </release>
+        <release version="1.21" date="2006-10-17">
+            <action dev="duclosm" type="fix">
+                Amélioration des codecs de Map et List.
+            </action>
+        </release>
+        <release version="1.20" date="2006-10-10">
+            <action dev="duclosm" type="add">
+                Ajout d'un encoder/decoder de Map pour le passage de données
+                client/serveur.
+            </action>
+        </release>
+        <release version="1.09" date="2006-03-08">
+            <action dev="duclosm" type="fix">
+                Prise en compte de nombreux rapports IDEA 5.
+            </action>
+        </release>
+        <release version="1.05" date="2005-10-26">
+            <action dev="duclosm" type="fix">
+                Correction de divers bugs et amélioration.
+            </action>
+        </release>
+        <release version="1.04" date="2005-09-14">
+            <action dev="duclosm" type="fix">
+                Adaptation des handler command à la version codjo-mad 2.12-20050914
+            </action>
+        </release>
+        <release version="1.00-SNAPSHOT" date="2005-02-11" description="Version initiale">
+            <action dev="marcona" type="fix">
+                Phase de developpement.
+            </action>
+        </release>
+    </body>
+</document>

@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="net.codjo.dataprocess.gui.repository.RepositoryWindow">
+  <grid id="27dc6" binding="mainPanel" layout-manager="FormLayout">
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:d:grow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <colspec value="fill:982px:grow"/>
+    <constraints>
+      <xy x="20" y="20" width="982" height="608"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <splitpane id="1b93f">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <dividerLocation value="354"/>
+          <dividerSize value="5"/>
+        </properties>
+        <border type="none" title=""/>
+        <children>
+          <grid id="5be34" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <splitpane position="left"/>
+            </constraints>
+            <properties/>
+            <border type="none" title=" Traitement ">
+              <font style="1"/>
+            </border>
+            <children>
+              <scrollpane id="de943">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="57b47" class="javax.swing.JList" binding="guiTreatmentList">
+                    <constraints/>
+                    <properties>
+                      <layoutOrientation value="0"/>
+                      <model/>
+                      <selectionMode value="0"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <grid id="835fa" layout-manager="FormLayout">
+                <rowspec value="top:d:noGrow"/>
+                <colspec value="fill:max(d;4px):noGrow"/>
+                <colspec value="left:4dlu:noGrow"/>
+                <colspec value="fill:d:grow"/>
+                <colspec value="left:4dlu:noGrow"/>
+                <colspec value="fill:max(d;4px):noGrow"/>
+                <colspec value="left:4dlu:noGrow"/>
+                <colspec value="fill:max(d;4px):noGrow"/>
+                <colspec value="left:4dlu:noGrow"/>
+                <colspec value="fill:max(d;4px):noGrow"/>
+                <colspec value="left:4dlu:noGrow"/>
+                <colspec value="fill:max(d;4px):noGrow"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="184" height="28"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="empty">
+                  <size top="0" left="0" bottom="0" right="0"/>
+                </border>
+                <children>
+                  <component id="2db00" class="javax.swing.JButton" binding="newTreatmentButton">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <forms defaultalign-vert="false"/>
+                    </constraints>
+                    <properties>
+                      <borderPainted value="true"/>
+                      <icon value="images/include.png"/>
+                      <opaque value="false"/>
+                      <preferredSize width="20" height="20"/>
+                      <text value=""/>
+                      <toolTipText value="Ajouter un traitement"/>
+                    </properties>
+                  </component>
+                  <component id="46011" class="javax.swing.JButton" binding="deleteTreatmentButton">
+                    <constraints>
+                      <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <forms defaultalign-vert="false"/>
+                    </constraints>
+                    <properties>
+                      <borderPainted value="true"/>
+                      <icon value="images/exclude.png"/>
+                      <opaque value="false"/>
+                      <preferredSize width="20" height="20"/>
+                      <text value=""/>
+                      <toolTipText value="Supprimer le traitement sélectionné"/>
+                    </properties>
+                  </component>
+                  <component id="8d05b" class="javax.swing.JToggleButton" binding="alphaSortButton">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <forms/>
+                    </constraints>
+                    <properties>
+                      <borderPainted value="true"/>
+                      <icon value="images/alpha_mode.gif"/>
+                      <preferredSize width="24" height="24"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="8be29" class="net.codjo.gui.toolkit.text.SearchTextField" binding="filterTextField">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                      <forms defaultalign-horz="false"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="30be8" class="javax.swing.JButton" binding="newTreatmentsXmlButton">
+                    <constraints>
+                      <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <forms defaultalign-vert="false"/>
+                    </constraints>
+                    <properties>
+                      <actionCommand value=""/>
+                      <borderPainted value="true"/>
+                      <icon value="images/include.png"/>
+                      <label value="xml"/>
+                      <margin top="2" left="5" bottom="2" right="5"/>
+                      <preferredSize width="55" height="20"/>
+                      <text value="xml"/>
+                      <toolTipText value="Ajouter des traitements en utilisant leur code XML"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="3f2dc" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="24434" class="javax.swing.JButton" binding="executeButton">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <icon value="images/execution.gif"/>
+                      <text value="Exécuter"/>
+                      <toolTipText value="Exécuter le traitement sélectionné"/>
+                    </properties>
+                  </component>
+                  <hspacer id="7932b">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </hspacer>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <tabbedpane id="666c9">
+            <constraints>
+              <splitpane position="right"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="f68cb" layout-manager="FormLayout">
+                <rowspec value="center:d:noGrow"/>
+                <rowspec value="top:4dlu:noGrow"/>
+                <rowspec value="fill:max(d;4px):grow"/>
+                <colspec value="fill:d:grow"/>
+                <constraints>
+                  <tabbedpane title="Description"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="9de79" layout-manager="FormLayout">
+                    <rowspec value="center:d:noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:max(d;4px):noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:max(d;4px):noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:max(d;4px):noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:57px:noGrow"/>
+                    <colspec value="fill:max(d;4px):noGrow"/>
+                    <colspec value="left:4dlu:noGrow"/>
+                    <colspec value="fill:191px:noGrow"/>
+                    <colspec value="left:4dlu:noGrow"/>
+                    <colspec value="fill:max(d;4px):noGrow"/>
+                    <colspec value="left:4dlu:noGrow"/>
+                    <colspec value="fill:80px:grow"/>
+                    <colspec value="left:4dlu:noGrow"/>
+                    <colspec value="fill:max(d;4px):noGrow"/>
+                    <colspec value="left:4dlu:noGrow"/>
+                    <colspec value="fill:d:grow"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                      <forms defaultalign-vert="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none" title=" Description "/>
+                    <children>
+                      <component id="1108a" class="javax.swing.JTextField" binding="nameTextField">
+                        <constraints>
+                          <grid row="0" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties>
+                          <enabled value="false"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="376bd" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text value="Identifiant:"/>
+                        </properties>
+                      </component>
+                      <component id="7a194" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text value="Titre:"/>
+                        </properties>
+                      </component>
+                      <component id="8d5da" class="javax.swing.JTextField" binding="titleTextField">
+                        <constraints>
+                          <grid row="2" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="1ca2f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text value="Type:"/>
+                        </properties>
+                      </component>
+                      <component id="bb239" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Commentaire:"/>
+                        </properties>
+                      </component>
+                      <component id="4eb4a" class="javax.swing.JComboBox" binding="typeComboBox">
+                        <constraints>
+                          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties/>
+                      </component>
+                      <component id="a5d72" class="javax.swing.JCheckBox" binding="returnResultCheckbox">
+                        <constraints>
+                          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text value="Renvoie un résultat"/>
+                        </properties>
+                      </component>
+                      <scrollpane id="6597b">
+                        <constraints>
+                          <grid row="8" column="2" row-span="1" col-span="9" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="fab03" class="javax.swing.JTextArea" binding="commentTextArea">
+                            <constraints/>
+                            <properties>
+                              <lineWrap value="true"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                      <component id="a357f" class="javax.swing.JLabel" binding="resultTableLabel">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Table de contrôle:"/>
+                        </properties>
+                      </component>
+                      <component id="cb99f" class="javax.swing.JTextField" binding="resultTableTextField">
+                        <constraints>
+                          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="50"/>
+                          </grid>
+                          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                        </constraints>
+                        <properties/>
+                      </component>
+                      <component id="6adfb" class="javax.swing.JLabel" binding="selectAllHandlerLabel">
+                        <constraints>
+                          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="selecAllHandler:"/>
+                        </properties>
+                      </component>
+                      <component id="afb8d" class="javax.swing.JTextField" binding="selectAllHandlerField">
+                        <constraints>
+                          <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties/>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="c1ce6" layout-manager="FormLayout">
+                    <rowspec value="center:110px:noGrow"/>
+                    <rowspec value="top:5dlu:noGrow"/>
+                    <rowspec value="fill:108px:grow"/>
+                    <colspec value="fill:69px:noGrow"/>
+                    <colspec value="left:4dlu:noGrow"/>
+                    <colspec value="fill:d:grow"/>
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                      <forms defaultalign-vert="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none" title=" Paramétrage d'exécution "/>
+                    <children>
+                      <component id="49ce5" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Cible:"/>
+                        </properties>
+                      </component>
+                      <scrollpane id="9e2e">
+                        <constraints>
+                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="557c4" class="javax.swing.JTextArea" binding="targetTextAreaRo">
+                            <constraints/>
+                            <properties>
+                              <editable value="false"/>
+                              <enabled value="false"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                      <scrollpane id="1381b">
+                        <constraints>
+                          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                        </constraints>
+                        <properties>
+                          <enabled value="true"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="6da15" class="net.codjo.dataprocess.gui.repository.ArgumentsTable" binding="argumentTableRo" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <cellSelectionEnabled value="false"/>
+                              <enabled value="false"/>
+                              <surrendersFocusOnKeystroke value="false"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                      <component id="99c8" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Arguments:"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="d305e" layout-manager="FormLayout">
+                <rowspec value="center:d:grow"/>
+                <colspec value="fill:d:grow"/>
+                <constraints>
+                  <tabbedpane title="Paramétrage d'exécution"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <splitpane id="f7a55">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="200" height="200"/>
+                      </grid>
+                      <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                    </constraints>
+                    <properties>
+                      <autoscrolls value="false"/>
+                      <continuousLayout value="true"/>
+                      <oneTouchExpandable value="true"/>
+                      <orientation value="0"/>
+                      <resizeWeight value="0.8"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <scrollpane id="217c5">
+                        <constraints>
+                          <splitpane position="left"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="8caed" class="javax.swing.JTextArea" binding="targetTextArea">
+                            <constraints/>
+                            <properties/>
+                          </component>
+                        </children>
+                      </scrollpane>
+                      <grid id="14086" layout-manager="FormLayout">
+                        <rowspec value="center:d:grow"/>
+                        <colspec value="fill:d:grow"/>
+                        <constraints>
+                          <splitpane position="right"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <grid id="6bd8d" layout-manager="FormLayout">
+                            <rowspec value="fill:d:grow"/>
+                            <colspec value="fill:d:noGrow"/>
+                            <colspec value="left:4dlu:noGrow"/>
+                            <colspec value="fill:d:grow"/>
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                              <forms defaultalign-vert="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none" title=" Arguments "/>
+                            <children>
+                              <scrollpane id="c5125">
+                                <constraints>
+                                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                                </constraints>
+                                <properties>
+                                  <enabled value="true"/>
+                                </properties>
+                                <border type="none"/>
+                                <children>
+                                  <component id="adc35" class="net.codjo.dataprocess.gui.repository.ArgumentsTable" binding="argumentTable" custom-create="true">
+                                    <constraints/>
+                                    <properties/>
+                                  </component>
+                                </children>
+                              </scrollpane>
+                              <grid id="447df" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                                  <forms defaultalign-horz="false"/>
+                                </constraints>
+                                <properties/>
+                                <border type="none"/>
+                                <children>
+                                  <grid id="90741" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                    <constraints border-constraint="North"/>
+                                    <properties/>
+                                    <border type="none"/>
+                                    <children>
+                                      <component id="a031f" class="javax.swing.JButton" binding="addArgumentButton">
+                                        <constraints border-constraint="West"/>
+                                        <properties>
+                                          <borderPainted value="true"/>
+                                          <icon value="images/include.png"/>
+                                          <opaque value="false"/>
+                                          <preferredSize width="20" height="20"/>
+                                          <text value=""/>
+                                          <toolTipText value="Ajouter un argument"/>
+                                        </properties>
+                                      </component>
+                                      <component id="d4a87" class="javax.swing.JButton" binding="deleteArgumentButton">
+                                        <constraints border-constraint="South"/>
+                                        <properties>
+                                          <borderPainted value="true"/>
+                                          <icon value="images/exclude.png"/>
+                                          <opaque value="false"/>
+                                          <preferredSize width="20" height="20"/>
+                                          <text value=""/>
+                                          <toolTipText value="Supprimer l'argument sélectionné"/>
+                                        </properties>
+                                      </component>
+                                    </children>
+                                  </grid>
+                                </children>
+                              </grid>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                    </children>
+                  </splitpane>
+                </children>
+              </grid>
+              <grid id="6c2e0" layout-manager="FormLayout">
+                <rowspec value="center:d:grow"/>
+                <rowspec value="top:4dlu:noGrow"/>
+                <rowspec value="center:max(d;4px):noGrow"/>
+                <colspec value="fill:p:noGrow"/>
+                <colspec value="left:4dlu:noGrow"/>
+                <colspec value="fill:d:grow(4.0)"/>
+                <constraints>
+                  <tabbedpane title="Traitement en XML"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="3c2ec">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                      <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="b291a" class="javax.swing.JTextArea" binding="treatmentModelXmlArea">
+                        <constraints/>
+                        <properties/>
+                      </component>
+                    </children>
+                  </scrollpane>
+                  <component id="a71d2" class="javax.swing.JButton" binding="submitXmlContentButton">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <forms/>
+                    </constraints>
+                    <properties>
+                      <enabled value="false"/>
+                      <icon value="images/Valid.gif"/>
+                      <maximumSize width="140" height="23"/>
+                      <minimumSize width="140" height="23"/>
+                      <preferredSize width="180" height="23"/>
+                      <text value="Valider les changements"/>
+                      <toolTipText value="Mettre à jour le traitement avec le XML"/>
+                      <visible value="true"/>
+                    </properties>
+                  </component>
+                  <hspacer id="b944c">
+                    <constraints>
+                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <forms defaultalign-horz="false"/>
+                    </constraints>
+                  </hspacer>
+                </children>
+              </grid>
+            </children>
+          </tabbedpane>
+        </children>
+      </splitpane>
+      <grid id="4df4b" layout-manager="FormLayout">
+        <rowspec value="center:d:noGrow"/>
+        <colspec value="fill:d:noGrow"/>
+        <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:d:grow"/>
+        <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:max(d;4px):noGrow"/>
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="5c8a" class="javax.swing.JButton" binding="saveAllButton">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <forms top="1" left="1" bottom="1" right="1"/>
+            </constraints>
+            <properties>
+              <enabled value="false"/>
+              <icon value="images/idea/save.png"/>
+              <label value="Sauvegarder"/>
+              <preferredSize width="120" height="25"/>
+              <text value="Sauvegarder"/>
+              <toolTipText value="Sauvegarder les traitements modifiés"/>
+            </properties>
+          </component>
+          <component id="97cf0" class="javax.swing.JButton" binding="quitButton">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <forms top="1" left="1" bottom="1" right="1"/>
+            </constraints>
+            <properties>
+              <icon value="images/exit.gif"/>
+              <preferredSize width="36" height="25"/>
+              <text value=""/>
+              <toolTipText value="Fermer la fenêtre"/>
+            </properties>
+          </component>
+          <hspacer id="7f587">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <forms defaultalign-horz="false"/>
+            </constraints>
+          </hspacer>
+        </children>
+      </grid>
+      <grid id="3a7b9" layout-manager="FormLayout">
+        <rowspec value="center:27px:noGrow"/>
+        <colspec value="fill:75px:noGrow"/>
+        <colspec value="left:14dlu:noGrow"/>
+        <colspec value="fill:107px:noGrow"/>
+        <colspec value="left:7dlu:noGrow"/>
+        <colspec value="fill:max(d;4px):noGrow"/>
+        <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:max(d;4px):noGrow"/>
+        <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:max(d;4px):noGrow"/>
+        <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:max(d;4px):noGrow"/>
+        <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:max(d;4px):noGrow"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties/>
+        <border type="etched"/>
+        <children>
+          <component id="98d16" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <forms top="1" left="1" bottom="1" right="1" defaultalign-horz="false"/>
+            </constraints>
+            <properties>
+              <text value="Référentiel:"/>
+            </properties>
+          </component>
+          <component id="5fa67" class="net.codjo.dataprocess.gui.selector.RepositoryComboBox" binding="repositoryComboBox" custom-create="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="3a6a9" class="javax.swing.JButton" binding="newRepositoryButton">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <forms top="1" left="1" bottom="1" right="1"/>
+            </constraints>
+            <properties>
+              <borderPainted value="true"/>
+              <icon value="images/include.png"/>
+              <opaque value="false"/>
+              <preferredSize width="25" height="25"/>
+              <text value=""/>
+              <toolTipText value="Ajouter un référentiel de traitement"/>
+            </properties>
+          </component>
+          <component id="c1288" class="javax.swing.JButton" binding="deleteRepositoryButton">
+            <constraints>
+              <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <borderPainted value="true"/>
+              <icon value="images/exclude.png"/>
+              <opaque value="false"/>
+              <preferredSize width="25" height="25"/>
+              <text value=""/>
+              <toolTipText value="Supprimer ce référentiel de traitement"/>
+            </properties>
+          </component>
+          <component id="a5469" class="javax.swing.JButton" binding="copyRepositoryButton">
+            <constraints>
+              <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <borderPainted value="true"/>
+              <icon value="images/Copy.gif"/>
+              <opaque value="false"/>
+              <preferredSize width="25" height="25"/>
+              <text value=""/>
+              <toolTipText value="Faire une copie de ce référentiel de traitement"/>
+            </properties>
+          </component>
+          <component id="ad53c" class="javax.swing.JButton" binding="renameRepositoryButton">
+            <constraints>
+              <grid row="0" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <borderPainted value="true"/>
+              <icon value="images/menu-replace.png"/>
+              <opaque value="false"/>
+              <preferredSize width="25" height="25"/>
+              <text value=""/>
+              <toolTipText value="Renommer ce référentiel de traitement"/>
+            </properties>
+          </component>
+          <component id="156d4" class="javax.swing.JButton" binding="exportRepositoryButton">
+            <constraints>
+              <grid row="0" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <borderPainted value="true"/>
+              <icon value="images/export.png"/>
+              <opaque value="false"/>
+              <preferredSize width="25" height="25"/>
+              <text value=""/>
+              <toolTipText value="Exporter ce référentiel de traitement"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+    <treatment id="TraitementJavaExemple" type="java">
+        <title>TraitementJavaExemple</title>
+        <comment>TraitementJavaExemple</comment>
+        <target>net.codjo.creo.dataprocess.treatment.TraitementJavaExemple</target>
+        <arguments>
+            <arg name="maColonne" value="$maColonne$" position="1" type="12"/>
+            <arg name="monLibelle" value="$monLibelle$" position="2" type="12"/>
+        </arguments>
+    </treatment>
+    <treatment id="TraitementSqlExemple" type="sql_with_result">
+        <title>Test de la mort</title>
+        <comment>Test de la mort</comment>
+        <target>insert into MA_TABLE (MA_COLONNE, MON_LIBELLE) values (?, ?) select * from MA_TABLE</target>
+        <result-table selectAllHandler="selectAllPeriod">AP_MA_TABLE</result-table>
+        <gui-target>net.codjo.palanoob</gui-target>
+        <arguments>
+            <arg name="maColonne" value="$maColonne$" position="1" type="12"/>
+            <arg name="monLibelle" value="$monLibelle$" position="2" type="12"/>
+        </arguments>
+    </treatment>
+</root>

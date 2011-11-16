@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://datagen.xsd">
+
+    <entity name="net.codjo.dataprocess.data.Context" table="PM_DP_CONTEXT">
+        <description>Context lie a un nom de context</description>
+        <feature>
+            <sql-index>
+                <idx type="primary-key" name-prefix="X1_" clustered="true"/>
+            </sql-index>
+            <generate-all/>
+            <handler-sql id="selectContextByContextName">
+                <attributes>
+                    <name>contextKey</name>
+                    <name>contextValue</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        CONTEXT_KEY,
+	                        CONTEXT_VALUE
+                        from
+                            PM_DP_CONTEXT
+                        where
+                            CONTEXT_NAME = ?
+                        ]]>
+                </query>
+                <arg type="string">contextName</arg>
+            </handler-sql>
+            <handler-sql id="deleteContextByContextName" transaction="true">
+                <attributes>
+                    <name>count</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    delete from PM_DP_CONTEXT
+	                    where
+	                        CONTEXT_NAME = ?
+                        select @@rowcount
+                        ]]>
+                </query>
+                <arg type="string">contextName</arg>
+            </handler-sql>
+            <handler-sql id="duplicateContext" transaction="true">
+                <attributes>
+                    <name>count</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    insert into PM_DP_CONTEXT
+	                    select
+	                        ?, CONTEXT_KEY, CONTEXT_VALUE
+                        from
+                            PM_DP_CONTEXT
+                        where
+                            CONTEXT_NAME = ?
+                        select @@rowcount
+                        ]]>
+                </query>
+                <arg type="string">newContextName</arg>
+                <arg type="string">oldContextName</arg>
+            </handler-sql>
+            <handler-sql id="selectValueByKeyAndContextName">
+                <attributes>
+                    <name>contextValue</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        CONTEXT_VALUE
+                        from
+                            PM_DP_CONTEXT
+                        where
+                            CONTEXT_NAME = ? and CONTEXT_KEY = ?
+                        ]]>
+                </query>
+                <arg type="string">contextName</arg>
+                <arg type="string">contextKey</arg>
+            </handler-sql>
+            <sql gap="1000000"/>
+        </feature>
+
+        <primary-key key-generator="IDENTITY">
+            <field name="contextId"/>
+        </primary-key>
+
+        <properties>
+            <field name="contextId" type="big-decimal">
+                <description>Id</description>
+                <sql type="numeric" precision="18" identity="true" required="true"/>
+            </field>
+            <field name="contextName" type="string">
+                <description>Nom du context</description>
+                <sql type="varchar" precision="100" required="false"/>
+            </field>
+            <field name="contextKey" type="string">
+                <description>Cle</description>
+                <sql type="varchar" precision="100" required="false"/>
+            </field>
+            <field name="contextValue" type="string">
+                <description>Valeur</description>
+                <sql type="varchar" precision="100" required="false"/>
+            </field>
+        </properties>
+    </entity>
+
+    <entity name="net.codjo.dataprocess.data.Repository" table="PM_REPOSITORY">
+        <description>Repository des traitements disponibles</description>
+        <feature>
+            <sql-index>
+                <idx type="primary-key" name-prefix="X1_" clustered="true"/>
+            </sql-index>
+            <generate-all/>
+            <handler-sql id="selectAllRepositoryNames">
+                <attributes>
+                    <name>repositoryId</name>
+                    <name>repositoryName</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        REPOSITORY_ID,
+                            REPOSITORY_NAME
+                        from
+                            PM_REPOSITORY
+                        order by REPOSITORY_NAME
+                        ]]>
+                </query>
+            </handler-sql>
+            <sql gap="1000000"/>
+        </feature>
+
+        <primary-key key-generator="MAX">
+            <field name="repositoryId"/>
+        </primary-key>
+
+        <properties>
+            <field name="repositoryId" type="big-decimal">
+                <description>Id</description>
+                <sql type="numeric" precision="18" identity="false" required="true"/>
+            </field>
+            <field name="repositoryName" type="string">
+                <description>Nom</description>
+                <sql type="varchar" precision="30" required="false"/>
+            </field>
+        </properties>
+    </entity>
+
+    <entity name="net.codjo.dataprocess.data.RepositoryContent" table="PM_REPOSITORY_CONTENT">
+        <description>Contenu des repository</description>
+        <feature>
+            <sql-index>
+                <idx type="primary-key" name-prefix="X1_" clustered="true"/>
+            </sql-index>
+            <generate-all/>
+            <handler-sql id="selectAllTreatmentModelId">
+                <attributes>
+                    <name>treatmentId</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        TREATMENT_ID
+                        from
+                            PM_REPOSITORY_CONTENT
+                        where
+                            REPOSITORY_ID = ?
+                        ]]>
+                </query>
+                <arg type="integer">repositoryId</arg>
+            </handler-sql>
+            <sql gap="1000000"/>
+        </feature>
+
+        <primary-key key-generator="MAX">
+            <field name="repositoryContentId"/>
+        </primary-key>
+
+        <properties>
+            <field name="repositoryContentId" type="big-decimal">
+                <description>Id</description>
+                <sql type="numeric" precision="18" identity="false" required="true"/>
+            </field>
+            <field name="repositoryId" type="big-decimal">
+                <description>Identifiant du repository</description>
+                <sql type="numeric" precision="18" required="true"/>
+            </field>
+            <field name="treatmentId" type="string">
+                <description>Identifiant du traitement</description>
+                <sql type="varchar" precision="50" required="true"/>
+            </field>
+            <field name="content" type="string">
+                <description>Contenu XML d'un traitement</description>
+                <sql type="text" required="false"/>
+            </field>
+        </properties>
+    </entity>
+
+    <entity name="net.codjo.dataprocess.data.Family" table="PM_FAMILY">
+        <description>Famille de liste de traitements</description>
+        <feature>
+            <sql-index>
+                <idx type="primary-key" name-prefix="X1_" clustered="true"/>
+            </sql-index>
+            <generate-all/>
+            <sql gap="1000000"/>
+            <handler-sql id="selectFamilyByRepositoryId">
+                <attributes>
+                    <name>familyId</name>
+                    <name>repositoryId</name>
+                    <name>familyName</name>
+                    <name>visible</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        fam.FAMILY_ID,
+                            fam.REPOSITORY_ID,
+                            fam.FAMILY_NAME,
+                            fam.VISIBLE
+                        from
+                            PM_FAMILY fam
+                        inner join
+                            PM_REPOSITORY repo on fam.REPOSITORY_ID = repo.REPOSITORY_ID
+                        where
+                            repo.REPOSITORY_ID = ?
+                        order by fam.FAMILY_NAME ASC
+                        ]]>
+                </query>
+                <arg type="integer">repositoryId</arg>
+            </handler-sql>
+            <handler-sql id="selectVisibleFamilyByRepositoryId">
+                <attributes>
+                    <name>familyId</name>
+                    <name>repositoryId</name>
+                    <name>familyName</name>
+                    <name>visible</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        fam.FAMILY_ID,
+                            fam.REPOSITORY_ID,
+                            fam.FAMILY_NAME,
+                            fam.VISIBLE
+                        from
+                            PM_FAMILY fam
+                        inner join
+                            PM_REPOSITORY repo on fam.REPOSITORY_ID = repo.REPOSITORY_ID
+                        where
+                            repo.REPOSITORY_ID = ? and fam.VISIBLE = 1
+                        order by fam.FAMILY_NAME ASC
+                        ]]>
+                </query>
+                <arg type="integer">repositoryId</arg>
+            </handler-sql>
+        </feature>
+
+        <primary-key key-generator="MAX">
+            <field name="familyId"/>
+        </primary-key>
+
+        <properties>
+            <field name="familyId" type="big-decimal">
+                <description>Identifiant</description>
+                <sql type="numeric" precision="18" required="true"/>
+            </field>
+            <field name="repositoryId" type="big-decimal">
+                <description>Identifiant repository</description>
+                <sql type="numeric" precision="18" required="false"/>
+            </field>
+            <field name="familyName" type="string">
+                <description>Nom de la famille</description>
+                <sql type="varchar" precision="30" required="false"/>
+            </field>
+            <field name="visible" type="boolean">
+                <description>Visible</description>
+                <sql type="bit" required="true" default="1"/>
+            </field>
+        </properties>
+    </entity>
+
+    <entity name="net.codjo.dataprocess.data.ExecutionList" table="PM_EXECUTION_LIST">
+        <description>Parametrage des listes d'execution</description>
+        <feature>
+            <sql-index>
+                <idx type="primary-key" name-prefix="X1_" clustered="true"/>
+            </sql-index>
+            <generate-all/>
+            <handler-sql id="selectAllFamiliesByRepositoryId">
+                <attributes>
+                    <name>executionListId</name>
+                    <name>familyId</name>
+                    <name>familyName</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        trt.EXECUTION_LIST_ID,
+                            trt.FAMILY_ID,
+                            fam.FAMILY_NAME
+                        from
+                            PM_EXECUTION_LIST trt
+                        inner join
+                            PM_FAMILY fam on trt.FAMILY_ID = fam.FAMILY_ID
+                        where
+                            trt.REPOSITORY_ID = ?
+                        order by FAMILY_NAME ASC
+                        ]]>
+                </query>
+                <arg type="integer">repositoryId</arg>
+            </handler-sql>
+            <handler-sql id="selectExecutionListsUsingFamily">
+                <attributes>
+                    <name>executionListId</name>
+                    <name>repositoryId</name>
+                    <name>familyId</name>
+                    <name>executionListName</name>
+                    <name>priority</name>
+                    <name>repositoryName</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        trt.EXECUTION_LIST_ID,
+                            trt.REPOSITORY_ID,
+                            trt.FAMILY_ID,
+                            trt.EXECUTION_LIST_NAME,
+                            trt.PRIORITY,
+                            rep.REPOSITORY_NAME
+                        from
+                            PM_EXECUTION_LIST trt
+                        inner join
+                            PM_REPOSITORY rep on trt.REPOSITORY_ID = rep.REPOSITORY_ID
+                        where
+                            trt.FAMILY_ID = ?
+                        order by REPOSITORY_NAME, EXECUTION_LIST_NAME ASC
+                        ]]>
+                </query>
+                <arg type="integer">familyId</arg>
+            </handler-sql>
+            <handler-sql id="selectExecListsByNameAndRepo">
+                <attributes>
+                    <name>executionListId</name>
+                    <name>repositoryId</name>
+                    <name>familyId</name>
+                    <name>executionListName</name>
+                    <name>repositoryName</name>
+                    <name>priority</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        trt.EXECUTION_LIST_ID,
+                            trt.REPOSITORY_ID,
+                            trt.FAMILY_ID,
+                            trt.EXECUTION_LIST_NAME,
+                            rep.REPOSITORY_NAME,
+                            trt.PRIORITY
+                        from
+                            PM_EXECUTION_LIST trt
+                        inner join
+                            PM_REPOSITORY rep on trt.REPOSITORY_ID = rep.REPOSITORY_ID
+                        where
+                            trt.EXECUTION_LIST_NAME = ? and rep.REPOSITORY_ID = ?
+                        order by EXECUTION_LIST_NAME ASC
+                        ]]>
+                </query>
+                <arg type="string">executionListName</arg>
+                <arg type="integer">repositoryId</arg>
+            </handler-sql>
+            <sql gap="1000000"/>
+        </feature>
+
+        <primary-key key-generator="MAX">
+            <field name="executionListId"/>
+        </primary-key>
+
+        <properties>
+            <field name="executionListId" type="big-decimal">
+                <description>Identifiant</description>
+                <sql type="numeric" precision="18" required="true"/>
+            </field>
+            <field name="repositoryId" type="big-decimal">
+                <description>Identifiant du referentiel</description>
+                <sql type="numeric" precision="18" required="true"/>
+            </field>
+            <field name="familyId" type="big-decimal">
+                <description>Id de la famille</description>
+                <sql type="numeric" precision="4" required="true" default="0"/>
+            </field>
+            <field name="executionListName" type="string">
+                <description>Libelle</description>
+                <sql type="varchar" precision="50" required="false"/>
+            </field>
+            <field name="listScope" type="string">
+                <description>Type : traitement ou controle</description>
+                <sql type="varchar" precision="1" in="'C','T'"/>
+            </field>
+            <field name="priority" type="big-decimal">
+                <description>Priorite</description>
+                <sql type="numeric" precision="4" required="false" default="0"/>
+            </field>
+        </properties>
+    </entity>
+
+    <entity name="net.codjo.dataprocess.data.Treatment" table="PM_TREATMENT">
+        <description>Parametrage des traitements</description>
+        <feature>
+            <generate-all/>
+            <sql gap="1000000"/>
+            <handler-sql id="selectAllUserTreatmentId">
+                <attributes>
+                    <name>treatmentId</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        PM_TREATMENT.TREATMENT_ID
+	                    from
+	                        PM_TREATMENT
+                        inner join
+                            PM_EXECUTION_LIST
+                            on PM_TREATMENT.EXECUTION_LIST_ID = PM_EXECUTION_LIST.EXECUTION_LIST_ID
+                        inner join
+                            PM_REPOSITORY
+                            on PM_EXECUTION_LIST.REPOSITORY_ID = PM_REPOSITORY.REPOSITORY_ID
+                        where
+                            PM_REPOSITORY.REPOSITORY_ID = ?
+                        order by PM_TREATMENT.TREATMENT_ID
+                        ]]>
+                </query>
+                <arg type="integer">repositoryId</arg>
+            </handler-sql>
+        </feature>
+
+        <primary-key key-generator="MAX">
+            <field name="executionListId"/>
+        </primary-key>
+
+        <properties>
+            <field name="treatmentId" type="string">
+                <description>Identifiant traitement</description>
+                <sql type="varchar" precision="50" required="true"/>
+            </field>
+            <field name="priority" type="big-decimal">
+                <description>Priorite</description>
+                <sql type="numeric" precision="4" required="false" default="0"/>
+            </field>
+            <field name="executionListId" type="big-decimal">
+                <description>Id liste de traitements</description>
+                <sql type="numeric" precision="18" required="true"/>
+            </field>
+        </properties>
+    </entity>
+
+    <entity name="net.codjo.dataprocess.data.ExecutionListStatus" table="PM_EXECUTION_LIST_STATUS">
+        <description>Statut des listes d'execution</description>
+        <feature>
+            <sql-index>
+                <idx type="primary-key" name-prefix="X1_" clustered="true"/>
+            </sql-index>
+            <generate-all/>
+            <sql gap="1000000"/>
+            <handler-sql id="selectAllExecutionListStatusByRepositoryAndFamily">
+                <attributes>
+                    <name>executionListId</name>
+                    <name>priority</name>
+                    <name>executionListName</name>
+                    <name>status</name>
+                    <name>executionDate</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                select
+	                    sta.EXECUTION_LIST_ID,
+                        ref.PRIORITY,
+                        ref.EXECUTION_LIST_NAME,
+                        sta.STATUS,
+                        sta.EXECUTION_DATE
+                    from
+                        PM_EXECUTION_LIST_STATUS sta
+                    inner join
+                        PM_EXECUTION_LIST ref on sta.EXECUTION_LIST_ID = ref.EXECUTION_LIST_ID
+                    where
+                        ref.REPOSITORY_ID  = ? and ref.FAMILY_ID = ?
+                    order by ref.PRIORITY
+                        ]]>
+                </query>
+                <arg type="integer">repositoryId</arg>
+                <arg type="integer">familyId</arg>
+            </handler-sql>
+        </feature>
+
+        <primary-key key-generator="MAX">
+            <field name="executionListId"/>
+        </primary-key>
+
+        <properties>
+            <field name="executionListId" type="big-decimal">
+                <description>Id</description>
+                <sql type="numeric" precision="18" identity="false" required="true"/>
+            </field>
+            <field name="status" type="big-decimal">
+                <description>Statut</description>
+                <sql type="numeric" precision="4" required="false" default="0"/>
+            </field>
+            <field name="executionDate" type="java.sql.Timestamp">
+                <description>Date et heure</description>
+                <sql type="timestamp" required="false"/>
+            </field>
+        </properties>
+    </entity>
+
+    <entity name="net.codjo.dataprocess.data.TreatmentStatus" table="PM_TREATMENT_STATUS">
+        <description>Statut des traitenents apres leur execution</description>
+        <feature>
+            <generate-all/>
+            <sql gap="1000000"/>
+        </feature>
+
+        <primary-key key-generator="MAX">
+            <field name="executionListId"/>
+        </primary-key>
+
+        <properties>
+            <field name="executionListId" type="big-decimal">
+                <description>Identifiant liste de traitements</description>
+                <sql type="numeric" precision="18" identity="false" required="true"/>
+            </field>
+            <field name="treatmentId" type="string">
+                <description>Identifiant traitement</description>
+                <sql type="varchar" precision="50" required="true"/>
+            </field>
+            <field name="status" type="big-decimal">
+                <description>Statut</description>
+                <sql type="numeric" precision="4" required="false" default="0"/>
+            </field>
+            <field name="executionDate" type="java.sql.Timestamp">
+                <description>Date et heure</description>
+                <sql type="timestamp" required="false"/>
+            </field>
+            <field name="errorMessage" type="string">
+                <description>Message d'erreur</description>
+                <sql type="varchar" precision="255" required="false"/>
+            </field>
+        </properties>
+    </entity>
+
+    <entity name="net.codjo.dataprocess.data.ExecutionListDependency" table="PM_DEPENDENCY">
+        <description>Dependence entre listes d'execution</description>
+        <feature>
+            <generate-all/>
+            <sql gap="1000000"/>
+        </feature>
+
+        <primary-key>
+            <field name="executionListIdPrinc"/>
+        </primary-key>
+
+        <properties>
+            <field name="executionListIdPrinc" type="string">
+                <description>Identifiant liste de traitements principale</description>
+                <sql type="varchar" precision="50" required="true"/>
+            </field>
+            <field name="executionListIdDep" type="string">
+                <description>Identifiant liste de traitements dependante</description>
+                <sql type="varchar" precision="50" required="true"/>
+            </field>
+            <field name="repositoryId" type="big-decimal">
+                <description>Identifiant du repository</description>
+                <sql type="numeric" precision="18" required="false" default="0"/>
+            </field>
+        </properties>
+    </entity>
+
+    <entity name="net.codjo.dataprocess.data.DpUser" table="PM_DP_USER">
+        <description>Parametrage des droits des utilisateurs sur les repositories</description>
+        <feature>
+            <sql-index>
+                <idx type="primary-key" name-prefix="X1_" clustered="true"/>
+            </sql-index>
+            <generate-all/>
+            <handler-sql id="selectDpUserParamByName">
+                <attributes>
+                    <name>userId</name>
+                    <name>userName</name>
+                    <name>userParam</name>
+                </attributes>
+                <query>
+                    <![CDATA[
+	                    select
+	                        USER_ID,
+	                        USER_NAME,
+	                        USER_PARAM
+                        from
+                            PM_DP_USER
+                        where
+                            USER_NAME = ?
+                        ]]>
+                </query>
+                <arg type="string">userName</arg>
+            </handler-sql>
+            <sql gap="1000000"/>
+        </feature>
+
+        <primary-key key-generator="IDENTITY">
+            <field name="userId"/>
+        </primary-key>
+
+        <properties>
+            <field name="userId" type="big-decimal">
+                <description>Identifiant</description>
+                <sql type="numeric" precision="23" identity="true" required="true"/>
+            </field>
+            <field name="userName" type="string">
+                <description>Nom de l'utilisateur</description>
+                <sql type="varchar" precision="255" required="true"/>
+            </field>
+            <field name="userParam" type="string">
+                <description>Parametres de l'utilisateur</description>
+                <sql type="text" required="true"/>
+            </field>
+        </properties>
+    </entity>
+
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+    <!--                   Table de resume des requetes direct T_DIRECTSQL_LOG          -->
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+    <entity name="net.codjo.dataprocess.data.technik.TDirectSqlLog" table="T_DIRECTSQL_LOG" type="data">
+        <description>Table des requetes executees en direct</description>
+        <feature>
+            <generate-all/>
+            <handler-requetor id="tDirectSqlLogRequetorHandler"/>
+            <doc-structure/>
+            <sql gap="1000000"/>
+            <sql-index>
+                <idx type="primary-key" name-prefix="X1_" clustered="true"/>
+            </sql-index>
+        </feature>
+
+        <primary-key key-generator="MAX">
+            <field name="tDirectSqlLogId"/>
+        </primary-key>
+
+        <properties>
+            <field name="tDirectSqlLogId" type="big-decimal">
+                <description>Identifiant</description>
+                <sql type="numeric" precision="23" identity="true" required="true"/>
+            </field>
+            <field name="initiator" type="string">
+                <description>Login utilisateur</description>
+                <sql type="varchar" precision="30" required="true"/>
+            </field>
+            <field name="flag" type="string">
+                <description>Flag pose sur la requete</description>
+                <sql type="varchar" precision="30" required="false"/>
+            </field>
+            <field name="requestDate" type="java.sql.Timestamp">
+                <description>Date de la requete</description>
+                <sql type="timestamp" required="true"/>
+            </field>
+            <field name="sqlRequest" type="string">
+                <description>Requete Sql</description>
+                <sql type="text" required="true"/>
+            </field>
+            <field name="result" type="string">
+                <description>Resultat</description>
+                <sql type="text" required="true"/>
+            </field>
+        </properties>
+    </entity>
+
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+    <!--   Table des transferts  (utilisee dans les plans d'integration pour transferer  -->
+    <!--         les donnees des tables de controles vers les tables finales)            -->
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+    <entity name="net.codjo.dataprocess.data.technik.TTransfer" table="T_TRANSFER" type="data">
+        <description>Table des transferts</description>
+        <feature>
+            <generate-all/>
+            <doc-structure/>
+            <sql gap="1000000"/>
+            <sql-index>
+                <idx type="primary-key" name-prefix="X1_" clustered="true"/>
+            </sql-index>
+        </feature>
+
+        <primary-key key-generator="MAX">
+            <field name="tTransferId"/>
+        </primary-key>
+
+        <properties>
+            <field name="tTransferId" type="big-decimal">
+                <description>Identifiant</description>
+                <sql type="numeric" precision="23" identity="true" required="true"/>
+            </field>
+            <field name="operationKey" type="big-decimal">
+                <description>Clef d'operation courante</description>
+                <sql type="numeric" precision="23" required="true"/>
+            </field>
+            <field name="sourceId" type="big-decimal">
+                <description>Id correspondant a la cle primaire de la table d'origine</description>
+                <sql type="numeric" precision="23" required="true"/>
+            </field>
+            <field name="flag" type="big-decimal">
+                <description>Flag de transfer</description>
+                <sql type="numeric" precision="23" required="true"/>
+            </field>
+        </properties>
+    </entity>
+
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+    <!--           Table implémentant une MAP de configuration (avec clé/valeur)         -->
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+    <entity name="net.codjo.dataprocess.data.PmDpConfig" table="PM_DP_CONFIG" type="data">
+        <description>Table de configuration (clé/valeur)</description>
+        <feature>
+            <generate-all/>
+            <doc-structure/>
+            <sql gap="1000000"/>
+            <sql-index>
+                <idx type="primary-key" name-prefix="X1_" clustered="true"/>
+            </sql-index>
+        </feature>
+
+        <primary-key key-generator="IDENTITY">
+            <field name="pmDpConfigId"/>
+        </primary-key>
+
+        <properties>
+            <field name="pmDpConfigId" type="big-decimal">
+                <description>Identifiant</description>
+                <sql type="numeric" precision="23" identity="true" required="true"/>
+            </field>
+            <field name="cle" type="string">
+                <description>Clé</description>
+                <sql type="varchar" precision="100" required="true"/>
+            </field>
+            <field name="valeur" type="string">
+                <description>Valeur</description>
+                <sql type="varchar" precision="255" required="true"/>
+            </field>
+        </properties>
+    </entity>
+</entities>

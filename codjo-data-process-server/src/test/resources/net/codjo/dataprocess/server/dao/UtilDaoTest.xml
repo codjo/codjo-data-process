@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Scenarii SYSTEM "http://scenarii.dtd">
+<Scenarii name="AUTOMATIC">
+    <Scenario id="EXPORT">
+        <input>
+            <table name="PM_TREATMENT">
+                <row>
+                    <field name="TREATMENT_ID" value="AAAA"/>
+                    <field name="PRIORITY" value="1"/>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                </row>
+                <row>
+                    <field name="TREATMENT_ID" value="BBBB"/>
+                    <field name="PRIORITY" value="2"/>
+                    <field name="EXECUTION_LIST_ID" value="20"/>
+                </row>
+                <row>
+                    <field name="TREATMENT_ID" value="CCCC"/>
+                    <field name="PRIORITY" value="3"/>
+                    <field name="EXECUTION_LIST_ID" value="30"/>
+                </row>
+                <row>
+                    <field name="TREATMENT_ID" value="DDDD"/>
+                    <field name="PRIORITY" value="4"/>
+                    <field name="EXECUTION_LIST_ID" value="40"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+        </etalon>
+    </Scenario>
+</Scenarii>

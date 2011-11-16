@@ -1,0 +1,191 @@
+bsh
+net.codjo.agent
+net.codjo.control.common
+net.codjo.database.api
+net.codjo.database.api.query
+net.codjo.dataprocess.common
+net.codjo.dataprocess.common.codec
+net.codjo.dataprocess.common.context
+net.codjo.dataprocess.common.exception
+net.codjo.dataprocess.common.message
+net.codjo.dataprocess.common.model
+net.codjo.dataprocess.common.report
+net.codjo.dataprocess.common.table.annotations
+net.codjo.dataprocess.common.table.model
+net.codjo.dataprocess.common.userparam
+net.codjo.dataprocess.common.util
+net.codjo.dataprocess.server.audit
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.message
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.workflow.common.message
+	-> net.codjo.workflow.server.plugin
+net.codjo.dataprocess.server.control
+	-> net.codjo.control.common
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.userparam
+	-> net.codjo.dataprocess.server.dao
+	-> net.codjo.dataprocess.server.handlerhelper
+	-> net.codjo.dataprocess.server.plugin
+	-> org.picocontainer
+net.codjo.dataprocess.server.dao
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.server.repository
+	-> net.codjo.dataprocess.server.util
+	-> net.codjo.mad.server.handler
+	-> org.w3c.dom
+net.codjo.dataprocess.server.handler
+	-> net.codjo.agent
+	-> net.codjo.dataprocess.common.table.annotations
+	-> net.codjo.dataprocess.common.table.model
+	-> net.codjo.dataprocess.server.handler.handlerfactory
+	-> net.codjo.mad.server.handler
+	-> net.codjo.plugin.common
+	-> net.codjo.reflect.collect
+	-> org.picocontainer
+net.codjo.dataprocess.server.handler.handlerfactory
+	-> net.codjo.database.api
+	-> net.codjo.database.api.query
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.table.annotations
+	-> net.codjo.dataprocess.common.table.model
+	-> net.codjo.mad.server.handler
+	-> net.codjo.mad.server.handler.requetor
+	-> net.codjo.mad.server.handler.sql
+	-> net.codjo.util.string
+	-> org.picocontainer
+	-> org.picocontainer.defaults
+net.codjo.dataprocess.server.handlercommand
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.server.handlerhelper
+	-> net.codjo.dataprocess.server.plugin
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.context
+	-> net.codjo.dataprocess.server.handlerhelper
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.database
+	-> net.codjo.dataprocess.server.util
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.dependency
+	-> net.codjo.dataprocess.server.handlerhelper
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.fmanager
+	-> net.codjo.mad.server.handler
+	-> sun.misc
+net.codjo.dataprocess.server.handlercommand.imports
+	-> net.codjo.dataprocess.server.plugin
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.repository
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.server.handlerhelper
+	-> net.codjo.dataprocess.server.treatmenthelper
+	-> net.codjo.dataprocess.server.util
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlerfactory
+	-> net.codjo.mad.server.handler
+	-> net.codjo.mad.server.handler.sql
+	-> net.codjo.util.string
+net.codjo.dataprocess.server.handlerhelper
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.report
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.server.dao
+	-> net.codjo.dataprocess.server.kernel
+	-> net.codjo.dataprocess.server.repository
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlerselect
+	-> net.codjo.database.api
+	-> net.codjo.mad.server.handler
+	-> net.codjo.mad.server.handler.sql
+net.codjo.dataprocess.server.imports
+	-> net.codjo.dataprocess.common
+	-> net.codjo.imports.common
+net.codjo.dataprocess.server.kernel
+	-> bsh
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.report
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.server.dao
+	-> net.codjo.dataprocess.server.repository
+	-> net.codjo.workflow.common.message
+	-> net.codjo.workflow.common.protocol
+net.codjo.dataprocess.server.plugin
+	-> net.codjo.agent
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.message
+	-> net.codjo.dataprocess.common.report
+	-> net.codjo.dataprocess.server.audit
+	-> net.codjo.dataprocess.server.handler
+	-> net.codjo.dataprocess.server.kernel
+	-> net.codjo.imports.common.message
+	-> net.codjo.mad.server.plugin
+	-> net.codjo.plugin.common
+	-> net.codjo.plugin.server
+	-> net.codjo.reflect.collect
+	-> net.codjo.sql.server
+	-> net.codjo.workflow.common.message
+	-> net.codjo.workflow.common.protocol
+	-> net.codjo.workflow.server.api
+	-> net.codjo.workflow.server.plugin
+	-> org.picocontainer
+net.codjo.dataprocess.server.repository
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+net.codjo.dataprocess.server.treatmenthelper
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.userparam
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.server.kernel
+	-> net.codjo.dataprocess.server.util
+	-> org.apache.commons.lang
+	-> org.w3c.dom
+net.codjo.dataprocess.server.util
+	-> net.codjo.control.common
+	-> net.codjo.dataprocess.common
+net.codjo.imports.common
+net.codjo.imports.common.message
+net.codjo.mad.server.handler
+net.codjo.mad.server.handler.requetor
+net.codjo.mad.server.handler.sql
+net.codjo.mad.server.plugin
+net.codjo.plugin.common
+net.codjo.plugin.server
+net.codjo.reflect.collect
+net.codjo.sql.server
+net.codjo.util.string
+net.codjo.workflow.common.message
+net.codjo.workflow.common.protocol
+net.codjo.workflow.server.api
+net.codjo.workflow.server.plugin
+org.apache.commons.lang
+org.picocontainer
+org.picocontainer.defaults
+org.w3c.dom
+sun.misc

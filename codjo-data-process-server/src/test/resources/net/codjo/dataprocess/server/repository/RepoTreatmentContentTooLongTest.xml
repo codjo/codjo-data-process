@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+    <treatment id="trt1" type="java" scope="TREATMENT">
+        <title>Maj des ptf miroités</title>
+        <comment>Traitement des Maj des ptf miroités</comment>
+        <target>com.patati.patata.Patatouf</target>
+        <gui-target>com.patati.patata.mage.imba</gui-target>
+        <arguments/>
+    </treatment>
+    <treatment id="trt2" type="java" scope="TREATMENT">
+        <title>Maj des ptf miroités</title>
+        <comment>Traitement des Maj des ptf miroités</comment>
+        <target>
+            import net.codjo.scop.common.*;
+            import net.codjo.scop.server.dataprocess.util.*;
+            import net.codjo.dataprocess.common.exception.*;
+            import java.sql.*;
+            import java.text.SimpleDateFormat;
+            import java.util.Date;
+            import net.codjo.dataprocess.common.util.CommonUtils;
+
+            Connection con;
+            String sql;
+            int okCompte,okPeriode,intCompte,intPeriode,intCodePortefeuille,okCodePortefeuille;
+            int okTypeStock,okperiode,intTypeStock;
+            PreparedStatement stmt,stmt2,stmt3,stmt10;
+            String periodeOrigine,periodeDest,periode;
+            String typestock,codePortefeuille;
+
+            private int tableAModifier(String tablesName)
+            throws Exception {int res = 1;
+            if (tablesName.indexOf("_RESULTAT") != -1 ){res = 0;}
+
+            return res;
+            }
+
+            private int champPeriode(String champName)
+            throws Exception {int res = 0;
+            if ("PERIODE".equals(champName)){res = 1;}
+            return res;
+            }
+
+            private int champTypeStock(String champName)
+            throws Exception {int res = 0;
+            if ("TYPE_STOCK".equals(champName)){res = 1;}
+            return res;
+            }
+
+            private int champCodePortefeuille(String champName)
+            throws Exception {int res = 0;
+            if ("CODE_PORTEFEUILLE".equals(champName)){res = 1;}
+            return res;}
+
+            private int champCompte(String champName)
+            throws Exception {int res = 0;
+            if (champName.indexOf("COMPTE") != -1 ){res = 1;}
+            return res;}
+
+            private void updateTable(String tablesName)
+            throws Exception{
+            String sql="update "+tablesName+" set PERIODE = ? from "+tablesName+" where PERIODE=?";
+            stmt3 = con.prepareStatement(sql);stmt3.setString(1, periodeDest);
+            stmt3.setString(2, periodeOrigine);
+            stmt3.executeUpdate();
+            }
+
+            private void deleteTable (String tablesName,String codePortefeuille,
+            String periode, String typestock,Integer nb)
+            throws Exception{String sql="delete "+tablesName+" from "+tablesName
+            +" where (PERIODE=? and PERIODE &lt;> '200713') and CODE_PORTEFEUILLE = ? and TYPE_STOCK = ?";
+            stmt3 = con.prepareStatement(sql);
+            stmt3.setString(1, periode);
+            stmt3.setString(2, codePortefeuille);
+            stmt3.setString(3, typestock);
+            int varOk = 0;
+            String libOk = null;
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+
+            if (0 != varOk){
+            treatment.sendInformationToClient("NON "
+            +libOk+"->"+tablesName+"/"+periode+"/"+codePortefeuille+"/"+typestock+":"+nb);}
+            else
+            {treatment.sendInformationToClient("delete ->"
+            +tablesName+"/"+periode+"/"+codePortefeuille+"/"+typestock+":"+nb);
+            stmt3.executeUpdate();}}
+
+            private void selectionDeleteTable(String tablesName)
+            throws Exception{sql=" if exists (select 1 from tempdb..sysobjects where id=object_id('#PTF1'))"
+            +"begin drop table tempdb..#PTF1 end";
+            stmt=con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            sql=" if exists (select 1 from tempdb..sysobjects where id=object_id('#PTF2'))"
+            +"begin drop table tempdb..#PTF2 end";
+            stmt=con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            sql ="select TYPE_STOCK,PERIODE,CODE_PORTEFEUILLE,count(1) as NB into #PTF1 "
+            +"from "+tablesName+" group by TYPE_STOCK,PERIODE,CODE_PORTEFEUILLE "
+            +"order by TYPE_STOCK,PERIODE,CODE_PORTEFEUILLE";
+            stmt = con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            sql ="select #PTF1.CODE_PORTEFEUILLE,#PTF1.TYPE_STOCK,#PTF1.PERIODE,#PTF1.NB into #PTF2 "
+            +"from #PTF1 "
+            +" left join PM_OPCVM_PERIMETRE on "
+            +"PM_OPCVM_PERIMETRE.PERIODE=#PTF1.PERIODE "
+            +"and PM_OPCVM_PERIMETRE.CODE_PORTEFEUILLE=#PTF1.CODE_PORTEFEUILLE "
+            +"and PM_OPCVM_PERIMETRE.TYPE_STOCK=#PTF1.TYPE_STOCK "
+            +"where PM_OPCVM_PERIMETRE.CODE_PORTEFEUILLE is null";
+            stmt = con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            stmt10=con.prepareStatement("select * from #PTF2");
+            ResultSet rsptf=stmt10.executeQuery();
+            while (rsptf.next()) {
+            String a=rsptf.getString("CODE_PORTEFEUILLE");
+            String b=rsptf.getString("PERIODE");
+            String c=rsptf.getString("TYPE_STOCK");
+            int d=rsptf.getInt("NB");
+            if ( "200713".equals(b)) {
+            treatment.sendInformationToClient("NON1 200713 ->"+tablesName+"/"+a+"/"+b+"/"+c+":"+d); }
+            else {
+            deleteTable(tablesName,a,b,"HB2",d);
+            }
+            }
+
+            sql=" if exists (select 1 from tempdb..sysobjects where id=object_id('#PTF1'))"
+            +"begin drop table tempdb..#PTF1 end";
+            stmt=con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            sql=" if exists (select 1 from tempdb..sysobjects where id=object_id('#PTF2'))"
+            +"begin drop table tempdb..#PTF2 end";
+            stmt=con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            }
+
+            try {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            Date dateDebut = Calendar.getInstance().getTime();
+            long debut = dateDebut.getTime();
+
+            con = treatment.getConnection();
+            periode = treatment.getArgument("periode");
+
+            stmt=con.prepareStatement("select name,id from sysobjects order by name");
+            ResultSet rstable=stmt.executeQuery();
+
+            while (rstable.next()) {
+            <!--1-->
+            String tablesName=rstable.getString("name");
+            String tablesId=rstable.getString("id");
+
+            if (tableAModifier(tablesName)==0){
+            <!--2-->
+            stmt2=con.prepareStatement("select name from syscolumns where id="+tablesId);
+            ResultSet rscol=stmt2.executeQuery();
+            okCodePortefeuille=0;
+            okTypeStock=0;
+            okPeriode=0;
+
+            while (rscol.next()) {
+            <!--3-->
+            String colName=rscol.getString("name");
+            intCodePortefeuille=champCodePortefeuille(colName);
+            intTypeStock=champTypeStock(colName);
+            intPeriode=champPeriode(colName);
+
+            okPeriode=okPeriode+intPeriode;
+            okCodePortefeuille=okCodePortefeuille+intCodePortefeuille;
+            okTypeStock=okTypeStock+intTypeStock;
+            }
+            if (okCodePortefeuille != 0 )
+            {if (okTypeStock != 0)
+            {if (okCodePortefeuille != 0)
+            <!--4-->
+            {
+            selectionDeleteTable(tablesName);
+            }
+            <!--4-->
+            }
+            <!--3-->
+            }
+            <!--2-->
+            }
+            <!--1-->
+            }
+            Date dateFin = Calendar.getInstance().getTime();
+            long fin = dateFin.getTime();
+            treatment.sendInformationToClient("\n début:" + dateFormat.format(dateDebut)
+            + "/fin:" + dateFormat.format(dateFin) + "/durée:"
+            + CommonUtils.timeMillisToString(fin - debut));
+            }
+            catch (Exception ex) {
+            Log.error(this.getClass(),ex);
+            throw new TreatmentException("Erreur dans le contrôle :\n"
+            +" L4.DeletePtfNonConso "+ex.getLocalizedMessage());
+            }
+            finally {
+            if (stmt != null) {
+            stmt.close();
+            }
+            }
+        </target>
+        <gui-target>com.patati.patata.mage.imba</gui-target>
+        <arguments/>
+    </treatment>
+    <treatment id="trt3" type="java" scope="TREATMENT">
+        <title>Titre quelconque</title>
+        <comment>Commentaire quelconque</comment>
+        <target>
+            import net.codjo.scop.common.*;
+            import net.codjo.scop.server.dataprocess.util.*;
+            import net.codjo.dataprocess.common.exception.*;
+            import java.sql.*;
+            import java.text.SimpleDateFormat;
+            import java.util.Date;
+            import net.codjo.dataprocess.common.util.CommonUtils;
+
+            Connection con;
+            String sql;
+            int okCompte,okPeriode,intCompte,intPeriode,intCodePortefeuille,okCodePortefeuille;
+            int okTypeStock,okperiode,intTypeStock;
+            PreparedStatement stmt,stmt2,stmt3,stmt10;
+            String periodeOrigine,periodeDest,periode;
+            String typestock,codePortefeuille;
+
+            private int tableAModifier(String tablesName)
+            throws Exception {int res = 1;
+            if (tablesName.indexOf("_RESULTAT") != -1 ){res = 0;}
+
+            return res;
+            }
+
+            private int champPeriode(String champName)
+            throws Exception {int res = 0;
+            if ("PERIODE".equals(champName)){res = 1;}
+            return res;
+            }
+
+            private int champTypeStock(String champName)
+            throws Exception {int res = 0;
+            if ("TYPE_STOCK".equals(champName)){res = 1;}
+            return res;
+            }
+
+            private int champCodePortefeuille(String champName)
+            throws Exception {int res = 0;
+            if ("CODE_PORTEFEUILLE".equals(champName)){res = 1;}
+            return res;}
+
+            private int champCompte(String champName)
+            throws Exception {int res = 0;
+            if (champName.indexOf("COMPTE") != -1 ){res = 1;}
+            return res;}
+
+            private void updateTable(String tablesName)
+            throws Exception{
+            String sql="update "+tablesName+" set PERIODE = ? from "+tablesName+" where PERIODE=?";
+            stmt3 = con.prepareStatement(sql);stmt3.setString(1, periodeDest);
+            stmt3.setString(2, periodeOrigine);
+            stmt3.executeUpdate();
+            }
+
+            private void deleteTable (String tablesName,String codePortefeuille,
+            String periode, String typestock,Integer nb)
+            throws Exception{String sql="delete "+tablesName+" from "+tablesName
+            +" where (PERIODE=? and PERIODE &lt;> '200713') and CODE_PORTEFEUILLE = ? and TYPE_STOCK = ?";
+            stmt3 = con.prepareStatement(sql);
+            stmt3.setString(1, periode);
+            stmt3.setString(2, codePortefeuille);
+            stmt3.setString(3, typestock);
+            int varOk = 0;
+            String libOk = null;
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("200713".equals(periode)){varOk=1; libOk=periode;}
+            if ("1610006".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("54".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("5X".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("6L".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A17".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("A28".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("G8".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+            if ("L4".equals(codePortefeuille)){varOk=1; libOk=codePortefeuille;}
+
+            if (0 != varOk){
+            treatment.sendInformationToClient("NON "
+            +libOk+"->"+tablesName+"/"+periode+"/"+codePortefeuille+"/"+typestock+":"+nb);}
+            else
+            {treatment.sendInformationToClient("delete ->"
+            +tablesName+"/"+periode+"/"+codePortefeuille+"/"+typestock+":"+nb);
+            stmt3.executeUpdate();}}
+
+            private void selectionDeleteTable(String tablesName)
+            throws Exception{sql=" if exists (select 1 from tempdb..sysobjects where id=object_id('#PTF1'))"
+            +"begin drop table tempdb..#PTF1 end";
+            stmt=con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            sql=" if exists (select 1 from tempdb..sysobjects where id=object_id('#PTF2'))"
+            +"begin drop table tempdb..#PTF2 end";
+            stmt=con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            sql ="select TYPE_STOCK,PERIODE,CODE_PORTEFEUILLE,count(1) as NB into #PTF1 "
+            +"from "+tablesName+" group by TYPE_STOCK,PERIODE,CODE_PORTEFEUILLE "
+            +"order by TYPE_STOCK,PERIODE,CODE_PORTEFEUILLE";
+            stmt = con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            sql ="select #PTF1.CODE_PORTEFEUILLE,#PTF1.TYPE_STOCK,#PTF1.PERIODE,#PTF1.NB into #PTF2 "
+            +"from #PTF1 "
+            +" left join PM_OPCVM_PERIMETRE on "
+            +"PM_OPCVM_PERIMETRE.PERIODE=#PTF1.PERIODE "
+            +"and PM_OPCVM_PERIMETRE.CODE_PORTEFEUILLE=#PTF1.CODE_PORTEFEUILLE "
+            +"and PM_OPCVM_PERIMETRE.TYPE_STOCK=#PTF1.TYPE_STOCK "
+            +"where PM_OPCVM_PERIMETRE.CODE_PORTEFEUILLE is null";
+            stmt = con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            stmt10=con.prepareStatement("select * from #PTF2");
+            ResultSet rsptf=stmt10.executeQuery();
+            while (rsptf.next()) {
+            String a=rsptf.getString("CODE_PORTEFEUILLE");
+            String b=rsptf.getString("PERIODE");
+            String c=rsptf.getString("TYPE_STOCK");
+            int d=rsptf.getInt("NB");
+            if ( "200713".equals(b)) {
+            treatment.sendInformationToClient("NON1 200713 ->"+tablesName+"/"+a+"/"+b+"/"+c+":"+d); }
+            else {
+            deleteTable(tablesName,a,b,"HB2",d);
+            }
+            }
+
+            sql=" if exists (select 1 from tempdb..sysobjects where id=object_id('#PTF1'))"
+            +"begin drop table tempdb..#PTF1 end";
+            stmt=con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            sql=" if exists (select 1 from tempdb..sysobjects where id=object_id('#PTF2'))"
+            +"begin drop table tempdb..#PTF2 end";
+            stmt=con.prepareStatement(sql);
+            stmt.executeUpdate();
+
+            }
+
+            try {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            Date dateDebut = Calendar.getInstance().getTime();
+            long debut = dateDebut.getTime();
+
+            con = treatment.getConnection();
+            periode = treatment.getArgument("periode");
+
+            stmt=con.prepareStatement("select name,id from sysobjects order by name");
+            ResultSet rstable=stmt.executeQuery();
+
+            while (rstable.next()) {
+            <!--1-->
+            String tablesName=rstable.getString("name");
+            String tablesId=rstable.getString("id");
+
+            if (tableAModifier(tablesName)==0){
+            <!--2-->
+            stmt2=con.prepareStatement("select name from syscolumns where id="+tablesId);
+            ResultSet rscol=stmt2.executeQuery();
+            okCodePortefeuille=0;
+            okTypeStock=0;
+            okPeriode=0;
+
+            while (rscol.next()) {
+            <!--3-->
+            String colName=rscol.getString("name");
+            intCodePortefeuille=champCodePortefeuille(colName);
+            intTypeStock=champTypeStock(colName);
+            intPeriode=champPeriode(colName);
+
+            okPeriode=okPeriode+intPeriode;
+            okCodePortefeuille=okCodePortefeuille+intCodePortefeuille;
+            okTypeStock=okTypeStock+intTypeStock;
+            }
+            if (okCodePortefeuille != 0 )
+            {if (okTypeStock != 0)
+            {if (okCodePortefeuille != 0)
+            <!--4-->
+            {
+            selectionDeleteTable(tablesName);
+            }
+            <!--4-->
+            }
+            <!--3-->
+            }
+            <!--2-->
+            }
+            <!--1-->
+            }
+            Date dateFin = Calendar.getInstance().getTime();
+            long fin = dateFin.getTime();
+            treatment.sendInformationToClient("\n début:" + dateFormat.format(dateDebut)
+            + "/fin:" + dateFormat.format(dateFin) + "/durée:"
+            + CommonUtils.timeMillisToString(fin - debut));
+            }
+            catch (Exception ex) {
+            Log.error(this.getClass(),ex);
+            throw new TreatmentException("Erreur dans le contrôle :\n"
+            +" L4.DeletePtfNonConso "+ex.getLocalizedMessage());
+            }
+            finally {
+            if (stmt != null) {
+            stmt.close();
+            }
+            }
+        </target>
+        <gui-target>com.patati.patata.mage.imba</gui-target>
+        <arguments/>
+    </treatment>
+</root>

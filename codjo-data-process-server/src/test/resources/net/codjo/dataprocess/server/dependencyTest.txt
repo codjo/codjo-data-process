@@ -1,0 +1,132 @@
+net.codjo.agent
+net.codjo.agent.test
+net.codjo.control.common
+net.codjo.database.common.api
+net.codjo.database.common.api.structure
+net.codjo.datagen
+net.codjo.dataprocess.common
+net.codjo.dataprocess.common.codec
+net.codjo.dataprocess.common.context
+net.codjo.dataprocess.common.exception
+net.codjo.dataprocess.common.message
+net.codjo.dataprocess.common.model
+net.codjo.dataprocess.common.report
+net.codjo.dataprocess.common.util
+net.codjo.dataprocess.server
+net.codjo.dataprocess.server.audit
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.message
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.server.control
+	-> net.codjo.control.common
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.server.dao
+	-> net.codjo.database.common.api
+	-> net.codjo.database.common.api.structure
+	-> net.codjo.datagen
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.server.handlerhelper
+	-> net.codjo.dataprocess.server.repository
+	-> net.codjo.dataprocess.server.util
+	-> net.codjo.test.common.fixture
+	-> net.codjo.test.common.matcher
+	-> net.codjo.tokio
+	-> net.codjo.util.file
+	-> org.w3c.dom
+net.codjo.dataprocess.server.handlercommand
+	-> net.codjo.dataprocess.server.plugin
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.context
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.database
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.dependency
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.fmanager
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.imports
+	-> net.codjo.dataprocess.server.plugin
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlercommand.repository
+	-> net.codjo.mad.server.handler
+net.codjo.dataprocess.server.handlerfactory
+	-> net.codjo.database.common.api
+	-> net.codjo.database.common.api.structure
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.server.handlerhelper
+net.codjo.dataprocess.server.imports
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.server.kernel
+	-> net.codjo.agent
+	-> net.codjo.database.common.api
+	-> net.codjo.database.common.api.structure
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.report
+	-> net.codjo.test.common.matcher
+	-> net.codjo.test.common.mock
+	-> net.codjo.tokio
+	-> net.codjo.workflow.common.message
+	-> net.codjo.workflow.common.protocol
+net.codjo.dataprocess.server.plugin
+	-> net.codjo.agent
+	-> net.codjo.agent.test
+	-> net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.context
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.message
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.report
+	-> net.codjo.dataprocess.server.kernel
+	-> net.codjo.mad.server.plugin
+	-> net.codjo.plugin.server
+	-> net.codjo.sql.server
+	-> net.codjo.test.common
+	-> net.codjo.test.common.matcher
+	-> net.codjo.workflow.common.message
+	-> net.codjo.workflow.common.protocol
+	-> net.codjo.workflow.server.api
+	-> net.codjo.workflow.server.plugin
+net.codjo.dataprocess.server.repository
+	-> net.codjo.database.common.api
+	-> net.codjo.datagen
+	-> net.codjo.dataprocess.common.exception
+	-> net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.server.treatmenthelper
+	-> net.codjo.dataprocess.server.util
+	-> net.codjo.test.common.fixture
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.server.treatmenthelper
+	-> net.codjo.test.common.matcher
+net.codjo.dataprocess.server.util
+	-> net.codjo.database.common.api
+	-> net.codjo.database.common.api.structure
+	-> net.codjo.datagen
+	-> net.codjo.dataprocess.common
+	-> net.codjo.test.common.fixture
+	-> net.codjo.test.common.matcher
+	-> net.codjo.tokio
+	-> net.codjo.tokio.model
+net.codjo.mad.server.handler
+net.codjo.mad.server.plugin
+net.codjo.plugin.server
+net.codjo.sql.server
+net.codjo.test.common
+net.codjo.test.common.fixture
+net.codjo.test.common.matcher
+net.codjo.test.common.mock
+net.codjo.tokio
+net.codjo.tokio.model
+net.codjo.util.file
+net.codjo.workflow.common.message
+net.codjo.workflow.common.protocol
+net.codjo.workflow.server.api
+net.codjo.workflow.server.plugin
+org.w3c.dom

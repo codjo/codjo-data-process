@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!ELEMENT root ( treatment+ ) >
+
+<!ELEMENT treatment ( title, comment?, target,result-table?, arguments? ) >
+<!ATTLIST treatment type (java|sql|stored_procedure) #REQUIRED >
+<!ATTLIST treatment scope (TREATMENT|CONTROL) #REQUIRED >
+<!ATTLIST treatment id ID #REQUIRED >
+
+<!ELEMENT arguments (arg*) >
+<!ELEMENT arg EMPTY >
+<!ATTLIST arg name CDATA #REQUIRED >
+<!ATTLIST arg value NMTOKEN #REQUIRED >
+<!ATTLIST arg position NMTOKEN #REQUIRED >
+<!ATTLIST arg type NMTOKEN #REQUIRED >
+
+<!ELEMENT target ( #PCDATA ) >
+
+<!ELEMENT gui-target ( #PCDATA ) >
+
+<!ELEMENT result-table ( #PCDATA ) >
+
+<!ELEMENT title ( #PCDATA) >
+
+<!ELEMENT comment ( #PCDATA ) >
+

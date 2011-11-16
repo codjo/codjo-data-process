@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+
+    <properties>
+        <title>codjo-dataprocess-gui</title>
+    </properties>
+
+    <body>
+        <section name="Data-process-gui">
+            <p>
+                Librairie responsable des IHM des traitements.
+            </p>
+            <subsection name="Packages">
+                <p>
+                    Description rapide des packages de cette librairie.
+                </p>
+                <table>
+                    <tr>
+                        <th>Package</th>
+                        <th>Commentaire</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/gui/launcher/package-summary.html">
+                                dataprocess.gui.launcher
+                            </a>
+                        </td>
+                        <td>
+                            IHM de lancement des traitements.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/gui/launcher/result/package-summary.html">
+                                dataprocess.gui.launcher.result
+                            </a>
+                        </td>
+                        <td>
+                            IHM de résultat des traitements.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/gui/param/package-summary.html">
+                                dataprocess.gui.param
+                            </a>
+                        </td>
+                        <td>
+                            IHM de paramétrage des traitements.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/gui/repository/package-summary.html">
+                                dataprocess.gui.repository
+                            </a>
+                        </td>
+                        <td>
+                            IHM de paramétrage des repositories.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/gui/selector/package-summary.html">
+                                dataprocess.gui.selector
+                            </a>
+                        </td>
+                        <td>
+                            IHM des sélecteurs.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/gui/util/package-summary.html">
+                                dataprocess.gui.util
+                            </a>
+                        </td>
+                        <td>
+                            Utilitaires divers.
+                        </td>
+                    </tr>
+                </table>
+            </subsection>
+        </section>
+        <section name="Utilisation">
+            <p>
+                Ce package contient les classes de l'IHM de data-process.
+                <br/>
+                Le menu peut etre ajouté sous la forme suivante dans menu.xml :
+            </p>
+            <source><![CDATA[
+    <menu>
+        <name>Traitements</name>
+        <menu>
+            <name>Paramétrage</name>
+            <menu action="net.codjo.dataprocess.gui.param.ExecutionListParamAction"/>
+                        <menu action="net.codjo.dataprocess.gui.param.ExecutionListPriorityAction"/>
+                        <menu action="net.codjo.dataprocess.gui.dependency.DependencyAction"/>
+                        <menu separator="true"/>
+                        <menu action="net.codjo.MON_APPLICATION.gui.dataprocess.RepositoryAction"/>
+                        <menu separator="true"/>
+                        <menu action="net.codjo.dataprocess.gui.family.FamilyAction"/>
+                    </menu>
+                    <menu>
+                        <name>Exécution</name>
+                        <menu action="net.codjo.MON_APPLICATION.gui.dataprocess.ScopLauncherAction"/>
+                    </menu>
+                </menu>
+                                    ]]></source>
+            <p>
+                Dans le
+                <em>Application.properties</em>
+                du client, il faut ajouter la
+                property définissant la topic JMS de retour de traitement
+                (cf
+                <a href="/codjo-data-process-ejb/index.html">codjo-data-process-ejb</a>
+                )):
+                <source><![CDATA[
+                # Parametrage codjo-data-process
+                dataprocess.topic.resultlistener.jndi=jms/NomAppli/TreatmentResultTopic
+                 ]]></source>
+            </p>
+        </section>
+        <section name="Traitements coté client">
+            <p>
+                On peut avoir besoin de d'executer du code java coté client après l'execution
+                d'un traitement sur le serveur.
+                <br/>
+                Pour cela, il faut :
+                <ol>
+                    <li>Créer la classe coté client sachant qu'elle doit implémenter l'interface
+                        TreatmentGui.
+                        La méthode
+                        <em>public void proceedGuiTreatment(List parameters)</em>
+                        sera exécutée, lorsque le traitement coté serveur sera terminé
+                        et qu'il aura envyé un message JMS au client.
+                    </li>
+                    <li>Paramétrer le traitement coté serveur avec la balise dans
+                        le fichier xml du repository, ou directement depuis l'IHM de paramétrage.
+                        <source><![CDATA[
+                <gui-target>nomPackage.nomClasse('un',2)</gui-target>
+                        ]]></source>
+                    </li>
+                </ol>
+                <p>
+                    NB : 'un' et 2 sont respectivement des paramêtres qui seront passés a la
+                    méthode sous forme de String. On peut donc les récupérer de la maniere
+                    suivante :
+                    <source><![CDATA[
+                    public void proceedGuiTreatment(List parameters){
+                        int param1 = Integer.parseInt((String)parameters.get(0));
+                        String param2 = (String)parameters.get(1);
+                     ....
+                     doSomething
+                     ....
+                      }
+                    ]]></source>
+                </p>
+            </p>
+        </section>
+    </body>
+</document>

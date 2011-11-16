@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<treatment id='monTraitement1' type='le troisième type'>
+    <title>titre du traitement</title>
+    <comment>pioupiou n'aime plus les pommes et les éclairs aux chocolats</comment>
+    <target>net.codjo.Maclasse</target>
+    <result-table selectAllHandler='selectAllPeriod'>MA_TABLE</result-table>
+    <gui-target>net.codjo.palanoob</gui-target>
+    <arguments>
+        <arg position='1' type='12' name='periode' value='200611'/>
+        <arg position='2' type='12' name='typestock' value='HB2'/>
+        <arg position='3' type='12' name='codePortefeuille' value='HB3'/>
+    </arguments>
+</treatment>

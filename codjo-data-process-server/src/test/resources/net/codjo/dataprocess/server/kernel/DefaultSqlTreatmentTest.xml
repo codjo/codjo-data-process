@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Scenarii PUBLIC "-//AGF, Inc.//DTD Scenarii 2.0//EN" "Scenarii.dtd">
+<Scenarii name="AUTOMATIC">
+    <Scenario id="DefaultSqlTreatment">
+        <etalon>
+            <table name="#T_TEMP" orderClause="CODE_PORTEFEUILLE">
+                <row comment="Test.">
+                    <field name="CODE_PORTEFEUILLE" value="MIMI"/>
+                    <field name="QUANTITE" value="0.12345"/>
+                </row>
+            </table>
+        </etalon>
+    </Scenario>
+</Scenarii>

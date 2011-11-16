@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+
+    <properties>
+        <title>Data-process</title>
+    </properties>
+
+    <body>
+        <section name="Data-process">
+            <p>
+                Le projet Data-process.
+            </p>
+            <p>
+                Cette librairie permet de paramétrer des "traitements" (java, sql, procédures stockées)
+                et de les lancer depuis une interface centralisée.
+            </p>
+        </section>
+        <section name="Installation">
+            <p>
+                Certaines preferences sont a declarer pour le bon affichage de la fenetre d'execution.
+            </p>
+            <p>
+                Pour inclure cette fonctionnalité dans un projet, il faut :
+                <ol>
+                    <li>Dans le module
+                        <em>datagen</em>
+                        , rajouter une dépendance vers
+                        <em>codjo-data-process</em>
+                        .
+                    </li>
+                    <li>Dans le module
+                        <em>presentation-handler</em>
+                        , rajouter une dépendance vers
+                        <em>codjo-data-process-common</em>
+                        et
+                        <em>codjo-data-process-ejb</em>
+                        .
+                    </li>
+                    <li>Créer le module data-process/impl qui contiendra les traitements
+                        et le faire dépendre de
+                        <em>codjo-data-process-common</em>
+                        .
+                    </li>
+                    <li>Créer le module data-process/ejb et le faire dépendre de
+                        <em>codjo-data-process-common</em>
+                        et
+                        <em>codjo-data-process-ejb</em>
+                        .
+                        et du module data-process-impl.
+                    </li>
+                    <li>Dans le module
+                        <em>application\client</em>
+                        , rajouter une dépendance vers
+                        <em>codjo-data-process-gui</em>
+                        et
+                        <em>codjo-data-process-common</em>
+                        .
+                    </li>
+                    <li>Rajouter le code suivant dans
+                        <em>conf\preference.xml</em>
+                        .
+                        <source><![CDATA[    
+    <!-- ************************************ -->
+    <!-- Pour la lib data process             -->
+    <!-- ************************************ -->
+    <preference id="ExecutionListWindow">
+        <selectAll>selectAllExecutionListStatusByRepositoryAndFamily</selectAll>
+        <column fieldName="priority" label="Priorité" minSize="50"/>
+        <column fieldName="executionListType" label="Type" minSize="30"/>
+        <column fieldName="executionListName" label="Titre" minSize="270"/>
+        <column fieldName="status" label="Statut" minSize="50"/>
+        <column fieldName="executionDate" label="Date et heure" minSize="150"/>
+    </preference>
+    ]]></source>
+                    </li>
+                    <li>
+                        Dans le fichier
+                        <em>datagen\conf\data\XXXGenDef.xml</em>
+                        , rajouter :
+                        <source><![CDATA[
+<include name="@codjo-data-process:codjo-data-process-common-def@"/>
+                        ]]></source>
+                    </li>
+                    <li>
+                        Dans le fichier
+                        <em>datagen\project.properties</em>
+                        , ajouter
+                        <em>codjo-data-process:codjo-data-process-common-def</em>
+                        à la la fin de la liste dans la propriété
+                        <em>maven.datagen.entityDeps</em>
+                        .
+                    </li>
+                    <li>Voici la liste des actions a rajouter dans le menu c.f :
+                        <em>conf\menu.xml</em>
+                        :
+                        <source><![CDATA[
+    <menu>
+        <name>Traitements</name>
+        <menu>
+            <name>Paramétrage</name>
+            <menu action="net.codjo.dataprocess.gui.param.ExecutionListParamAction"/>
+            <menu action="net.codjo.dataprocess.gui.param.ExecutionListPriorityAction"/>
+            <menu action="net.codjo.dataprocess.gui.dependency.DependencyAction"/>
+            <menu separator="true"/>
+            <menu action="net.codjo.MON_APPLICATION.gui.dataprocess.RepositoryAction"/>
+            <menu separator="true"/>
+            <menu action="net.codjo.dataprocess.gui.family.FamilyAction"/>
+        </menu>
+        <menu>
+            <name>Exécution</name>
+            <menu action="net.codjo.MON_APPLICATION.gui.dataprocess.ScopLauncherAction"/>
+        </menu>
+    </menu>
+                        ]]></source>
+                    </li>
+                    <li>
+                        Dans le
+                        <em>Application.properties</em>
+                        du client, ajouter la property définissant la topic JMS de retour de traitement
+                        (cf
+                        <a href="/codjo-data-process-ejb/index.html">codjo-data-process-ejb</a>
+                        )):
+                        <source><![CDATA[
+                        # Parametrage codjo-data-process
+                        dataprocess.topic.resultlistener.jndi=jms/NomAppli/TreatmentResultTopic
+                         ]]></source>
+                    </li>
+                </ol>
+            </p>
+        </section>
+        <section name="Paramétrage">
+            <p>
+                La librairie codjo-data-process peut éxecuter plusieurs types de traitements, notamment
+                <em>sql</em>
+                ou
+                <em>java</em>
+                . Dans le premier cas la partie
+                <em>cible</em>
+                (ou
+                <em>target</em>
+                )
+                contiendra le code sql a éxécuter, dans le deuxieme cas une référence a une classe
+                java qui étend la classe
+                <em>DefaultJavaTreatment</em>
+            </p>
+            <subsection name="Traitements et controles SQL">
+                <p>A finir</p>
+            </subsection>
+            <subsection name="Traitements et controles java">
+                <p>A finir</p>
+            </subsection>
+            <subsection name="Procédures stockées">
+                <p>A finir</p>
+            </subsection>
+            <subsection name="Gestion approfondies des paramètres">
+                <p>A finir</p>
+            </subsection>
+        </section>
+    </body>
+</document>

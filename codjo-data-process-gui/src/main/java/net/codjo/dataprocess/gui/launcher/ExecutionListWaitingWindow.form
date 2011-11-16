@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="net.codjo.dataprocess.gui.launcher.ExecutionListWaitingWindow">
+  <grid id="27dc6" binding="mainPanel" layout-manager="FormLayout">
+    <rowspec value="fill:90px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="fill:max(d;4px):grow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <colspec value="fill:max(m;500px):grow"/>
+    <constraints>
+      <xy x="20" y="20" width="581" height="219"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="ec723" layout-manager="FormLayout">
+        <rowspec value="top:d:noGrow"/>
+        <rowspec value="top:4dlu:noGrow"/>
+        <rowspec value="center:10px:noGrow"/>
+        <rowspec value="top:4dlu:noGrow"/>
+        <rowspec value="fill:36px:grow"/>
+        <colspec value="fill:max(m;500px):grow"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+        <border type="etched"/>
+        <children>
+          <component id="3b8af" class="javax.swing.JLabel" binding="execListNameLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <forms top="0" left="4" bottom="0" right="4" defaultalign-horz="false"/>
+            </constraints>
+            <properties>
+              <font name="Dialog" size="12" style="1"/>
+              <foreground color="-16777012"/>
+              <text value="..."/>
+            </properties>
+          </component>
+          <vspacer id="a100a">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <forms defaultalign-vert="false"/>
+            </constraints>
+          </vspacer>
+          <scrollpane id="db0dc" binding="infoScrollPane">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <forms top="0" left="2" bottom="0" right="2" defaultalign-horz="false" defaultalign-vert="false"/>
+            </constraints>
+            <properties>
+              <enabled value="true"/>
+            </properties>
+            <border type="none">
+              <title-color color="-16777216"/>
+            </border>
+            <children>
+              <component id="7e2ff" class="javax.swing.JTextArea" binding="infoTextArea">
+                <constraints/>
+                <properties>
+                  <background swing-color="Label.background"/>
+                  <editable value="false"/>
+                  <font name="Dialog" size="11" style="0"/>
+                  <foreground color="-16777216"/>
+                  <lineWrap value="true"/>
+                  <rows value="1"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+      <grid id="f664a" binding="topPanel" layout-manager="FormLayout">
+        <rowspec value="center:d:grow"/>
+        <colspec value="fill:d:grow"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="803ff" class="javax.swing.JButton" binding="workingButton">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <forms defaultalign-horz="false"/>
+            </constraints>
+            <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <enabled value="true"/>
+              <focusPainted value="false"/>
+              <icon value="images/murmeca.gif"/>
+              <opaque value="false"/>
+              <rolloverEnabled value="false"/>
+              <text value=""/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="a093a" binding="bottomPanel" layout-manager="FormLayout">
+        <rowspec value="center:d:noGrow"/>
+        <colspec value="fill:d:grow"/>
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="f043c" class="javax.swing.JButton" binding="stopButton">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <forms defaultalign-horz="false" defaultalign-vert="false"/>
+            </constraints>
+            <properties>
+              <icon value="images/cancel.png"/>
+              <margin top="2" left="5" bottom="2" right="5"/>
+              <maximumSize width="55" height="25"/>
+              <minimumSize width="55" height="25"/>
+              <preferredSize width="65" height="25"/>
+              <text value="Stop"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

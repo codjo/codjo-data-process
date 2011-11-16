@@ -1,0 +1,59 @@
+net.codjo.dataprocess.common
+net.codjo.dataprocess.common.codec
+	-> net.codjo.dataprocess.common.model
+	-> com.thoughtworks.xstream
+	-> com.thoughtworks.xstream.converters
+	-> com.thoughtworks.xstream.io
+	-> com.thoughtworks.xstream.io.xml
+	-> org.apache.commons.lang
+net.codjo.dataprocess.common.context
+	-> com.thoughtworks.xstream
+	-> com.thoughtworks.xstream.converters
+	-> com.thoughtworks.xstream.io
+	-> com.thoughtworks.xstream.io.xml
+net.codjo.dataprocess.common.eventsbinder
+	-> net.codjo.dataprocess.common.eventsbinder.annotations
+	-> net.codjo.dataprocess.common.eventsbinder.dynalistener
+	-> net.codjo.dataprocess.common.eventsbinder.reflect
+net.codjo.dataprocess.common.eventsbinder.annotations
+net.codjo.dataprocess.common.eventsbinder.annotations.events
+net.codjo.dataprocess.common.eventsbinder.annotations.managers
+	-> net.codjo.dataprocess.common.eventsbinder
+	-> net.codjo.dataprocess.common.eventsbinder.annotations.events
+	-> net.codjo.dataprocess.common.eventsbinder.dynalistener
+net.codjo.dataprocess.common.eventsbinder.dynalistener
+net.codjo.dataprocess.common.eventsbinder.reflect
+net.codjo.dataprocess.common.exception
+net.codjo.dataprocess.common.message
+	-> net.codjo.workflow.common.message
+net.codjo.dataprocess.common.model
+	-> net.codjo.dataprocess.common.exception
+	-> com.thoughtworks.xstream.converters
+	-> com.thoughtworks.xstream.io
+net.codjo.dataprocess.common.report
+	-> com.thoughtworks.xstream
+	-> com.thoughtworks.xstream.io.xml
+net.codjo.dataprocess.common.table.annotations
+net.codjo.dataprocess.common.table.model
+	-> net.codjo.dataprocess.common.table.annotations
+	-> net.codjo.util.string
+net.codjo.dataprocess.common.userparam
+	-> net.codjo.dataprocess.common
+	-> com.thoughtworks.xstream
+	-> com.thoughtworks.xstream.io.xml
+net.codjo.dataprocess.common.util
+	-> net.codjo.dataprocess.common
+	-> net.codjo.dataprocess.common.codec
+	-> com.thoughtworks.xstream
+	-> com.thoughtworks.xstream.io.xml
+	-> org.w3c.dom
+	-> org.xml.sax
+net.codjo.util.string
+net.codjo.workflow.common.message
+com.thoughtworks.xstream
+com.thoughtworks.xstream.converters
+com.thoughtworks.xstream.io
+com.thoughtworks.xstream.io.xml
+org.apache.commons.lang
+org.w3c.dom
+org.xml.sax

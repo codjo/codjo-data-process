@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+    <properties>
+        <title>Changes</title>
+    </properties>
+    <body>
+        <release version="1.24" date="2007-01-10">
+            <action dev="blazart" type="add">
+                Publication des JMS depuis un thread separé car il semble qu'un bug de weblo force
+                le topic a être dans la transaction.
+            </action>
+            <action dev="blazart" type="add">
+                Extension de AbstractTreatment: un traitement peut maintenant envoyé des information sur
+                sa progression par exemple.
+            </action>
+            <action dev="blazart" type="add">
+                Remplacement de l'affichage HTML des état des traitement par une JTable.
+                Ajout de l'affichage des infos sur la tache en cours de traitement dans la JTable
+                et dans la fenêtre d'attente.
+            </action>
+            <action dev="duclosm" type="add">
+                A sa création un traitement reçoit maintenant l'ExecutionListModel.
+            </action>
+            <action dev="duclosm" type="add">
+                Ajout pour test git - ajout 2 - ajout 3
+                Séparation et instanciation dynamique de la classe d'Audit (AuditHelper) pour éviter une
+                dépendance statique à cause de l'utilisation de data-process par des applications Jade
+                n'utilisant pas jms.
+            </action>
+        </release>
+        <release version="1.22" date="2006-10-25">
+            <action dev="duclosm" type="fix">
+                Correction du problème des WARNING systématiques lors de l'exécution des
+                traitements de SCOP.
+            </action>
+            <action dev="duclosm" type="add">
+                Amélioration des codecs de Map et de List.
+            </action>
+        </release>
+        <release version="1.21" date="2006-10-17">
+            <action dev="duclosm" type="fix">
+                Amélioration des codecs de Map et List.
+            </action>
+        </release>
+        <release version="1.20" date="2006-10-10">
+            <action dev="duclosm" type="add">
+                Ajout d'un encoder/decoder de Map pour le passage de données
+                client/serveur.
+            </action>
+        </release>
+        <release version="1.18" date="2006-09-21">
+            <action dev="duclosm" type="add">
+                Modifs de data-process pour pouvoir tester complètement les
+                traitements et contrôles (et notamment les retours des contrôles). Le test
+                des traitements et contrôles passent maintenant par une même fonction.
+            </action>
+        </release>
+        <release version="1.17" date="2006-09-07">
+            <action dev="duclosm" type="fix">
+                Renommage de AP_EXECUTION_LIST_STATUS en PM_EXECUTION_LIST_STATUS et
+                modifs des méthodes associées.
+            </action>
+            <action dev="duclosm" type="fix">
+                Renommage du champ USER_NAME de la table PM_CONTEXT en CONTEXT_NAME et
+                modifs des méthodes associées.
+            </action>
+            <action dev="duclosm" type="fix">
+                Correction d'un bug dans la détection d'erreurs avec les moficateurs
+                d'arguments des traitements.
+            </action>
+        </release>
+        <release version="1.16" date="2006-07-27">
+            <action dev="duclosm" type="add">
+                Vérification en amont des listes d’exécution avant leur exécution avec
+                présentation d’un diagnostique d’erreurs possible à l'exécution.
+            </action>
+        </release>
+        <release version="1.15" date="2006-07-06">
+            <action dev="duclosm" type="fix">
+                Utilisation de datagen.xsd dans TestGenDef.xml.
+            </action>
+            <action dev="duclosm" type="fix">
+                Ajout des gaps pour les tables de data-process.
+            </action>
+            <action dev="duclosm" type="add">
+                La copie d'un repository entraîne maintenant la copie du context qui y est
+                associé.
+            </action>
+            <action dev="duclosm" type="add">
+                Ajout des fenêtres pour l'affichage des tables de data-process.
+            </action>
+            <action dev="duclosm" type="fix">
+                Correction pour lancer INIT_DB.cmd (création de tables/index, ...) sur la
+                base de donnée de test (LIB_INT) lors de son test global sur SIC2.
+            </action>
+        </release>
+        <release version="1.14" date="2006-06-14">
+            <action dev="duclosm" type="add">
+                Modifs de data-process pour mettre en place son XSD.
+            </action>
+            <action dev="duclosm" type="fix">
+                Modif des tables PM_REPOSITORY et PM_REPOSITORY_CONTENT pour supprimer
+                Identity sur la clé primaire, modif du code Java associé.
+            </action>
+            <action dev="duclosm" type="add">
+                Mise en échec d'une liste de traitement vide si on répond "non" à la
+                question posée lors de son exécution.
+            </action>
+        </release>
+        <release version="1.13" date="2006-05-19">
+            <action dev="duclosm" type="add">
+                La modification des repositories n'est possible maintenant que par un
+                utilisateur à la fois.
+            </action>
+        </release>
+        <release version="1.12" date="2006-05-04">
+            <action dev="duclosm" type="fix">
+                Modification de la récupération du packageArgumentModifier
+                pour permettre les tests unitaires de traitements SCOP qui utilisent les
+                modificateurs d'argument.
+            </action>
+        </release>
+        <release version="1.11" date="2006-04-28">
+            <action dev="duclosm" type="add">
+                Ajout de modificateurs d'arguments pour modidifier les arguments passés
+                aux traitements.
+            </action>
+            <action dev="duclosm" type="add">
+                Ajout de la balise gui-target dans le repository.xml pour spécifier la
+                classe à exécuter côté client après l'exécution de sa partie serveur.
+            </action>
+            <action dev="duclosm" type="add">
+                Possibilité d'exécuter un traitement côté client après l'exécution de sa
+                partie serveur.
+            </action>
+        </release>
+        <release version="1.10" date="2006-03-16">
+            <action dev="duclosm" type="add">
+                Suppression possible de listes de traitements par repository et famille.
+            </action>
+        </release>
+        <release version="1.09" date="2006-03-08">
+            <action dev="duclosm" type="fix">
+                Prise en compte de nombreux rapports IDEA 5.
+            </action>
+            <action dev="duclosm" type="add">
+                Le renommage de repository est désormais possible dans la fenêtre de
+                gestion des repositories.
+            </action>
+            <action dev="duclosm" type="add">
+                On peut maintenant copier un ensemble de liste d'exécution lié à un
+                repository vers un autre repository dans la fenêtre de gestion des listes
+                d'exécution.
+            </action>
+            <action dev="duclosm" type="fix">
+                L'ajout d'une liste d'exécution dans un repository n'est plus bloquée si
+                elle existe déjà dans un autre repository.
+            </action>
+            <action dev="duclosm" type="fix">
+                Correction d'un gros bug lors de la suppression d'un repository.
+            </action>
+        </release>
+        <release version="1.08" date="2006-01-11">
+            <action dev="duclosm" type="fix">
+                Correction du problème de sauvegarde des Repositories sous UNIX.
+            </action>
+            <action dev="duclosm" type="fix">
+                La copie de traitements d'un Repository à un autre pouvait permettre la
+                création de traitements avec le même Id.
+            </action>
+        </release>
+        <release version="1.07" date="2005-12-09">
+            <action dev="duclosm" type="fix">
+                Certaines connections n'étaient pas libérées en cas d'erreur dans
+                certains handlers.
+            </action>
+            <action dev="duclosm" type="fix">
+                Correction d'une fuite mémoire lors de l'ouverture de certaines fenêtres.
+            </action>
+            <action dev="duclosm" type="fix">
+                Sauvegarde des retours chariots (ie. champs Commentaire et requête SQL)
+                lors de la sauvegarde de Repository.
+            </action>
+            <action dev="duclosm" type="add">
+                Ajout d'une RequestToolBar lors de l'affichage des tables de contôles.
+            </action>
+            <action dev="duclosm" type="add">
+                Diverses améliorations de l'IHM. (ex: certaines fenêtres deviennent
+                modales).
+            </action>
+        </release>
+        <release version="1.06" date="2005-11-24">
+            <action dev="duclosm" type="add">
+                Bouton permettant de réinitialiser l'état des listes d'exécution pour le
+                repository courant.
+            </action>
+            <action dev="duclosm" type="add">
+                Correction du problème des fenêtres qui passaient derrière l'application
+                et donnaient l'impression qu'elle était bloquée.
+            </action>
+            <action dev="duclosm" type="add">
+                Affichage d'une nouvelle fenêtre plus petite et nouveau logo lors de
+                l'exécution des listes de traitements.
+            </action>
+            <action dev="duclosm" type="add">
+                Remonter de toutes les erreurs du serveur (suite à l'appel des handlers)
+                vers les Clients.
+            </action>
+        </release>
+        <release version="1.05" date="2005-10-26">
+            <action dev="duclosm" type="fix">
+                Correction de bugs (bugs des dépendances d'exécution provoqués par des
+                listes de traitements dont le nom comporte une quote, ...) et diverses
+                amélioration de l'IHM.
+            </action>
+        </release>
+        <release version="1.04" date="2005-09-14">
+            <action dev="duclosm" type="fix">
+                Adaptation des handler command à la version codjo-mad 2.12-20050914.
+            </action>
+        </release>
+        <release version="1.00-SNAPSHOT" date="2005-02-11" description="Version initiale">
+            <action dev="marcona" type="fix">
+                Phase de developpement.
+            </action>
+        </release>
+    </body>
+</document>

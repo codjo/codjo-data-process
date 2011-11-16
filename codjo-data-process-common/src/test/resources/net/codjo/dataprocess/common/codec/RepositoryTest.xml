@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+    <treatment id="1" type="stored_procedure" scope="TREATMENT">
+        <title>titre magnifique</title>
+        <comment>commentaire magnifique et étrange</comment>
+        <target>sp_maproc</target>
+        <gui-target>net.codjo.wow.druide</gui-target>
+        <arguments>
+            <arg name="@arg1" value="Arno" position="1" type="23"/>
+            <arg name="@arg2" value="Mehdi" position="2" type="24"/>
+        </arguments>
+    </treatment>
+    <treatment id="2" type="sql" scope="TREATMENT">
+        <title>titre 2</title>
+        <target>insert into MEHDI values (?,?)</target>
+        <gui-target>net.codjo.wow.chaman</gui-target>
+        <arguments>
+            <arg name="arg1" value="Arno" position="1" type="23"/>
+            <arg name="arg2" value="Mehdi" position="2" type="24"/>
+            <arg name="arg3" value="Mehdi2" position="2" type="24"/>
+        </arguments>
+    </treatment>
+    <treatment id="3" type="java" scope="TREATMENT">
+        <title>titre pas magnifique</title>
+        <comment>commentaire pas magnifique</comment>
+        <target>net.codjo.dataprocess.MonTraitement</target>
+        <gui-target>net.codjo.wow.chaman.nerf.nref</gui-target>
+    </treatment>
+</root>

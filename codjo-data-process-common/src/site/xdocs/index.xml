@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<document>
+
+    <properties>
+        <title>codjo-data-process-common</title>
+    </properties>
+
+    <body>
+        <section name="Data-process-common">
+            <p>
+                Librairie responsable des traitements.
+            </p>
+            <subsection name="Packages">
+                <p>
+                    Description rapide des packages de cette librairie.
+                </p>
+                <table>
+                    <tr>
+                        <th>Package</th>
+                        <th>Commentaire</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/package-summary.html">
+                                dataprocess</a>
+                        </td>
+                        <td>
+                            Noyau des traitements.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/exception/package-summary.html">
+                                dataprocess.exception</a>
+                        </td>
+                        <td>
+                            Definition des exceptions.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/repository/package-summary.html">
+                                dataprocess.repository</a>
+                        </td>
+                        <td>
+                            Definition des classes permettant de gérer le repository.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/user/package-summary.html">
+                                dataprocess.user</a>
+                        </td>
+                        <td>
+                            Definition des classes spécifiques à un utilisateur.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/util/package-summary.html">
+                                dataprocess.util</a>
+                        </td>
+                        <td>
+                            Definition des classes permettant de gérer les listes d'exécution.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./apidocs/net/codjo/dataprocess/util/encoder/package-summary.html">
+                                dataprocess.util.encoder</a>
+                        </td>
+                        <td>
+                            Definition des classes permettant de gérer les encodages.
+                        </td>
+                    </tr>
+                </table>
+            </subsection>
+        </section>
+    </body>
+</document>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE root PUBLIC "" "">
+<root>
+	<treatment id ="trt1" type="sql" scope="TREATMENT">
+	        <title>Maj des ptf miroités</title>
+	        <comment>Traitement des Maj des ptf miroités</comment>
+		    <target>sp_SIF_Update_Portfolios</target>
+	        <arguments/>
+	</treatment>
+	<treatment id ="trt2" type="stored_procedure" scope="TREATMENT">
+	        <title>Conso des mouvements</title>
+	        <comment>Traitement des Conso des mouvements</comment>
+		    <target>sp_SIF_Aggregate_Transactions</target>
+	        <arguments/>
+	</treatment>
+	<treatment id ="trt3" type="stored_procedure" scope="TREATMENT">
+	        <title>Initialisations</title>
+	        <comment>Traitement des Initialisations</comment>
+		    <target>sp_SIF_Initialisations</target>
+	        <arguments/>
+	</treatment>
+	<treatment id ="trt4" type="java" scope="TREATMENT">
+	        <title>Création des liens OST</title>
+	        <comment>Traitement des Création des liens OST</comment>
+		    <target>net.codjo.dataprocess.impl.treatment.linksCreation.OSTLinksCreationTreatment</target>
+	        <arguments/>
+	</treatment>
+	<treatment id ="trt5" type="java"  scope="TREATMENT">
+	        <title>Création des liens Cession</title>
+	        <comment>Traitement des Création des liens Cession</comment>
+		    <target>net.codjo.dataprocess.impl.treatment.linksCreation.CessionLinksCreationTreatment</target>
+	        <arguments/>
+	</treatment>
+	<treatment id ="trt6" type="java" scope="TREATMENT">
+	        <title>Validation des liens</title>
+	        <comment>Traitement des Validation des liens</comment>
+		    <target>net.codjo.dataprocess.impl.treatment.linksCreation.LinksValidationTreatment</target>
+	        <arguments/>
+	</treatment>
+	<treatment id ="trt7" type="java" scope="TREATMENT">
+	        <title>Copie des informations</title>
+	        <comment>Traitement des Copie des informations</comment>
+		    <target>net.codjo.dataprocess.impl.treatment.linksCreation.InformationCopyTreatment</target>
+	        <arguments/>
+	</treatment>
+	<treatment id ="trt8" type="java" scope="TREATMENT">
+	        <title>Création des sursis</title>
+		    <comment>Traitement des Création des sursis</comment>
+		    <target>net.codjo.dataprocess.impl.treatment.rollover.RolloverCreationTreatment</target>
+	    <arguments/>
+	</treatment>
+	<treatment id ="trt9" type="java" scope="TREATMENT">
+	        <title>Réactivation des sursis</title>
+		    <comment>Traitement de réactivation des sursis</comment>
+		    <target>net.codjo.dataprocess.impl.treatment.life.LifeSecurityTrackingTreatment</target>
+	    <arguments/>
+	</treatment>	
+    <treatment id ="trt10" type="java" scope="CONTROL">
+	        <title>Controle d'intégrité des titres</title>
+ 		    <comment>Intégrité des titres des mouvements par rapport au référentiel titre</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.referentialIntegrity.SecurityIntegrityControl</target>
+ 		    <result-table>RES_SECURITY_INTEGRITY</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt11" type="java" scope="CONTROL">
+	        <title>Controle d'intégrité du paramétrage du périmètre</title>
+ 		    <comment>Intégrité des compagnies du référentiel portefeuille par rapport au paramétrage</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.paramIntegrity.ParamScopeIntegrityControl</target>
+ 		    <result-table>RES_PARAM_SCOPE_INTEGRITY</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt12" type="java" scope="CONTROL">
+	        <title>Controle d'intégrité du paramétrage des tyops</title>
+ 		    <comment>Intégrité des tyops des mouvements par rapport au paramétrage</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.paramIntegrity.ParamTyopIntegrityControl</target>
+ 		    <result-table>RES_PARAM_TYOP_INTEGRITY</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt13" type="java" scope="CONTROL">
+	        <title>Controle d'intégrité des tyop</title>
+ 		    <comment>Intégrité des tyop des mouvements par rapport au référentiel tyop</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.referentialIntegrity.TyopIntegrityControl</target>
+ 		    <result-table>RES_TYOP_INTEGRITY</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt14" type="java" scope="CONTROL">
+	        <title>Controle d'intégrité des devises</title>
+ 		    <comment>Intégrité des devises des mouvements par rapport au référentiel devises</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.referentialIntegrity.CurrencyIntegrityControl</target>
+ 		    <result-table>RES_CURRENCY_INTEGRITY</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt15" type="java" scope="CONTROL">
+	        <title>Controle d'intégrité des portefeuilles</title>
+ 		    <comment>Intégrité des portefeuilles des mouvements par rapport au référentiel portefeuilles</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.referentialIntegrity.PortfolioIntegrityControl</target>
+ 		    <result-table>RES_PTF_INTEGRITY</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt16" type="java" scope="CONTROL">
+	        <title>Controle d'intégrité des compagnies</title>
+ 		    <comment>Intégrité des compagnies des ptf par rapport au référentiel compagnies</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.referentialIntegrity.CompanyIntegrityControl</target>
+ 		    <result-table>RES_COMPANY_INTEGRITY</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt17" type="java" scope="CONTROL">
+	        <title>Controle d'intégrité des sursis</title>
+ 		    <comment>Intégrité des sursis des mouvements</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.links.RolloverIntegrityControl</target>
+ 		    <result-table>RES_ROLLOVER_INTEGRITY</result-table>
+            <arguments/>
+    </treatment>
+        <treatment id ="trt18" type="java" scope="CONTROL">
+	        <title>Controle des OST</title>
+ 		    <comment>Controles des OST</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.links.OSTControl</target>
+ 		    <result-table>RES_OST</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt19" type="java" scope="CONTROL">
+	        <title>Controle des flux internes</title>
+ 		    <comment>Controle des types de flux internes</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.links.InternalFlowControl</target>
+ 		    <result-table>RES_INTERNAL_FLOW</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt20" type="java" scope="CONTROL">
+	        <title>Controle du perimetre de l'integration fiscale</title>
+ 		    <comment>Controle du perimetre de l'integration fiscale</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.links.ScopeControl</target>
+ 		    <result-table>RES_SCOPE</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt21" type="java" scope="TREATMENT">
+	        <title>Mise à jour de la période courante</title>
+ 		    <comment>Mise à jour des dates de début et de fin de période courante</comment>
+ 		    <target>net.codjo.dataprocess.impl.treatment.historisation.UpdateCurrentPeriod</target>
+             <arguments/>
+    </treatment>
+    <treatment id ="trt22" type="java" scope="CONTROL">
+	        <title>Controle d'unicité de la période</title>
+ 		    <comment>Controle d'unicité de la période</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.historisation.PeriodUnicityControl</target>
+            <result-table>RES_PERIOD_UNICITY</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt23" type="java" scope="CONTROL">
+	        <title>Controle sur l'historisation de l'année</title>
+ 		    <comment>Controle sur l'historisation de l'année</comment>
+ 		    <target>net.codjo.dataprocess.impl.control.historisation.YearHistorisationControl</target>
+            <result-table>RES_YEAR_HISTORISATION</result-table>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt24" type="java" scope="TREATMENT">
+	        <title>Annulation de l'historisation</title>
+ 		    <comment>Annulation de l'historisation</comment>
+ 		    <target>net.codjo.dataprocess.impl.treatment.historisation.HistorisationCancelTreatment</target>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt25" type="java" scope="TREATMENT">
+	        <title>Annulation de la création des sursis</title>
+ 		    <comment>Annulation de la création des sursis</comment>
+ 		    <target>net.codjo.dataprocess.impl.treatment.dataRecovery.RolloverCancelTreatment</target>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt26" type="java" scope="TREATMENT">
+	        <title>Annulation de la réactivation des sursis</title>
+ 		    <comment>Annulation de la réactivation des sursis</comment>
+ 		    <target>net.codjo.dataprocess.impl.treatment.dataRecovery.ReactivationCancelTreatment</target>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt27" type="java" scope="TREATMENT">
+	        <title>Historisation</title>
+ 		    <comment>Historisation</comment>
+ 		    <target>net.codjo.dataprocess.impl.treatment.historisation.HistorisationTreatment</target>
+            <arguments/>
+    </treatment>
+    <treatment id ="trt28" type="java" scope="TREATMENT">
+	        <title>Prétraitement de la reprise des données</title>
+ 		    <comment>Prétraitement de la reprise des données</comment>
+ 		    <target>net.codjo.dataprocess.impl.treatment.dataRecovery.PreDataRecoveryTreatment</target>
+            <arguments/>
+    </treatment>
+</root>

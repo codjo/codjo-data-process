@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+    <properties>
+        <title>Changes</title>
+    </properties>
+    <body>
+        <release version="1.24" date="2007-01-10">
+            <action dev="blazart" type="add">
+                Remplacement de l'affichage HTML des état des traitement par une JTable.
+                Ajout de l'affichage des infos sur la tache en cours de traitement dans la JTable
+                et dans la fenêtre d'attente.
+            </action>
+        </release>
+        <release version="1.16" date="2006-07-27">
+            <action dev="duclosm" type="add">
+                Modif GUI pour afficher la vérification en amont des listes d'exécution
+                avant leur exécution avec présentation d'un diagnostique d'erreurs
+                possible à l'exécution.
+            </action>
+        </release>
+        <release version="1.15" date="2006-07-06">
+            <action dev="duclosm" type="add">
+                Ajout des fenêtres pour l'affichage des tables de data-process.
+            </action>
+        </release>
+        <release version="1.14" date="2006-06-14">
+            <action dev="duclosm" type="add">
+                Mise en echec d'une liste de traitement vide si on répond "non" à la
+                question posée lors de son exécution.
+            </action>
+        </release>
+        <release version="1.13" date="2006-05-19">
+            <action dev="duclosm" type="add">
+                La modification des repositories n'est possible maintenant que par un
+                utilisateur à la fois.
+            </action>
+        </release>
+        <release version="1.11" date="2006-04-28">
+            <action dev="duclosm" type="add">
+                Possibilité d'exécuter un traitement côté client après l'exécution de la
+                partie serveur.
+            </action>
+        </release>
+        <release version="1.10" date="2006-03-16">
+            <action dev="duclosm" type="add">
+                Suppression possible de listes de traitements par repository et famille.
+            </action>
+        </release>
+        <release version="1.09" date="2006-03-08">
+            <action dev="duclosm" type="fix">
+                Prise en compte de nombreux rapports IDEA 5.
+            </action>
+            <action dev="duclosm" type="add">
+                Le renommage de repository est désormais possible dans la fenêtre de
+                gestion des repositories.
+            </action>
+            <action dev="duclosm" type="add">
+                On peut maintenant copier un ensemble de liste d'exécution lié à un
+                repository vers un autre repository dans la fenêtre de gestion des listes
+                d'exécution.
+            </action>
+            <action dev="duclosm" type="fix">
+                L'ajout d'une liste d'exécution dans un repository n'est plus bloquée si
+                elle existe déjà dans un autre repository.
+            </action>
+            <action dev="duclosm" type="fix">
+                Correction de nombreux bug dans la fenêtre de gestion des repositories.
+            </action>
+        </release>
+        <release version="1.08" date="2006-01-11">
+            <action dev="duclosm" type="fix">
+                La copie de traitements d'un Repository à un autre pouvait permettre la
+                création de traitements avec le même Id.
+            </action>
+        </release>
+        <release version="1.07" date="2005-12-09">
+            <action dev="duclosm" type="add">
+                Ajout d'une RequestToolBar lors de l'affichage des tables de contôles.
+            </action>
+            <action dev="duclosm" type="add">
+                Diverses améliorations de l'IHM. (ex: certaines fenêtres deviennent
+                modales).
+            </action>
+            <action dev="duclosm" type="fix">
+                Correction d'une fuite mémoire lors de l'ouverture de certaines fenêtres.
+            </action>
+            <action dev="duclosm" type="fix">
+                Sauvegarde des retours chariots (champs Commentaire et requête SQL) lors
+                de la sauvegarde de Repository.
+            </action>
+        </release>
+        <release version="1.06" date="2005-11-24">
+            <action dev="duclosm" type="add">
+                Bouton permettant de réinitialiser l'état des listes d'exécution pour le
+                repository courant.
+            </action>
+            <action dev="duclosm" type="add">
+                Correction du problème des fenêtres qui passaient derrière l'application
+                et donnaient l'impression qu'elle était bloquée.
+            </action>
+            <action dev="duclosm" type="add">
+                Affichage d'une nouvelle fenêtre plus petite et nouveau logo lors de
+                l'exécution des listes de traitements.
+            </action>
+        </release>
+        <release version="1.05" date="2005-10-26">
+            <action dev="duclosm" type="fix">
+                Diverses amélioration de l'IHM.
+            </action>
+        </release>
+        <release version="1.00-SNAPSHOT" date="2005-02-11" description="Version initiale">
+            <action dev="marcona" type="fix">
+                Phase de developpement.
+            </action>
+        </release>
+    </body>
+</document>

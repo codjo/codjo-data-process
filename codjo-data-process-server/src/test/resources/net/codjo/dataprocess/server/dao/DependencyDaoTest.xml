@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Scenarii SYSTEM "http://scenarii.dtd">
+<Scenarii name="AUTOMATIC">
+    <Scenario id="PAS_DE_CYCLE">
+        <input>
+            <table name="PM_DEPENDENCY">
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 2"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 3"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 4"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 2"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 8"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 2"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 9"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 9"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 5"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 8"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="l'état 10"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="l'état 10"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 22"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+        </etalon>
+    </Scenario>
+    <Scenario id="CYCLE">
+        <input>
+            <table name="PM_DEPENDENCY">
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 2"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 3"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 4"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 2"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 8"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 2"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 9"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 9"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 5"/>
+                </row>
+                <row comment="cette ligne provoque un cycle">
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 9"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 2"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 8"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="l'état 10"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="l'état 10"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 22"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+        </etalon>
+    </Scenario>
+    <Scenario id="INSERT_DELETE_DEPENDENCY">
+        <input>
+            <table name="PM_DEPENDENCY">
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 2"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 3"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 4"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 2"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 8"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 2"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 9"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 9"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 5"/>
+                </row>
+                <row comment="cette ligne provoque un cycle">
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 9"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 2"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 8"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="j'''suis 10"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="j'''suis 10"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 22"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+            <table name="PM_DEPENDENCY">
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 9"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 5"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 8"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="j'''suis 10"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="j'''suis 10"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 22"/>
+                </row>
+            </table>
+        </etalon>
+    </Scenario>
+    <Scenario id="UpdateDependencies_isExecutable">
+        <input>
+            <table name="PM_DEPENDENCY">
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 2"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 3"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 1"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 4"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 2"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 8"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 2"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 9"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 9"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 5"/>
+                </row>
+                <row comment="cette ligne provoque un cycle">
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 9"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 2"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="text 8"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="l'''état 10"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID_PRINC" value="l'''état 10"/>
+                    <field name="EXECUTION_LIST_ID_DEP" value="text 22"/>
+                </row>
+            </table>
+            <table name="PM_EXECUTION_LIST_STATUS">
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="1"/>
+                    <field name="STATUS" value="1"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="22"/>
+                    <field name="STATUS" value="0"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                    <field name="STATUS" value="1"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="8"/>
+                    <field name="STATUS" value="1"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="2"/>
+                    <field name="STATUS" value="1"/>
+                </row>
+            </table>
+            <table name="PM_EXECUTION_LIST">
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID" value="1"/>
+                    <field name="EXECUTION_LIST_NAME" value="text 1"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                    <field name="EXECUTION_LIST_NAME" value="l'''état 10"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID" value="8"/>
+                    <field name="EXECUTION_LIST_NAME" value="text 8"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID" value="2"/>
+                    <field name="EXECUTION_LIST_NAME" value="text 2"/>
+                </row>
+                <row>
+                    <field name="REPOSITORY_ID" value="55"/>
+                    <field name="EXECUTION_LIST_ID" value="22"/>
+                    <field name="EXECUTION_LIST_NAME" value="text 22"/>
+                </row>
+            </table>
+        </input>
+        <etalon>
+            <table name="PM_EXECUTION_LIST_STATUS" orderClause="EXECUTION_LIST_ID">
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="1"/>
+                    <field name="STATUS" value="1"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="22"/>
+                    <field name="STATUS" value="10"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="10"/>
+                    <field name="STATUS" value="10"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="8"/>
+                    <field name="STATUS" value="10"/>
+                </row>
+                <row>
+                    <field name="EXECUTION_LIST_ID" value="2"/>
+                    <field name="STATUS" value="1"/>
+                </row>
+            </table>
+        </etalon>
+    </Scenario>
+</Scenarii>
