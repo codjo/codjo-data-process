@@ -2125,3 +2125,1423 @@ Table PM_DEPENDENCY created
 16:17:36,551 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DP_USER.tab
 Table PM_DP_USER created
 
+15:03:58,959 INFO  kernel.Main - Debut de generation....
+15:03:59,083 INFO  kernel.Main - Generation Trigger Delete en 93ms
+15:03:59,083 INFO  kernel.Main - Generation Constraint en 93ms
+15:03:59,083 INFO  kernel.Main - Generation Trigger IU en 93ms
+15:03:59,083 INFO  kernel.Main - Generation Trigger Insert en 93ms
+15:03:59,083 INFO  kernel.Main - Generation Trigger Update en 93ms
+15:03:59,083 INFO  kernel.Main - Generation VIEW en 93ms
+15:03:59,099 INFO  kernel.Main - Roles en 16ms
+15:03:59,302 INFO  kernel.Util - Re-tentative de creation du repertoire : C:\dev\projects\codjo\lib\codjo-data-process\codjo-data-process-server\target\datagen\handler\net\codjo\dataprocess\data
+15:03:59,302 INFO  kernel.Main - Generation CASTOR en 312ms
+15:03:59,302 INFO  kernel.Util - Re-tentative de creation du repertoire : C:\dev\projects\codjo\lib\codjo-data-process\codjo-data-process-server\target\datagen\handler\net\codjo\dataprocess\data\technik
+15:03:59,349 INFO  kernel.Main - Generation des definitions de lien en 266ms
+15:03:59,349 INFO  kernel.Main - Handler Requetor en 266ms
+15:03:59,349 INFO  kernel.Main - Structures en 266ms
+15:03:59,364 INFO  kernel.Main - Handler Archive en 15ms
+15:03:59,380 INFO  kernel.Main - Handler Commande en 31ms
+15:03:59,442 INFO  kernel.Main - Generation globs en 62ms
+15:03:59,520 INFO  kernel.Main - Generation JAVA en 530ms
+15:03:59,551 INFO  kernel.Main - Generation referentiels en 187ms
+15:04:00,144 INFO  kernel.Main - Handler Sql en 1s
+15:04:00,347 INFO  kernel.Main - Generation Index en 1s
+15:04:00,565 INFO  kernel.Main - Handler New en 1s
+15:04:00,612 INFO  kernel.Main - Handler Delete en 1s
+15:04:00,753 INFO  kernel.Main - Handler Update en 1s
+15:04:01,221 INFO  kernel.Main - Handler Select en 2s
+15:04:01,267 INFO  kernel.Main - Generation table en 2s
+15:04:01,267 INFO  kernel.Main - ...Fin de generation en 2s
+15:04:01,860 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DEPENDENCY.tab
+Table PM_DEPENDENCY created
+
+15:04:02,125 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST.tab
+Table PM_EXECUTION_LIST created
+
+15:04:02,235 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST_STATUS.tab
+Table PM_EXECUTION_LIST_STATUS created
+
+15:04:04,887 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:04,918 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:05,230 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.TreatmentFactory : Type de traitement inconnu : bob
+15:04:05,245 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.TreatmentFactory : La classe 'com.class.inexistante' du traitement java 'traitement 7' n'existe pas
+java.lang.ClassNotFoundException: com.class.inexistante
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251)
+	at org.apache.maven.surefire.booter.IsolatedClassLoader.loadClass(IsolatedClassLoader.java:103)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:164)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactory.build(TreatmentFactory.java:57)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactory.buildTreatment(TreatmentFactory.java:106)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactoryTest.testClassNotFound(TreatmentFactoryTest.java:280)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:04:05,308 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.TreatmentFactory : Problème d'instanciation/accessibilité de la classe 'net.codjo.dataprocess.server.kernel.JavaTreatmentExemple2' du traitement java 'traitement 7'
+java.lang.IllegalAccessException: Class net.codjo.dataprocess.server.kernel.TreatmentFactory can not access a member of class net.codjo.dataprocess.server.kernel.JavaTreatmentExemple2 with modifiers "private"
+	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:65)
+	at java.lang.Class.newInstance0(Class.java:344)
+	at java.lang.Class.newInstance(Class.java:303)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactory.build(TreatmentFactory.java:57)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactory.buildTreatment(TreatmentFactory.java:106)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactoryTest.testClassNotInstanciable(TreatmentFactoryTest.java:302)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:04:06,322 INFO  net.codjo.dataprocess.server.kernel.TreatmentResultSenderTest$1 - (requestId) Requête de null
+15:04:06,369 INFO  net.codjo.dataprocess.server.kernel.TreatmentResultSenderTest$1 - (requestId) Requête de null
+15:04:06,400 INFO  net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.TreatmentResultSender : sendAudit : JobAudit{type=MID, date=Mon Jan 23 15:04:06 CET 2012, arguments=Arguments{error=, info=mon message, status=INFO, targetGuiClassName=, targetGuiClassParameters=, treatmentId=traitement 1}, error=null, requestId='null'}
+15:04:06,571 INFO  kernel.Main - Debut de generation....
+15:04:06,603 INFO  kernel.Main - Generation Constraint en 16ms
+15:04:06,618 INFO  kernel.Main - Generation Trigger Delete en 31ms
+15:04:06,618 INFO  kernel.Main - Generation Trigger Insert en 31ms
+15:04:06,618 INFO  kernel.Main - Generation Trigger Update en 31ms
+15:04:06,618 INFO  kernel.Main - Generation Trigger IU en 31ms
+15:04:06,634 INFO  kernel.Main - Generation VIEW en 47ms
+15:04:06,696 INFO  kernel.Main - Roles en 78ms
+15:04:06,759 INFO  kernel.Main - Generation CASTOR en 172ms
+15:04:06,790 INFO  kernel.Main - Generation des definitions de lien en 172ms
+15:04:06,821 INFO  kernel.Main - Structures en 218ms
+15:04:06,852 INFO  kernel.Main - Handler Requetor en 218ms
+15:04:06,868 INFO  kernel.Main - Handler Archive en 47ms
+15:04:06,930 INFO  kernel.Main - Handler Commande en 78ms
+15:04:06,961 INFO  kernel.Main - Generation globs en 31ms
+15:04:06,993 INFO  kernel.Main - Generation JAVA en 406ms
+15:04:07,008 INFO  kernel.Main - Generation referentiels en 140ms
+15:04:07,585 INFO  kernel.Main - Handler Sql en 967ms
+15:04:07,960 INFO  kernel.Main - Handler Delete en 1s
+15:04:07,975 INFO  kernel.Main - Generation Index en 1s
+15:04:07,991 INFO  kernel.Main - Handler Update en 1s
+15:04:08,022 INFO  kernel.Main - Handler New en 1s
+15:04:08,475 INFO  kernel.Main - Handler Select en 1s
+15:04:08,615 INFO  kernel.Main - Generation table en 2s
+15:04:08,615 INFO  kernel.Main - ...Fin de generation en 2s
+15:04:08,709 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DP_CONTEXT.tab
+Table PM_DP_CONTEXT created
+
+15:04:09,145 INFO  kernel.Main - Debut de generation....
+15:04:09,177 INFO  kernel.Main - Generation Trigger Delete en 16ms
+15:04:09,192 INFO  kernel.Main - Generation Trigger IU en 31ms
+15:04:09,192 INFO  kernel.Main - Generation Trigger Update en 31ms
+15:04:09,192 INFO  kernel.Main - Generation VIEW en 31ms
+15:04:09,192 INFO  kernel.Main - Generation Trigger Insert en 31ms
+15:04:09,208 INFO  kernel.Main - Generation Constraint en 47ms
+15:04:09,255 INFO  kernel.Main - Roles en 63ms
+15:04:09,301 INFO  kernel.Main - Structures en 124ms
+15:04:09,317 INFO  kernel.Main - Generation des definitions de lien en 125ms
+15:04:09,317 INFO  kernel.Main - Generation CASTOR en 156ms
+15:04:09,364 INFO  kernel.Main - Handler Archive en 47ms
+15:04:09,395 INFO  kernel.Main - Handler Commande en 31ms
+15:04:09,395 INFO  kernel.Main - Handler Requetor en 187ms
+15:04:09,473 INFO  kernel.Main - Generation globs en 78ms
+15:04:09,535 INFO  kernel.Main - Generation JAVA en 374ms
+15:04:09,567 INFO  kernel.Main - Generation referentiels en 172ms
+15:04:10,175 INFO  kernel.Main - Handler Sql en 983ms
+15:04:10,518 INFO  kernel.Main - Handler New en 1s
+15:04:10,518 INFO  kernel.Main - Handler Delete en 1s
+15:04:10,612 INFO  kernel.Main - Generation Index en 1s
+15:04:10,627 INFO  kernel.Main - Handler Update en 1s
+15:04:11,017 INFO  kernel.Main - Handler Select en 1s
+15:04:11,173 INFO  kernel.Main - Generation table en 2s
+15:04:11,173 INFO  kernel.Main - ...Fin de generation en 2s
+15:04:11,283 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT.tab
+Table PM_TREATMENT created
+
+15:04:11,361 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY.tab
+Table PM_REPOSITORY created
+
+15:04:11,517 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:11,517 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:13,295 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:13,295 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:13,311 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:13,311 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler cmdDeleteExecutionLists
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler cmdMapServer
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler cmdNewFamily
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler saveContext
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler saveContextNameKeyValue
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler copyExecutionListsFromRepoToRepo
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler createExportConfigFromTemplate
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler dbExecuteSqlRequest
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler dbGetAllFieldNamesByTable
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler deleteDependency
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler deleteDependencyPrincOrDep
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler findDependency
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler findImplication
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler insertDependency
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler isExecutable
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler updateImplication
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler executeSql
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler executionListProcessor
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler exportSqlQueryToStringFormat
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler dpFdownload
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler dpFexplorerCommand$1
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler dpFexplorerCommand$2
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler dpFexplorer
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler getAllDefaultConfigProperty
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler getConfigProperty
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler getFamilyIdFromName
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler getNotResolvableArguments
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler getRepositoryIdFromName
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler reinitialiseUserImport
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler loadUserTreatmentList
+15:04:13,482 INFO  net.codjo.mad.common.Log - 	UserHandler manageTreatmentModel
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler reinitExecutionList
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler cmdDeleteRepository
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler cmdNewRepository
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler cmdUpdateRepository
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler executionListParamImport
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler getRepositoryContent
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler importRepository
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler reinitializeRepositoryCache
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler renameRepository
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler treatmentFillStatus
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler treatmentProcessor
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler treatmentStoreListLoader
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler treatmentStoreListSaver
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler userLoginTrackerCommand$1
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler userLoginTracker
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler userManager
+15:04:13,498 INFO  net.codjo.mad.common.Log - 	UserHandler selectCount
+15:04:13,545 INFO  net.codjo.agent.imtp.NoConnectionIMTPManager - Demarrage du 'NoConnectionIMTPManager' : Communication intra-platform bloquee
+15:04:13,545 INFO  net.codjo.dataprocess.server.plugin.DataProcessJobAgent$DataProcessParticipant - (null) Requête de null - context=<DataProcessContext>
+  <data key="periode" value="200512"/>
+</DataProcessContext>
+dataProcessJobType=EXECUTION_LIST_JOB_TYPE
+executionListModel=<?xml version="1.0" encoding="ISO-8859-1"?>
+<executionList id="0" name="listModel1" status="0" priority="1" familyId="1"/>
+repositoryId=1
+15:04:13,545 INFO  net.codjo.dataprocess.server.plugin.DataProcessJobAgent$DataProcessParticipant - (null) Audit PRE
+15:04:13,560 INFO  net.codjo.dataprocess.server.plugin.DataProcessJobAgent$DataProcessParticipant - (null) Audit POST
+15:04:13,888 INFO  kernel.Main - Debut de generation....
+15:04:13,935 INFO  kernel.Main - Generation Constraint en 32ms
+15:04:13,950 INFO  kernel.Main - Generation Trigger IU en 47ms
+15:04:13,950 INFO  kernel.Main - Generation Trigger Delete en 47ms
+15:04:13,950 INFO  kernel.Main - Generation Trigger Update en 47ms
+15:04:13,950 INFO  kernel.Main - Generation Trigger Insert en 47ms
+15:04:13,966 INFO  kernel.Main - Generation VIEW en 63ms
+15:04:13,997 INFO  kernel.Main - Roles en 47ms
+15:04:14,028 INFO  kernel.Main - Generation CASTOR en 125ms
+15:04:14,044 INFO  kernel.Main - Generation des definitions de lien en 78ms
+15:04:14,106 INFO  kernel.Main - Structures en 171ms
+15:04:14,137 INFO  kernel.Main - Handler Requetor en 171ms
+15:04:14,137 INFO  kernel.Main - Handler Archive en 31ms
+15:04:14,169 INFO  kernel.Main - Handler Commande en 32ms
+15:04:14,200 INFO  kernel.Main - Generation globs en 31ms
+15:04:14,262 INFO  kernel.Main - Generation JAVA en 359ms
+15:04:14,309 INFO  kernel.Main - Generation referentiels en 172ms
+15:04:15,027 INFO  kernel.Main - Handler Sql en 1s
+15:04:15,214 INFO  kernel.Main - Handler New en 1s
+15:04:15,307 INFO  kernel.Main - Handler Delete en 1s
+15:04:15,307 INFO  kernel.Main - Generation Index en 1s
+15:04:15,417 INFO  kernel.Main - Handler Update en 1s
+15:04:15,822 INFO  kernel.Main - Handler Select en 1s
+15:04:15,994 INFO  kernel.Main - Generation table en 2s
+15:04:15,994 INFO  kernel.Main - ...Fin de generation en 2s
+15:04:16,087 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY.tab
+Table PM_REPOSITORY created
+
+15:04:16,181 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY_CONTENT.tab
+Table PM_REPOSITORY_CONTENT created
+
+15:04:16,197 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout des référentiels de traitement suivants :
+15:04:16,197 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - ---> REP1 (repositoryId = 1)
+15:04:16,243 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper -      fichiers : /net/codjo/dataprocess/server/repository/RepositoryTest3.xml
+15:04:16,259 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout terminé avec succès !
+15:04:16,306 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout des référentiels de traitement suivants :
+15:04:16,306 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - ---> REP1 (repositoryId = 1)
+15:04:16,321 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper -      fichiers : /net/codjo/dataprocess/server/repository/RepositoryTest3.xml
+15:04:16,462 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout terminé avec succès !
+15:04:16,509 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout des référentiels de traitement suivants :
+15:04:16,509 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - ---> REP (repositoryId = 1)
+15:04:16,524 ERROR net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - 
+Erreur durant l'ajout des référentiels de traitement.
+!!! Rollback effectué !!!
+
+net.codjo.dataprocess.common.exception.TreatmentException: La taille de l'identifiant d'un traitement ('trt1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab') dépasse 50 caractères.
+	at net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper.insertRepositoryContent(TreatmentHelper.java:217)
+	at net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper.insertAllRepositoryContent(TreatmentHelper.java:163)
+	at net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper.initRepository(TreatmentHelper.java:83)
+	at net.codjo.dataprocess.server.repository.RepositoryTest.loadRepoWithTreatmentIdTooLongError(RepositoryTest.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:04:16,540 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout des référentiels de traitement suivants :
+15:04:16,540 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - ---> REP (repositoryId = 1)
+15:04:16,602 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper -      fichiers : /net/codjo/dataprocess/server/repository/RepoTreatmentContentTooLongTest.xml
+15:04:16,649 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout terminé avec succès !
+15:04:17,710 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.Argument : Classe de modification d'arguments 'PACKAGE_ARGUMENT_MODIFIER_NOT_INITIALIZED.ArgumentModifierExample' inexistante
+java.lang.ClassNotFoundException: PACKAGE_ARGUMENT_MODIFIER_NOT_INITIALIZED.ArgumentModifierExample
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251)
+	at org.apache.maven.surefire.booter.IsolatedClassLoader.loadClass(IsolatedClassLoader.java:103)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:164)
+	at net.codjo.dataprocess.server.kernel.Argument.processContext(Argument.java:80)
+	at net.codjo.dataprocess.server.kernel.Argument.computeValue(Argument.java:58)
+	at net.codjo.dataprocess.server.kernel.ArgumentTest.packageArgumentModifier(ArgumentTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:04:17,803 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.Argument : Erreur dans la classe de modification d'arguments 'net.codjo.dataprocess.server.kernel.ArgumentModifierExample'
+net.codjo.dataprocess.common.exception.TreatmentException: La résolution d'un argument local (net.codjo.dataprocess.server.kernel.ArgumentModifierExample('$portfolioCode$', '#monParamLocal#', 'CONSTANT')) est impossible car le traitement est utilisé en dehors d'un repository et/ou d'une liste d'exécution
+	at net.codjo.dataprocess.server.kernel.Argument.proceedParameters(Argument.java:282)
+	at net.codjo.dataprocess.server.kernel.Argument.processContext(Argument.java:81)
+	at net.codjo.dataprocess.server.kernel.Argument.computeValue(Argument.java:58)
+	at net.codjo.dataprocess.server.kernel.ArgumentTest.processContextArgumentModifier(ArgumentTest.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:04:17,803 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.Argument : Classe de modification d'arguments 'net.codjo.dataprocess.server.kernel.XXXX' inexistante
+java.lang.ClassNotFoundException: net.codjo.dataprocess.server.kernel.XXXX
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251)
+	at org.apache.maven.surefire.booter.IsolatedClassLoader.loadClass(IsolatedClassLoader.java:103)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:164)
+	at net.codjo.dataprocess.server.kernel.Argument.processContext(Argument.java:80)
+	at net.codjo.dataprocess.server.kernel.Argument.computeValue(Argument.java:58)
+	at net.codjo.dataprocess.server.kernel.ArgumentTest.processContextArgumentModifier(ArgumentTest.java:143)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:04:18,131 INFO  kernel.Main - Debut de generation....
+15:04:18,162 INFO  kernel.Main - Generation Constraint en 15ms
+15:04:18,178 INFO  kernel.Main - Generation Trigger IU en 31ms
+15:04:18,178 INFO  kernel.Main - Generation Trigger Update en 31ms
+15:04:18,178 INFO  kernel.Main - Generation VIEW en 31ms
+15:04:18,178 INFO  kernel.Main - Generation Trigger Insert en 31ms
+15:04:18,178 INFO  kernel.Main - Generation Trigger Delete en 31ms
+15:04:18,193 INFO  kernel.Main - Roles en 15ms
+15:04:18,271 INFO  kernel.Main - Generation CASTOR en 124ms
+15:04:18,318 INFO  kernel.Main - Structures en 156ms
+15:04:18,318 INFO  kernel.Main - Handler Requetor en 140ms
+15:04:18,318 INFO  kernel.Main - Generation des definitions de lien en 140ms
+15:04:18,334 INFO  kernel.Main - Handler Archive en 16ms
+15:04:18,349 INFO  kernel.Main - Handler Commande en 31ms
+15:04:18,365 INFO  kernel.Main - Generation globs en 16ms
+15:04:18,474 INFO  kernel.Main - Generation referentiels en 140ms
+15:04:18,490 INFO  kernel.Main - Generation JAVA en 343ms
+15:04:19,145 INFO  kernel.Main - Handler Sql en 967ms
+15:04:19,332 INFO  kernel.Main - Generation Index en 1s
+15:04:19,457 INFO  kernel.Main - Handler Update en 1s
+15:04:19,457 INFO  kernel.Main - Handler Delete en 1s
+15:04:19,488 INFO  kernel.Main - Handler New en 1s
+15:04:19,925 INFO  kernel.Main - Handler Select en 1s
+15:04:20,050 INFO  kernel.Main - Generation table en 1s
+15:04:20,050 INFO  kernel.Main - ...Fin de generation en 1s
+15:04:20,128 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : T_TRANSFER.tab
+Table T_TRANSFER created
+
+15:04:22,593 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:22,593 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:22,733 INFO  kernel.Main - Debut de generation....
+15:04:22,780 INFO  kernel.Main - Generation Constraint en 31ms
+15:04:22,795 INFO  kernel.Main - Generation Trigger Delete en 46ms
+15:04:22,795 INFO  kernel.Main - Generation Trigger Update en 46ms
+15:04:22,795 INFO  kernel.Main - Generation VIEW en 46ms
+15:04:22,795 INFO  kernel.Main - Generation Trigger Insert en 46ms
+15:04:22,858 INFO  kernel.Main - Generation Trigger IU en 109ms
+15:04:22,858 INFO  kernel.Main - Roles en 63ms
+15:04:22,905 INFO  kernel.Main - Generation CASTOR en 156ms
+15:04:22,920 INFO  kernel.Main - Structures en 140ms
+15:04:22,951 INFO  kernel.Main - Generation des definitions de lien en 156ms
+15:04:22,951 INFO  kernel.Main - Handler Archive en 0ms
+15:04:22,967 INFO  kernel.Main - Handler Requetor en 109ms
+15:04:22,998 INFO  kernel.Main - Handler Commande en 47ms
+15:04:23,045 INFO  kernel.Main - Generation globs en 47ms
+15:04:23,123 INFO  kernel.Main - Generation JAVA en 374ms
+15:04:23,139 INFO  kernel.Main - Generation referentiels en 156ms
+15:04:23,809 INFO  kernel.Main - Handler Sql en 1s
+15:04:24,090 INFO  kernel.Main - Handler New en 1s
+15:04:24,090 INFO  kernel.Main - Handler Update en 1s
+15:04:24,090 INFO  kernel.Main - Generation Index en 1s
+15:04:24,106 INFO  kernel.Main - Handler Delete en 1s
+15:04:24,574 INFO  kernel.Main - Handler Select en 1s
+15:04:24,714 INFO  kernel.Main - Generation table en 1s
+15:04:24,714 INFO  kernel.Main - ...Fin de generation en 1s
+15:04:24,823 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_FAMILY.tab
+Table PM_FAMILY created
+
+15:04:24,901 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY.tab
+Table PM_REPOSITORY created
+
+15:04:25,354 INFO  kernel.Main - Debut de generation....
+15:04:25,416 INFO  kernel.Main - Generation Constraint en 31ms
+15:04:25,432 INFO  kernel.Main - Generation Trigger Insert en 47ms
+15:04:25,432 INFO  kernel.Main - Generation Trigger Update en 47ms
+15:04:25,432 INFO  kernel.Main - Generation VIEW en 47ms
+15:04:25,432 INFO  kernel.Main - Generation Trigger Delete en 47ms
+15:04:25,432 INFO  kernel.Main - Generation Trigger IU en 47ms
+15:04:25,463 INFO  kernel.Main - Roles en 31ms
+15:04:25,510 INFO  kernel.Main - Generation CASTOR en 125ms
+15:04:25,525 INFO  kernel.Main - Generation des definitions de lien en 93ms
+15:04:25,541 INFO  kernel.Main - Structures en 125ms
+15:04:25,541 INFO  kernel.Util - Re-tentative de creation du repertoire : C:\dev\projects\codjo\lib\codjo-data-process\codjo-data-process-server\target\datagen\handler\net\codjo\dataprocess\data\technik
+15:04:25,541 INFO  kernel.Util - Re-tentative de creation du repertoire : C:\dev\projects\codjo\lib\codjo-data-process\codjo-data-process-server\target\datagen\handler\net\codjo\dataprocess\data
+15:04:25,557 INFO  kernel.Main - Handler Requetor en 125ms
+15:04:25,557 INFO  kernel.Main - Handler Archive en 16ms
+15:04:25,650 INFO  kernel.Main - Handler Commande en 93ms
+15:04:25,681 INFO  kernel.Main - Generation globs en 31ms
+15:04:25,681 INFO  kernel.Main - Generation JAVA en 296ms
+15:04:25,728 INFO  kernel.Main - Generation referentiels en 171ms
+15:04:26,368 INFO  kernel.Main - Handler Sql en 936ms
+15:04:26,586 INFO  kernel.Main - Handler New en 1s
+15:04:26,664 INFO  kernel.Main - Generation Index en 1s
+15:04:26,758 INFO  kernel.Main - Handler Update en 1s
+15:04:26,773 INFO  kernel.Main - Handler Delete en 1s
+15:04:27,179 INFO  kernel.Main - Handler Select en 1s
+15:04:27,335 INFO  kernel.Main - Generation table en 1s
+15:04:27,335 INFO  kernel.Main - ...Fin de generation en 1s
+15:04:27,429 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : T_TRANSFER.tab
+Table T_TRANSFER created
+
+15:04:28,255 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:28,255 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:04:28,599 INFO  kernel.Main - Debut de generation....
+15:04:28,661 INFO  kernel.Main - Generation Trigger Delete en 47ms
+15:04:28,661 INFO  kernel.Main - Generation Trigger Insert en 47ms
+15:04:28,661 INFO  kernel.Main - Generation Trigger IU en 47ms
+15:04:28,661 INFO  kernel.Main - Generation Constraint en 47ms
+15:04:28,677 INFO  kernel.Main - Generation Trigger Update en 63ms
+15:04:28,677 INFO  kernel.Main - Generation VIEW en 63ms
+15:04:28,692 INFO  kernel.Main - Roles en 31ms
+15:04:28,723 INFO  kernel.Main - Generation CASTOR en 109ms
+15:04:28,801 INFO  kernel.Main - Generation des definitions de lien en 140ms
+15:04:28,801 INFO  kernel.Main - Structures en 140ms
+15:04:28,817 INFO  kernel.Util - Re-tentative de creation du repertoire : C:\dev\projects\codjo\lib\codjo-data-process\codjo-data-process-server\target\datagen\handler\net\codjo\dataprocess\data
+15:04:28,833 INFO  kernel.Main - Handler Archive en 32ms
+15:04:28,833 INFO  kernel.Main - Handler Requetor en 156ms
+15:04:28,848 INFO  kernel.Main - Handler Commande en 15ms
+15:04:28,879 INFO  kernel.Main - Generation globs en 31ms
+15:04:28,926 INFO  kernel.Main - Generation JAVA en 312ms
+15:04:29,004 INFO  kernel.Main - Generation referentiels en 171ms
+15:04:29,597 INFO  kernel.Main - Handler Sql en 920ms
+15:04:29,831 INFO  kernel.Main - Handler New en 1s
+15:04:29,893 INFO  kernel.Main - Handler Update en 1s
+15:04:29,925 INFO  kernel.Main - Handler Delete en 1s
+15:04:29,940 INFO  kernel.Main - Generation Index en 1s
+15:04:30,346 INFO  kernel.Main - Handler Select en 1s
+15:04:30,486 INFO  kernel.Main - Generation table en 1s
+15:04:30,486 INFO  kernel.Main - ...Fin de generation en 1s
+15:04:30,580 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT_STATUS.tab
+Table PM_TREATMENT_STATUS created
+
+15:04:30,658 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST_STATUS.tab
+Table PM_EXECUTION_LIST_STATUS created
+
+15:04:31,329 INFO  kernel.Main - Debut de generation....
+15:04:31,422 INFO  kernel.Main - Generation Constraint en 78ms
+15:04:31,422 INFO  kernel.Main - Generation Trigger Update en 78ms
+15:04:31,422 INFO  kernel.Main - Generation Trigger Delete en 78ms
+15:04:31,438 INFO  kernel.Main - Generation Trigger IU en 94ms
+15:04:31,438 INFO  kernel.Main - Generation Trigger Insert en 94ms
+15:04:31,438 INFO  kernel.Main - Generation VIEW en 94ms
+15:04:31,469 INFO  kernel.Main - Roles en 47ms
+15:04:31,485 INFO  kernel.Main - Generation CASTOR en 141ms
+15:04:31,547 INFO  kernel.Main - Structures en 125ms
+15:04:31,547 INFO  kernel.Main - Generation des definitions de lien en 125ms
+15:04:31,547 INFO  kernel.Util - Re-tentative de creation du repertoire : C:\dev\projects\codjo\lib\codjo-data-process\codjo-data-process-server\target\datagen\handler\net\codjo\dataprocess\data
+15:04:31,547 INFO  kernel.Util - Re-tentative de creation du repertoire : C:\dev\projects\codjo\lib\codjo-data-process\codjo-data-process-server\target\datagen\handler\net\codjo\dataprocess\data
+15:04:31,563 INFO  kernel.Main - Handler Archive en 16ms
+15:04:31,578 INFO  kernel.Main - Handler Requetor en 140ms
+15:04:31,641 INFO  kernel.Main - Handler Commande en 78ms
+15:04:31,656 INFO  kernel.Main - Generation globs en 15ms
+15:04:31,672 INFO  kernel.Main - Generation JAVA en 328ms
+15:04:31,687 INFO  kernel.Main - Generation referentiels en 109ms
+15:04:32,343 INFO  kernel.Main - Handler Sql en 905ms
+15:04:32,608 INFO  kernel.Main - Generation Index en 1s
+15:04:32,608 INFO  kernel.Main - Handler Delete en 1s
+15:04:32,623 INFO  kernel.Main - Handler New en 1s
+15:04:32,670 INFO  kernel.Main - Handler Update en 1s
+15:04:33,123 INFO  kernel.Main - Handler Select en 1s
+15:04:33,216 INFO  kernel.Main - Generation table en 1s
+15:04:33,216 INFO  kernel.Main - ...Fin de generation en 1s
+15:04:33,325 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : T_TRANSFER.tab
+Table T_TRANSFER created
+
+15:04:33,403 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DP_CONTEXT.tab
+Table PM_DP_CONTEXT created
+
+15:04:33,481 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY.tab
+Table PM_REPOSITORY created
+
+15:04:33,575 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY_CONTENT.tab
+Table PM_REPOSITORY_CONTENT created
+
+15:04:33,653 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_FAMILY.tab
+Table PM_FAMILY created
+
+15:04:33,747 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST.tab
+Table PM_EXECUTION_LIST created
+
+15:04:33,856 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT.tab
+Table PM_TREATMENT created
+
+15:04:34,043 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST_STATUS.tab
+Table PM_EXECUTION_LIST_STATUS created
+
+15:04:34,137 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT_STATUS.tab
+Table PM_TREATMENT_STATUS created
+
+15:04:34,215 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DEPENDENCY.tab
+Table PM_DEPENDENCY created
+
+15:04:34,324 INFO  net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.repository.Repository : Réinitialisation du cache des référentiels de traitement.
+15:04:34,620 INFO  net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.repository.Repository : Réinitialisation du cache des référentiels de traitement.
+15:04:35,104 INFO  kernel.Main - Debut de generation....
+15:04:35,197 INFO  kernel.Main - Generation Trigger IU en 78ms
+15:04:35,213 INFO  kernel.Main - Generation Trigger Insert en 94ms
+15:04:35,213 INFO  kernel.Main - Generation VIEW en 94ms
+15:04:35,213 INFO  kernel.Main - Generation Constraint en 94ms
+15:04:35,213 INFO  kernel.Main - Generation Trigger Delete en 94ms
+15:04:35,213 INFO  kernel.Main - Generation Trigger Update en 94ms
+15:04:35,213 INFO  kernel.Main - Roles en 0ms
+15:04:35,260 INFO  kernel.Main - Generation CASTOR en 141ms
+15:04:35,275 INFO  kernel.Main - Generation des definitions de lien en 62ms
+15:04:35,307 INFO  kernel.Main - Structures en 110ms
+15:04:35,353 INFO  kernel.Main - Handler Archive en 46ms
+15:04:35,353 INFO  kernel.Main - Handler Requetor en 140ms
+15:04:35,369 INFO  kernel.Main - Handler Commande en 16ms
+15:04:35,447 INFO  kernel.Main - Generation globs en 78ms
+15:04:35,494 INFO  kernel.Main - Generation JAVA en 375ms
+15:04:35,525 INFO  kernel.Main - Generation referentiels en 172ms
+15:04:36,055 INFO  kernel.Main - Handler Sql en 842ms
+15:04:36,352 INFO  kernel.Main - Handler New en 1s
+15:04:36,367 INFO  kernel.Main - Generation Index en 1s
+15:04:36,367 INFO  kernel.Main - Handler Update en 1s
+15:04:36,430 INFO  kernel.Main - Handler Delete en 1s
+15:04:36,851 INFO  kernel.Main - Handler Select en 1s
+15:04:36,991 INFO  kernel.Main - Generation table en 1s
+15:04:36,991 INFO  kernel.Main - ...Fin de generation en 1s
+15:04:37,069 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : T_TRANSFER.tab
+Table T_TRANSFER created
+
+15:04:37,163 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DP_CONTEXT.tab
+Table PM_DP_CONTEXT created
+
+15:04:37,257 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY.tab
+Table PM_REPOSITORY created
+
+15:04:37,397 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY_CONTENT.tab
+Table PM_REPOSITORY_CONTENT created
+
+15:04:37,506 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_FAMILY.tab
+Table PM_FAMILY created
+
+15:04:37,615 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST.tab
+Table PM_EXECUTION_LIST created
+
+15:04:37,725 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT.tab
+Table PM_TREATMENT created
+
+15:04:37,818 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST_STATUS.tab
+Table PM_EXECUTION_LIST_STATUS created
+
+15:04:37,927 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT_STATUS.tab
+Table PM_TREATMENT_STATUS created
+
+15:04:38,021 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DEPENDENCY.tab
+Table PM_DEPENDENCY created
+
+15:04:38,271 INFO  net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.repository.Repository : Réinitialisation du cache des référentiels de traitement.
+15:04:38,832 INFO  net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.repository.Repository : Réinitialisation du cache des référentiels de traitement.
+15:04:39,721 INFO  kernel.Main - Debut de generation....
+15:04:39,815 INFO  kernel.Main - Generation Trigger Update en 78ms
+15:04:39,815 INFO  kernel.Main - Generation Constraint en 78ms
+15:04:39,815 INFO  kernel.Main - Generation Trigger Insert en 78ms
+15:04:39,815 INFO  kernel.Main - Generation Trigger IU en 78ms
+15:04:39,815 INFO  kernel.Main - Generation Trigger Delete en 78ms
+15:04:39,815 INFO  kernel.Main - Generation VIEW en 78ms
+15:04:39,831 INFO  kernel.Main - Roles en 16ms
+15:04:39,877 INFO  kernel.Main - Generation CASTOR en 140ms
+15:04:39,893 INFO  kernel.Main - Generation des definitions de lien en 78ms
+15:04:39,893 INFO  kernel.Main - Structures en 78ms
+15:04:39,924 INFO  kernel.Main - Handler Requetor en 109ms
+15:04:39,924 INFO  kernel.Main - Handler Archive en 31ms
+15:04:39,940 INFO  kernel.Main - Handler Commande en 16ms
+15:04:40,018 INFO  kernel.Main - Generation JAVA en 281ms
+15:04:40,018 INFO  kernel.Main - Generation globs en 78ms
+15:04:40,049 INFO  kernel.Main - Generation referentiels en 125ms
+15:04:40,657 INFO  kernel.Main - Handler Sql en 842ms
+15:04:40,923 INFO  kernel.Main - Handler New en 1s
+15:04:40,985 INFO  kernel.Main - Handler Delete en 1s
+15:04:40,985 INFO  kernel.Main - Handler Update en 1s
+15:04:40,985 INFO  kernel.Main - Generation Index en 1s
+15:04:41,453 INFO  kernel.Main - Handler Select en 1s
+15:04:41,578 INFO  kernel.Main - Generation table en 1s
+15:04:41,578 INFO  kernel.Main - ...Fin de generation en 1s
+15:04:41,671 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DP_USER.tab
+Table PM_DP_USER created
+
+15:11:50,891 INFO  kernel.Main - Debut de generation....
+15:11:51,031 INFO  kernel.Main - Generation Trigger IU en 93ms
+15:11:51,031 INFO  kernel.Main - Generation Trigger Update en 93ms
+15:11:51,031 INFO  kernel.Main - Generation Trigger Insert en 93ms
+15:11:51,031 INFO  kernel.Main - Generation Constraint en 93ms
+15:11:51,031 INFO  kernel.Main - Generation Trigger Delete en 93ms
+15:11:51,031 INFO  kernel.Main - Generation VIEW en 93ms
+15:11:51,062 INFO  kernel.Main - Roles en 31ms
+15:11:51,172 INFO  kernel.Main - Generation CASTOR en 234ms
+15:11:51,296 INFO  kernel.Main - Generation des definitions de lien en 265ms
+15:11:51,312 INFO  kernel.Main - Structures en 281ms
+15:11:51,312 INFO  kernel.Main - Handler Requetor en 281ms
+15:11:51,328 INFO  kernel.Main - Handler Archive en 16ms
+15:11:51,343 INFO  kernel.Main - Handler Commande en 31ms
+15:11:51,406 INFO  kernel.Main - Generation globs en 63ms
+15:11:51,499 INFO  kernel.Main - Generation referentiels en 171ms
+15:11:51,640 INFO  kernel.Main - Generation JAVA en 702ms
+15:11:52,217 INFO  kernel.Main - Handler Sql en 1s
+15:11:52,404 INFO  kernel.Main - Generation Index en 1s
+15:11:52,420 INFO  kernel.Main - Handler New en 1s
+15:11:52,482 INFO  kernel.Main - Handler Update en 1s
+15:11:52,513 INFO  kernel.Main - Handler Delete en 1s
+15:11:52,966 INFO  kernel.Main - Handler Select en 1s
+15:11:53,075 INFO  kernel.Main - Generation table en 2s
+15:11:53,075 INFO  kernel.Main - ...Fin de generation en 2s
+15:11:53,512 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DEPENDENCY.tab
+Table PM_DEPENDENCY created
+
+15:11:53,605 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST.tab
+Table PM_EXECUTION_LIST created
+
+15:11:53,699 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST_STATUS.tab
+Table PM_EXECUTION_LIST_STATUS created
+
+15:11:55,399 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:11:55,430 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:11:55,711 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.TreatmentFactory : Type de traitement inconnu : bob
+15:11:55,727 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.TreatmentFactory : La classe 'com.class.inexistante' du traitement java 'traitement 7' n'existe pas
+java.lang.ClassNotFoundException: com.class.inexistante
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251)
+	at org.apache.maven.surefire.booter.IsolatedClassLoader.loadClass(IsolatedClassLoader.java:103)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:164)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactory.build(TreatmentFactory.java:57)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactory.buildTreatment(TreatmentFactory.java:106)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactoryTest.testClassNotFound(TreatmentFactoryTest.java:280)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:11:55,758 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.TreatmentFactory : Problème d'instanciation/accessibilité de la classe 'net.codjo.dataprocess.server.kernel.JavaTreatmentExemple2' du traitement java 'traitement 7'
+java.lang.IllegalAccessException: Class net.codjo.dataprocess.server.kernel.TreatmentFactory can not access a member of class net.codjo.dataprocess.server.kernel.JavaTreatmentExemple2 with modifiers "private"
+	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:65)
+	at java.lang.Class.newInstance0(Class.java:344)
+	at java.lang.Class.newInstance(Class.java:303)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactory.build(TreatmentFactory.java:57)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactory.buildTreatment(TreatmentFactory.java:106)
+	at net.codjo.dataprocess.server.kernel.TreatmentFactoryTest.testClassNotInstanciable(TreatmentFactoryTest.java:302)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:11:56,616 INFO  net.codjo.dataprocess.server.kernel.TreatmentResultSenderTest$1 - (requestId) Requête de null
+15:11:56,663 INFO  net.codjo.dataprocess.server.kernel.TreatmentResultSenderTest$1 - (requestId) Requête de null
+15:11:56,678 INFO  net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.TreatmentResultSender : sendAudit : JobAudit{type=MID, date=Mon Jan 23 15:11:56 CET 2012, arguments=Arguments{error=, info=mon message, status=INFO, targetGuiClassName=, targetGuiClassParameters=, treatmentId=traitement 1}, error=null, requestId='null'}
+15:11:56,834 INFO  kernel.Main - Debut de generation....
+15:11:56,881 INFO  kernel.Main - Generation Constraint en 31ms
+15:11:56,881 INFO  kernel.Main - Generation Trigger Insert en 31ms
+15:11:56,881 INFO  kernel.Main - Generation Trigger Update en 31ms
+15:11:56,897 INFO  kernel.Main - Generation Trigger Delete en 47ms
+15:11:56,897 INFO  kernel.Main - Generation Trigger IU en 47ms
+15:11:56,897 INFO  kernel.Main - Generation VIEW en 47ms
+15:11:56,912 INFO  kernel.Main - Roles en 31ms
+15:11:56,959 INFO  kernel.Main - Generation CASTOR en 109ms
+15:11:56,959 INFO  kernel.Main - Generation des definitions de lien en 78ms
+15:11:57,053 INFO  kernel.Main - Structures en 172ms
+15:11:57,068 INFO  kernel.Main - Handler Requetor en 171ms
+15:11:57,084 INFO  kernel.Main - Handler Archive en 31ms
+15:11:57,100 INFO  kernel.Main - Handler Commande en 32ms
+15:11:57,131 INFO  kernel.Main - Generation globs en 31ms
+15:11:57,131 INFO  kernel.Main - Generation JAVA en 281ms
+15:11:57,256 INFO  kernel.Main - Generation referentiels en 172ms
+15:11:57,895 INFO  kernel.Main - Handler Sql en 998ms
+15:11:58,238 INFO  kernel.Main - Generation Index en 1s
+15:11:58,316 INFO  kernel.Main - Handler Delete en 1s
+15:11:58,332 INFO  kernel.Main - Handler New en 1s
+15:11:58,332 INFO  kernel.Main - Handler Update en 1s
+15:11:58,769 INFO  kernel.Main - Handler Select en 1s
+15:11:58,940 INFO  kernel.Main - Generation table en 2s
+15:11:58,940 INFO  kernel.Main - ...Fin de generation en 2s
+15:11:59,065 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DP_CONTEXT.tab
+Table PM_DP_CONTEXT created
+
+15:11:59,518 INFO  kernel.Main - Debut de generation....
+15:11:59,564 INFO  kernel.Main - Generation Constraint en 31ms
+15:11:59,564 INFO  kernel.Main - Generation Trigger Delete en 31ms
+15:11:59,564 INFO  kernel.Main - Generation Trigger Update en 31ms
+15:11:59,564 INFO  kernel.Main - Generation Trigger Insert en 31ms
+15:11:59,564 INFO  kernel.Main - Generation VIEW en 31ms
+15:11:59,564 INFO  kernel.Main - Generation Trigger IU en 31ms
+15:11:59,596 INFO  kernel.Main - Roles en 32ms
+15:11:59,627 INFO  kernel.Main - Generation CASTOR en 94ms
+15:11:59,674 INFO  kernel.Main - Generation des definitions de lien en 110ms
+15:11:59,674 INFO  kernel.Main - Structures en 110ms
+15:11:59,736 INFO  kernel.Main - Handler Requetor en 172ms
+15:11:59,767 INFO  kernel.Main - Handler Archive en 93ms
+15:11:59,767 INFO  kernel.Main - Handler Commande en 31ms
+15:11:59,783 INFO  kernel.Main - Generation globs en 16ms
+15:11:59,783 INFO  kernel.Main - Generation JAVA en 250ms
+15:11:59,892 INFO  kernel.Main - Generation referentiels en 125ms
+15:12:00,516 INFO  kernel.Main - Handler Sql en 952ms
+15:12:00,844 INFO  kernel.Main - Handler Update en 1s
+15:12:00,844 INFO  kernel.Main - Handler New en 1s
+15:12:00,875 INFO  kernel.Main - Generation Index en 1s
+15:12:00,922 INFO  kernel.Main - Handler Delete en 1s
+15:12:01,358 INFO  kernel.Main - Handler Select en 1s
+15:12:01,546 INFO  kernel.Main - Generation table en 2s
+15:12:01,546 INFO  kernel.Main - ...Fin de generation en 2s
+15:12:01,639 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT.tab
+Table PM_TREATMENT created
+
+15:12:01,733 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY.tab
+Table PM_REPOSITORY created
+
+15:12:01,858 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:12:01,858 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:12:03,371 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:12:03,386 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:12:03,386 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:12:03,386 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler cmdDeleteExecutionLists
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler cmdMapServer
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler cmdNewFamily
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler saveContext
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler saveContextNameKeyValue
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler copyExecutionListsFromRepoToRepo
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler createExportConfigFromTemplate
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler dbExecuteSqlRequest
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler dbGetAllFieldNamesByTable
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler deleteDependency
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler deleteDependencyPrincOrDep
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler findDependency
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler findImplication
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler insertDependency
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler isExecutable
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler updateImplication
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler executeSql
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler executionListProcessor
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler exportSqlQueryToStringFormat
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler dpFdownload
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler dpFexplorerCommand$1
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler dpFexplorerCommand$2
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler dpFexplorer
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler getAllDefaultConfigProperty
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler getConfigProperty
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler getFamilyIdFromName
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler getNotResolvableArguments
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler getRepositoryIdFromName
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler reinitialiseUserImport
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler loadUserTreatmentList
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler manageTreatmentModel
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler reinitExecutionList
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler cmdDeleteRepository
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler cmdNewRepository
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler cmdUpdateRepository
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler executionListParamImport
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler getRepositoryContent
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler importRepository
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler reinitializeRepositoryCache
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler renameRepository
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler treatmentFillStatus
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler treatmentProcessor
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler treatmentStoreListLoader
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler treatmentStoreListSaver
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler userLoginTrackerCommand$1
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler userLoginTracker
+15:12:03,870 INFO  net.codjo.mad.common.Log - 	UserHandler userManager
+15:12:03,886 INFO  net.codjo.mad.common.Log - 	UserHandler selectCount
+15:12:03,917 INFO  net.codjo.agent.imtp.NoConnectionIMTPManager - Demarrage du 'NoConnectionIMTPManager' : Communication intra-platform bloquee
+15:12:03,932 INFO  net.codjo.dataprocess.server.plugin.DataProcessJobAgent$DataProcessParticipant - (null) Requête de null - context=<DataProcessContext>
+  <data key="periode" value="200512"/>
+</DataProcessContext>
+dataProcessJobType=EXECUTION_LIST_JOB_TYPE
+executionListModel=<?xml version="1.0" encoding="ISO-8859-1"?>
+<executionList id="0" name="listModel1" status="0" priority="1" familyId="1"/>
+repositoryId=1
+15:12:03,932 INFO  net.codjo.dataprocess.server.plugin.DataProcessJobAgent$DataProcessParticipant - (null) Audit PRE
+15:12:03,948 INFO  net.codjo.dataprocess.server.plugin.DataProcessJobAgent$DataProcessParticipant - (null) Audit POST
+15:12:04,244 INFO  kernel.Main - Debut de generation....
+15:12:04,307 INFO  kernel.Main - Generation Constraint en 47ms
+15:12:04,307 INFO  kernel.Main - Generation Trigger Delete en 47ms
+15:12:04,307 INFO  kernel.Main - Generation Trigger Update en 47ms
+15:12:04,322 INFO  kernel.Main - Generation Trigger IU en 62ms
+15:12:04,322 INFO  kernel.Main - Generation Trigger Insert en 62ms
+15:12:04,322 INFO  kernel.Main - Generation VIEW en 62ms
+15:12:04,354 INFO  kernel.Main - Roles en 32ms
+15:12:04,400 INFO  kernel.Main - Generation CASTOR en 140ms
+15:12:04,478 INFO  kernel.Main - Generation des definitions de lien en 156ms
+15:12:04,478 INFO  kernel.Main - Structures en 171ms
+15:12:04,494 INFO  kernel.Main - Handler Requetor en 172ms
+15:12:04,494 INFO  kernel.Main - Handler Archive en 16ms
+15:12:04,510 INFO  kernel.Main - Handler Commande en 16ms
+15:12:04,541 INFO  kernel.Main - Generation globs en 31ms
+15:12:04,556 INFO  kernel.Main - Generation JAVA en 296ms
+15:12:04,650 INFO  kernel.Main - Generation referentiels en 156ms
+15:12:05,383 INFO  kernel.Main - Handler Sql en 1s
+15:12:05,773 INFO  kernel.Main - Generation Index en 1s
+15:12:05,789 INFO  kernel.Main - Handler Delete en 1s
+15:12:05,820 INFO  kernel.Main - Handler New en 1s
+15:12:05,882 INFO  kernel.Main - Handler Update en 1s
+15:12:06,382 INFO  kernel.Main - Handler Select en 2s
+15:12:06,600 INFO  kernel.Main - Generation table en 2s
+15:12:06,600 INFO  kernel.Main - ...Fin de generation en 2s
+15:12:06,709 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY.tab
+Table PM_REPOSITORY created
+
+15:12:06,803 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY_CONTENT.tab
+Table PM_REPOSITORY_CONTENT created
+
+15:12:06,818 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout des référentiels de traitement suivants :
+15:12:06,818 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - ---> REP1 (repositoryId = 1)
+15:12:06,850 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper -      fichiers : /net/codjo/dataprocess/server/repository/RepositoryTest3.xml
+15:12:06,865 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout terminé avec succès !
+15:12:06,912 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout des référentiels de traitement suivants :
+15:12:06,928 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - ---> REP1 (repositoryId = 1)
+15:12:06,943 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper -      fichiers : /net/codjo/dataprocess/server/repository/RepositoryTest3.xml
+15:12:06,959 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout terminé avec succès !
+15:12:07,021 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout des référentiels de traitement suivants :
+15:12:07,021 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - ---> REP (repositoryId = 1)
+15:12:07,099 ERROR net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - 
+Erreur durant l'ajout des référentiels de traitement.
+!!! Rollback effectué !!!
+
+net.codjo.dataprocess.common.exception.TreatmentException: La taille de l'identifiant d'un traitement ('trt1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab') dépasse 50 caractères.
+	at net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper.insertRepositoryContent(TreatmentHelper.java:217)
+	at net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper.insertAllRepositoryContent(TreatmentHelper.java:163)
+	at net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper.initRepository(TreatmentHelper.java:83)
+	at net.codjo.dataprocess.server.repository.RepositoryTest.loadRepoWithTreatmentIdTooLongError(RepositoryTest.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:12:07,099 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout des référentiels de traitement suivants :
+15:12:07,115 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - ---> REP (repositoryId = 1)
+15:12:07,162 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper -      fichiers : /net/codjo/dataprocess/server/repository/RepoTreatmentContentTooLongTest.xml
+15:12:07,224 INFO  net.codjo.dataprocess.server.treatmenthelper.TreatmentHelper - Ajout terminé avec succès !
+15:12:08,098 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.Argument : Classe de modification d'arguments 'PACKAGE_ARGUMENT_MODIFIER_NOT_INITIALIZED.ArgumentModifierExample' inexistante
+java.lang.ClassNotFoundException: PACKAGE_ARGUMENT_MODIFIER_NOT_INITIALIZED.ArgumentModifierExample
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251)
+	at org.apache.maven.surefire.booter.IsolatedClassLoader.loadClass(IsolatedClassLoader.java:103)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:164)
+	at net.codjo.dataprocess.server.kernel.Argument.processContext(Argument.java:80)
+	at net.codjo.dataprocess.server.kernel.Argument.computeValue(Argument.java:58)
+	at net.codjo.dataprocess.server.kernel.ArgumentTest.packageArgumentModifier(ArgumentTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:12:08,191 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.Argument : Erreur dans la classe de modification d'arguments 'net.codjo.dataprocess.server.kernel.ArgumentModifierExample'
+net.codjo.dataprocess.common.exception.TreatmentException: La résolution d'un argument local (net.codjo.dataprocess.server.kernel.ArgumentModifierExample('$portfolioCode$', '#monParamLocal#', 'CONSTANT')) est impossible car le traitement est utilisé en dehors d'un repository et/ou d'une liste d'exécution
+	at net.codjo.dataprocess.server.kernel.Argument.proceedParameters(Argument.java:282)
+	at net.codjo.dataprocess.server.kernel.Argument.processContext(Argument.java:81)
+	at net.codjo.dataprocess.server.kernel.Argument.computeValue(Argument.java:58)
+	at net.codjo.dataprocess.server.kernel.ArgumentTest.processContextArgumentModifier(ArgumentTest.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:12:08,191 ERROR net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.kernel.Argument : Classe de modification d'arguments 'net.codjo.dataprocess.server.kernel.XXXX' inexistante
+java.lang.ClassNotFoundException: net.codjo.dataprocess.server.kernel.XXXX
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251)
+	at org.apache.maven.surefire.booter.IsolatedClassLoader.loadClass(IsolatedClassLoader.java:103)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:164)
+	at net.codjo.dataprocess.server.kernel.Argument.processContext(Argument.java:80)
+	at net.codjo.dataprocess.server.kernel.Argument.computeValue(Argument.java:58)
+	at net.codjo.dataprocess.server.kernel.ArgumentTest.processContextArgumentModifier(ArgumentTest.java:143)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:138)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:125)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:290)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:818)
+15:12:08,488 INFO  kernel.Main - Debut de generation....
+15:12:08,550 INFO  kernel.Main - Generation Constraint en 47ms
+15:12:08,566 INFO  kernel.Main - Generation Trigger Update en 63ms
+15:12:08,566 INFO  kernel.Main - Generation Trigger Delete en 63ms
+15:12:08,581 INFO  kernel.Main - Generation Trigger IU en 78ms
+15:12:08,581 INFO  kernel.Main - Generation Trigger Insert en 78ms
+15:12:08,581 INFO  kernel.Main - Generation VIEW en 78ms
+15:12:08,597 INFO  kernel.Main - Roles en 31ms
+15:12:08,706 INFO  kernel.Main - Generation CASTOR en 203ms
+15:12:08,722 INFO  kernel.Main - Structures en 172ms
+15:12:08,753 INFO  kernel.Main - Generation des definitions de lien en 172ms
+15:12:08,768 INFO  kernel.Util - Re-tentative de creation du repertoire : C:\dev\projects\codjo\lib\codjo-data-process\codjo-data-process-server\target\datagen\handler\net\codjo\dataprocess\data
+15:12:08,768 INFO  kernel.Main - Handler Archive en 15ms
+15:12:08,784 INFO  kernel.Main - Handler Requetor en 203ms
+15:12:08,815 INFO  kernel.Main - Handler Commande en 47ms
+15:12:08,878 INFO  kernel.Main - Generation globs en 63ms
+15:12:08,893 INFO  kernel.Main - Generation JAVA en 390ms
+15:12:08,924 INFO  kernel.Main - Generation referentiels en 140ms
+15:12:09,548 INFO  kernel.Main - Handler Sql en 967ms
+15:12:09,923 INFO  kernel.Main - Handler Update en 1s
+15:12:09,938 INFO  kernel.Main - Handler New en 1s
+15:12:09,938 INFO  kernel.Main - Generation Index en 1s
+15:12:09,938 INFO  kernel.Main - Handler Delete en 1s
+15:12:10,391 INFO  kernel.Main - Handler Select en 1s
+15:12:10,547 INFO  kernel.Main - Generation table en 2s
+15:12:10,547 INFO  kernel.Main - ...Fin de generation en 2s
+15:12:10,625 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : T_TRANSFER.tab
+Table T_TRANSFER created
+
+15:12:12,793 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:12:12,793 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:12:12,934 INFO  kernel.Main - Debut de generation....
+15:12:12,980 INFO  kernel.Main - Generation Constraint en 31ms
+15:12:12,980 INFO  kernel.Main - Generation Trigger Delete en 31ms
+15:12:13,043 INFO  kernel.Main - Generation Trigger Insert en 94ms
+15:12:13,043 INFO  kernel.Main - Generation Trigger Update en 94ms
+15:12:13,043 INFO  kernel.Main - Generation Trigger IU en 94ms
+15:12:13,043 INFO  kernel.Main - Generation VIEW en 94ms
+15:12:13,105 INFO  kernel.Main - Roles en 125ms
+15:12:13,136 INFO  kernel.Main - Generation CASTOR en 187ms
+15:12:13,168 INFO  kernel.Main - Structures en 188ms
+15:12:13,183 INFO  kernel.Main - Generation des definitions de lien en 140ms
+15:12:13,214 INFO  kernel.Main - Handler Archive en 31ms
+15:12:13,214 INFO  kernel.Main - Handler Requetor en 171ms
+15:12:13,292 INFO  kernel.Main - Handler Commande en 78ms
+15:12:13,339 INFO  kernel.Main - Generation globs en 47ms
+15:12:13,339 INFO  kernel.Main - Generation JAVA en 390ms
+15:12:13,402 INFO  kernel.Main - Generation referentiels en 188ms
+15:12:14,213 INFO  kernel.Main - Handler Sql en 1s
+15:12:14,306 INFO  kernel.Main - Generation Index en 1s
+15:12:14,306 INFO  kernel.Main - Handler New en 1s
+15:12:14,322 INFO  kernel.Main - Handler Delete en 1s
+15:12:14,416 INFO  kernel.Main - Handler Update en 1s
+15:12:14,790 INFO  kernel.Main - Handler Select en 1s
+15:12:14,977 INFO  kernel.Main - Generation table en 2s
+15:12:14,977 INFO  kernel.Main - ...Fin de generation en 2s
+15:12:15,102 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_FAMILY.tab
+Table PM_FAMILY created
+
+15:12:15,196 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY.tab
+Table PM_REPOSITORY created
+
+15:12:15,617 INFO  kernel.Main - Debut de generation....
+15:12:15,664 INFO  kernel.Main - Generation Trigger Delete en 32ms
+15:12:15,664 INFO  kernel.Main - Generation Trigger Insert en 32ms
+15:12:15,664 INFO  kernel.Main - Generation Trigger IU en 32ms
+15:12:15,695 INFO  kernel.Main - Generation Constraint en 63ms
+15:12:15,695 INFO  kernel.Main - Generation Trigger Update en 63ms
+15:12:15,695 INFO  kernel.Main - Generation VIEW en 63ms
+15:12:15,710 INFO  kernel.Main - Roles en 46ms
+15:12:15,804 INFO  kernel.Main - Generation CASTOR en 172ms
+15:12:15,851 INFO  kernel.Main - Generation des definitions de lien en 187ms
+15:12:15,851 INFO  kernel.Main - Structures en 187ms
+15:12:15,866 INFO  kernel.Util - Re-tentative de creation du repertoire : C:\dev\projects\codjo\lib\codjo-data-process\codjo-data-process-server\target\datagen\handler\net\codjo\dataprocess\data
+15:12:15,866 INFO  kernel.Util - Re-tentative de creation du repertoire : C:\dev\projects\codjo\lib\codjo-data-process\codjo-data-process-server\target\datagen\handler\net\codjo\dataprocess\data\technik
+15:12:15,898 INFO  kernel.Main - Handler Archive en 47ms
+15:12:15,898 INFO  kernel.Main - Handler Requetor en 203ms
+15:12:15,913 INFO  kernel.Main - Handler Commande en 15ms
+15:12:15,944 INFO  kernel.Main - Generation globs en 31ms
+15:12:15,944 INFO  kernel.Main - Generation JAVA en 312ms
+15:12:16,054 INFO  kernel.Main - Generation referentiels en 156ms
+15:12:16,584 INFO  kernel.Main - Handler Sql en 889ms
+15:12:16,865 INFO  kernel.Main - Handler Update en 1s
+15:12:16,880 INFO  kernel.Main - Handler Delete en 1s
+15:12:16,974 INFO  kernel.Main - Handler New en 1s
+15:12:16,974 INFO  kernel.Main - Generation Index en 1s
+15:12:17,380 INFO  kernel.Main - Handler Select en 1s
+15:12:17,582 INFO  kernel.Main - Generation table en 1s
+15:12:17,582 INFO  kernel.Main - ...Fin de generation en 1s
+15:12:17,676 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : T_TRANSFER.tab
+Table T_TRANSFER created
+
+15:12:18,487 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:12:18,487 INFO  net.codjo.plugin.server.ServerCore - Utilisation de la configuration surcharge : file:C:\Users\bernaju\log4j.properties
+15:12:18,830 INFO  kernel.Main - Debut de generation....
+15:12:18,893 INFO  kernel.Main - Generation Constraint en 47ms
+15:12:18,893 INFO  kernel.Main - Generation Trigger Insert en 47ms
+15:12:18,893 INFO  kernel.Main - Generation Trigger Delete en 47ms
+15:12:18,908 INFO  kernel.Main - Generation Trigger Update en 62ms
+15:12:18,908 INFO  kernel.Main - Generation Trigger IU en 62ms
+15:12:18,908 INFO  kernel.Main - Generation VIEW en 62ms
+15:12:18,908 INFO  kernel.Main - Roles en 15ms
+15:12:18,986 INFO  kernel.Main - Generation CASTOR en 140ms
+15:12:19,018 INFO  kernel.Main - Structures en 125ms
+15:12:19,018 INFO  kernel.Main - Generation des definitions de lien en 125ms
+15:12:19,080 INFO  kernel.Main - Handler Archive en 62ms
+15:12:19,080 INFO  kernel.Main - Handler Requetor en 172ms
+15:12:19,096 INFO  kernel.Main - Handler Commande en 16ms
+15:12:19,096 INFO  kernel.Main - Generation JAVA en 250ms
+15:12:19,142 INFO  kernel.Main - Generation globs en 46ms
+15:12:19,252 INFO  kernel.Main - Generation referentiels en 172ms
+15:12:19,860 INFO  kernel.Main - Handler Sql en 952ms
+15:12:20,094 INFO  kernel.Main - Handler Delete en 1s
+15:12:20,141 INFO  kernel.Main - Handler New en 1s
+15:12:20,156 INFO  kernel.Main - Handler Update en 1s
+15:12:20,188 INFO  kernel.Main - Generation Index en 1s
+15:12:20,624 INFO  kernel.Main - Handler Select en 1s
+15:12:20,765 INFO  kernel.Main - Generation table en 1s
+15:12:20,765 INFO  kernel.Main - ...Fin de generation en 1s
+15:12:20,858 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT_STATUS.tab
+Table PM_TREATMENT_STATUS created
+
+15:12:21,014 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST_STATUS.tab
+Table PM_EXECUTION_LIST_STATUS created
+
+15:12:21,560 INFO  kernel.Main - Debut de generation....
+15:12:21,623 INFO  kernel.Main - Generation Constraint en 47ms
+15:12:21,638 INFO  kernel.Main - Generation Trigger IU en 62ms
+15:12:21,638 INFO  kernel.Main - Generation Trigger Insert en 62ms
+15:12:21,654 INFO  kernel.Main - Generation Trigger Delete en 78ms
+15:12:21,654 INFO  kernel.Main - Generation VIEW en 78ms
+15:12:21,654 INFO  kernel.Main - Generation Trigger Update en 78ms
+15:12:21,654 INFO  kernel.Main - Roles en 16ms
+15:12:21,732 INFO  kernel.Main - Generation CASTOR en 156ms
+15:12:21,732 INFO  kernel.Main - Generation des definitions de lien en 94ms
+15:12:21,732 INFO  kernel.Main - Structures en 109ms
+15:12:21,763 INFO  kernel.Main - Handler Archive en 31ms
+15:12:21,857 INFO  kernel.Main - Handler Commande en 94ms
+15:12:21,888 INFO  kernel.Main - Handler Requetor en 234ms
+15:12:21,919 INFO  kernel.Main - Generation globs en 31ms
+15:12:21,997 INFO  kernel.Main - Generation JAVA en 421ms
+15:12:21,997 INFO  kernel.Main - Generation referentiels en 140ms
+15:12:22,606 INFO  kernel.Main - Handler Sql en 952ms
+15:12:23,011 INFO  kernel.Main - Generation Index en 1s
+15:12:23,042 INFO  kernel.Main - Handler Update en 1s
+15:12:23,042 INFO  kernel.Main - Handler New en 1s
+15:12:23,058 INFO  kernel.Main - Handler Delete en 1s
+15:12:23,542 INFO  kernel.Main - Handler Select en 1s
+15:12:23,698 INFO  kernel.Main - Generation table en 2s
+15:12:23,698 INFO  kernel.Main - ...Fin de generation en 2s
+15:12:23,791 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : T_TRANSFER.tab
+Table T_TRANSFER created
+
+15:12:23,885 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DP_CONTEXT.tab
+Table PM_DP_CONTEXT created
+
+15:12:23,978 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY.tab
+Table PM_REPOSITORY created
+
+15:12:24,072 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY_CONTENT.tab
+Table PM_REPOSITORY_CONTENT created
+
+15:12:24,181 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_FAMILY.tab
+Table PM_FAMILY created
+
+15:12:24,290 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST.tab
+Table PM_EXECUTION_LIST created
+
+15:12:24,368 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT.tab
+Table PM_TREATMENT created
+
+15:12:24,462 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST_STATUS.tab
+Table PM_EXECUTION_LIST_STATUS created
+
+15:12:24,556 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT_STATUS.tab
+Table PM_TREATMENT_STATUS created
+
+15:12:24,649 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DEPENDENCY.tab
+Table PM_DEPENDENCY created
+
+15:12:24,758 INFO  net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.repository.Repository : Réinitialisation du cache des référentiels de traitement.
+15:12:25,070 INFO  net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.repository.Repository : Réinitialisation du cache des référentiels de traitement.
+15:12:25,492 INFO  kernel.Main - Debut de generation....
+15:12:25,570 INFO  kernel.Main - Generation Constraint en 63ms
+15:12:25,570 INFO  kernel.Main - Generation Trigger Delete en 63ms
+15:12:25,601 INFO  kernel.Main - Generation Trigger Update en 94ms
+15:12:25,601 INFO  kernel.Main - Generation Trigger IU en 94ms
+15:12:25,601 INFO  kernel.Main - Generation Trigger Insert en 94ms
+15:12:25,601 INFO  kernel.Main - Generation VIEW en 94ms
+15:12:25,616 INFO  kernel.Main - Roles en 46ms
+15:12:25,632 INFO  kernel.Main - Generation CASTOR en 125ms
+15:12:25,663 INFO  kernel.Main - Structures en 93ms
+15:12:25,663 INFO  kernel.Main - Generation des definitions de lien en 62ms
+15:12:25,710 INFO  kernel.Main - Handler Requetor en 109ms
+15:12:25,710 INFO  kernel.Main - Handler Archive en 47ms
+15:12:25,804 INFO  kernel.Main - Handler Commande en 94ms
+15:12:25,835 INFO  kernel.Main - Generation globs en 31ms
+15:12:25,835 INFO  kernel.Main - Generation JAVA en 328ms
+15:12:25,882 INFO  kernel.Main - Generation referentiels en 172ms
+15:12:26,490 INFO  kernel.Main - Handler Sql en 889ms
+15:12:26,849 INFO  kernel.Main - Handler Update en 1s
+15:12:26,911 INFO  kernel.Main - Handler New en 1s
+15:12:26,927 INFO  kernel.Main - Handler Delete en 1s
+15:12:26,942 INFO  kernel.Main - Generation Index en 1s
+15:12:27,379 INFO  kernel.Main - Handler Select en 1s
+15:12:27,566 INFO  kernel.Main - Generation table en 2s
+15:12:27,566 INFO  kernel.Main - ...Fin de generation en 2s
+15:12:27,644 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : T_TRANSFER.tab
+Table T_TRANSFER created
+
+15:12:27,722 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DP_CONTEXT.tab
+Table PM_DP_CONTEXT created
+
+15:12:27,800 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY.tab
+Table PM_REPOSITORY created
+
+15:12:27,878 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_REPOSITORY_CONTENT.tab
+Table PM_REPOSITORY_CONTENT created
+
+15:12:27,988 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_FAMILY.tab
+Table PM_FAMILY created
+
+15:12:28,081 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST.tab
+Table PM_EXECUTION_LIST created
+
+15:12:28,190 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT.tab
+Table PM_TREATMENT created
+
+15:12:28,284 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_EXECUTION_LIST_STATUS.tab
+Table PM_EXECUTION_LIST_STATUS created
+
+15:12:28,393 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_TREATMENT_STATUS.tab
+Table PM_TREATMENT_STATUS created
+
+15:12:28,487 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DEPENDENCY.tab
+Table PM_DEPENDENCY created
+
+15:12:28,643 INFO  net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.repository.Repository : Réinitialisation du cache des référentiels de traitement.
+15:12:29,126 INFO  net.codjo.dataprocess.common.Log - net.codjo.dataprocess.server.repository.Repository : Réinitialisation du cache des référentiels de traitement.
+15:12:30,078 INFO  kernel.Main - Debut de generation....
+15:12:30,140 INFO  kernel.Main - Generation Constraint en 46ms
+15:12:30,140 INFO  kernel.Main - Generation Trigger Delete en 46ms
+15:12:30,140 INFO  kernel.Main - Generation Trigger Update en 46ms
+15:12:30,203 INFO  kernel.Main - Generation Trigger IU en 109ms
+15:12:30,218 INFO  kernel.Main - Generation Trigger Insert en 124ms
+15:12:30,218 INFO  kernel.Main - Generation VIEW en 124ms
+15:12:30,218 INFO  kernel.Main - Roles en 78ms
+15:12:30,250 INFO  kernel.Main - Generation CASTOR en 156ms
+15:12:30,296 INFO  kernel.Main - Generation des definitions de lien en 156ms
+15:12:30,296 INFO  kernel.Main - Structures en 156ms
+15:12:30,343 INFO  kernel.Main - Handler Archive en 47ms
+15:12:30,374 INFO  kernel.Main - Handler Requetor en 156ms
+15:12:30,390 INFO  kernel.Main - Handler Commande en 47ms
+15:12:30,484 INFO  kernel.Main - Generation globs en 94ms
+15:12:30,484 INFO  kernel.Main - Generation JAVA en 390ms
+15:12:30,530 INFO  kernel.Main - Generation referentiels en 156ms
+15:12:31,326 INFO  kernel.Main - Handler Sql en 1s
+15:12:31,513 INFO  kernel.Main - Handler Update en 1s
+15:12:31,529 INFO  kernel.Main - Generation Index en 1s
+15:12:31,638 INFO  kernel.Main - Handler New en 1s
+15:12:31,654 INFO  kernel.Main - Handler Delete en 1s
+15:12:32,090 INFO  kernel.Main - Handler Select en 1s
+15:12:32,262 INFO  kernel.Main - Generation table en 2s
+15:12:32,262 INFO  kernel.Main - ...Fin de generation en 2s
+15:12:32,356 INFO  net.codjo.database.common.api.JdbcFixtureAdvanced - Exécution du script : PM_DP_USER.tab
+Table PM_DP_USER created
+

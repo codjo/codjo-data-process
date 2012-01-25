@@ -10,11 +10,11 @@
     <parent>
         <groupId>net.codjo.pom</groupId>
         <artifactId>codjo-pom-library</artifactId>
-        <version>2.1</version>
+        <version>SNAPSHOT</version>
     </parent>
     <groupId>net.codjo.data-process</groupId>
     <artifactId>codjo-data-process</artifactId>
-    <version>2.73</version>
+    <version>2.74-SNAPSHOT</version>
     <dependencyManagement>
         <dependencies>
             <dependency>
