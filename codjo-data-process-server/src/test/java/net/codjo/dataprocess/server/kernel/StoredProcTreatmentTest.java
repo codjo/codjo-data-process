@@ -53,7 +53,7 @@ public class StoredProcTreatmentTest {
         treatmentModel.setArguments(argList);
 
         AbstractTreatment abstractTreatment =
-              TreatmentFactory.buildTreatment(new ConnectionMock(), treatmentModel, 0, null);
+              TreatmentFactory.buildTreatment(new ConnectionMock().getStub(), treatmentModel, 0, null);
         abstractTreatment.configure(context);
         Object result = abstractTreatment.proceedTreatment(context);
         assertThat(result instanceof Integer, equalTo(true));
