@@ -3,9 +3,13 @@
   <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="930" height="601"/>
+      <xy x="20" y="20" width="930" height="800"/>
     </constraints>
-    <properties/>
+    <properties>
+      <minimumSize width="319" height="800"/>
+      <opaque value="false"/>
+      <preferredSize width="319" height="800"/>
+    </properties>
     <border type="none"/>
     <children>
       <grid id="8dcc1" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -26,7 +30,7 @@
             </constraints>
             <properties>
               <continuousLayout value="true"/>
-              <dividerLocation value="385"/>
+              <dividerLocation value="700"/>
               <dividerSize value="5"/>
               <orientation value="0"/>
             </properties>
@@ -172,7 +176,9 @@
                                     <children>
                                       <component id="3a63c" class="javax.swing.JList" binding="trtList">
                                         <constraints/>
-                                        <properties/>
+                                        <properties>
+                                          <model/>
+                                        </properties>
                                       </component>
                                     </children>
                                   </scrollpane>

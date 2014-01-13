@@ -4,6 +4,7 @@
  * Common Apache License 2.0
  */
 package net.codjo.dataprocess.gui.selector;
+import javax.swing.JButton;
 import net.codjo.dataprocess.client.RepositoryClientHelper;
 import net.codjo.dataprocess.common.exception.RepositoryException;
 import net.codjo.dataprocess.gui.util.ComboUpdateEventListener;
@@ -33,6 +34,7 @@ public class RepositoryFamilyPanel extends JPanel {
     private MutableGuiContext ctxt;
     private boolean enableRepositoryCombobox;
     private boolean isLoading;
+    private JButton refreshButton = new JButton("Rafraichir");
 
 
     public RepositoryFamilyPanel(MutableGuiContext ctxt,
@@ -110,26 +112,22 @@ public class RepositoryFamilyPanel extends JPanel {
         gridBagConstraints4.insets = new Insets(5, 6, 5, 0);
         gridBagConstraints4.gridx = 3;
 
-        GridBagConstraints gridBagConstraints5 = new GridBagConstraints();
+         GridBagConstraints gridBagConstraints5 = new GridBagConstraints();
         gridBagConstraints5.gridy = 0;
-        gridBagConstraints5.ipadx = 0;
-        gridBagConstraints5.insets = new Insets(5, 10, 5, 1);
+        gridBagConstraints5.ipadx = 100;
+        gridBagConstraints5.fill = GridBagConstraints.NONE;
+        gridBagConstraints5.insets = new Insets(5, 6, 5, 0);
         gridBagConstraints5.gridx = 4;
-
-        GridBagConstraints gridBagConstraints6 = new GridBagConstraints();
-        gridBagConstraints6.gridy = 0;
-        gridBagConstraints6.ipadx = 100;
-        gridBagConstraints6.fill = GridBagConstraints.NONE;
-        gridBagConstraints6.insets = new Insets(5, 6, 5, 0);
-        gridBagConstraints6.gridx = 5;
 
         add(jLabelRepository, gridBagConstraints1);
         add(repositoryComboBox, gridBagConstraints2);
         add(jLabelFamily, gridBagConstraints3);
         add(familyComboBox, gridBagConstraints4);
+        add(refreshButton, gridBagConstraints5);
 
         repositoryComboBox.addActionListener(new RepositoryActionListener());
         familyComboBox.addActionListener(new FamilyActionListener());
+        refreshButton.addActionListener(new FamilyActionListener());
 
         repositoryComboBox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {

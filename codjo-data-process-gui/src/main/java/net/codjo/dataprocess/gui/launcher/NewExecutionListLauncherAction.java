@@ -46,8 +46,8 @@ public class NewExecutionListLauncherAction extends AbstractAction {
                                                                                 dataProcessGuiPlugin,
                                                                                 frame);
             frame.setContentPane(newExecutionListLauncherWindow.getMainPanel());
-            frame.setPreferredSize(new Dimension(1150, 700));
-            frame.setMinimumSize(new Dimension(900, 600));
+            frame.setPreferredSize(new Dimension(1150, 880));
+            frame.setMinimumSize(new Dimension(900, 780));
             return frame;
         }
         else {
