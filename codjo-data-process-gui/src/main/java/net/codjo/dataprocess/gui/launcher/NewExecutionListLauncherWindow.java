@@ -97,7 +97,7 @@ import static net.codjo.dataprocess.common.DataProcessConstants.TO_DO;
 /**
  *
  */
-public class NewExecutionListLauncherWindow {
+public class    NewExecutionListLauncherWindow {
     private JPanel mainPanel;
     private JButton reinitExecutionButton;
     private JButton execButton;
